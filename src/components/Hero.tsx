@@ -7,7 +7,7 @@ import LoadingScreen from './LoadingScreen';
 const luxuryFlooringImages = [
   { 
     id: 1, 
-    img: "/IMG-20250614-WA0001.jpg",
+    img: "/1.jpg",
     title: "Premium Staircase",
     subtitle: "Luxury Carpet Installation",
     category: "Staircase Carpeting",
@@ -18,7 +18,7 @@ const luxuryFlooringImages = [
   },
   { 
     id: 2, 
-    img: "/IMG-20250614-WA0002.jpg",
+    img: "/2.jpg",
     title: "Elegant Stairway",
     subtitle: "Professional Installation",
     category: "Staircase Carpeting",
@@ -29,7 +29,7 @@ const luxuryFlooringImages = [
   },
   { 
     id: 3, 
-    img: "/IMG-20250614-WA0003.jpg",
+    img: "/3.jpg",
     title: "Modern Staircase",
     subtitle: "Contemporary Design",
     category: "Staircase Carpeting",
@@ -40,7 +40,7 @@ const luxuryFlooringImages = [
   },
   { 
     id: 4, 
-    img: "/IMG-20250614-WA0005.jpg",
+    img: "/4.jpg",
     title: "Classic Stairway",
     subtitle: "Traditional Excellence",
     category: "Staircase Carpeting",
@@ -51,7 +51,7 @@ const luxuryFlooringImages = [
   },
   { 
     id: 5, 
-    img: "/IMG-20250614-WA0008.jpg",
+    img: "/5.jpg",
     title: "Luxury Laminate Stairs",
     subtitle: "Premium Wood Effect",
     category: "Laminate Staircase",

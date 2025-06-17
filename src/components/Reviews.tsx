@@ -26,8 +26,8 @@ const reviews: Review[] = [
     rating: 5,
     text: 'Absolutely brilliant service! The team transformed our staircase with gorgeous carpet from their extensive collection. Professional, punctual, and the quality is outstanding. Every detail was spot on.',
     service: 'Premium Staircase Carpeting',
-    image: '/IMG-20250614-WA0001.jpg',
-    projectImage: '/IMG-20250614-WA0001.jpg',
+    image: '/1.jpg',
+    projectImage: '/1.jpg',
     color: '#8B5CF6',
     gradient: 'from-purple-500 to-indigo-600',
     verified: true,
@@ -41,8 +41,8 @@ const reviews: Review[] = [
     rating: 5,
     text: 'Exceptional staircase installation throughout our home. The attention to detail was impressive and the finish is absolutely perfect. Highly recommended! The team was professional throughout.',
     service: 'Elegant Stairway Installation',
-    image: '/IMG-20250614-WA0002.jpg',
-    projectImage: '/IMG-20250614-WA0002.jpg',
+    image: '/2.jpg',
+    projectImage: '/2.jpg',
     color: '#10B981',
     gradient: 'from-emerald-500 to-teal-600',
     verified: true,
@@ -56,8 +56,8 @@ const reviews: Review[] = [
     rating: 5,
     text: 'Fantastic staircase carpeting for our home. The showroom had an amazing variety and the team helped us choose the perfect option. Couldn\'t be happier with the transformation!',
     service: 'Modern Staircase Design',
-    image: '/IMG-20250614-WA0003.jpg',
-    projectImage: '/IMG-20250614-WA0003.jpg',
+    image: '/3.jpg',
+    projectImage: '/3.jpg',
     color: '#F59E0B',
     gradient: 'from-amber-500 to-orange-600',
     verified: true,
@@ -71,8 +71,8 @@ const reviews: Review[] = [
     rating: 5,
     text: 'Outstanding staircase carpeting project. The precision and craftsmanship were first-class. The door-to-door service made everything so convenient. Will definitely use again for our next project.',
     service: 'Classic Stairway Excellence',
-    image: '/IMG-20250614-WA0005.jpg',
-    projectImage: '/IMG-20250614-WA0005.jpg',
+    image: '/4.jpg',
+    projectImage: '/4.jpg',
     color: '#EF4444',
     gradient: 'from-red-500 to-pink-600',
     verified: true,
@@ -86,8 +86,8 @@ const reviews: Review[] = [
     rating: 5,
     text: 'Brilliant transformation of our stairs with luxury laminate. The team was knowledgeable and helped us select from their wonderful range. Exceeded all expectations! Superb workmanship.',
     service: 'Luxury Laminate Staircase',
-    image: '/IMG-20250614-WA0008.jpg',
-    projectImage: '/IMG-20250614-WA0008.jpg',
+    image: '/5.jpg',
+    projectImage: '/5.jpg',
     color: '#3B82F6',
     gradient: 'from-blue-500 to-indigo-600',
     verified: true,
@@ -263,11 +263,6 @@ const Reviews = () => {
                       alt={`${currentReviewData.service} project`}
                       className="w-full h-full object-cover"
                       loading="lazy"
-                      onError={(e) => {
-                        console.error('Review image failed to load:', currentReviewData.projectImage);
-                        // Fallback to a working Pexels image
-                        e.currentTarget.src = 'https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=1';
-                      }}
                     />
                   </motion.div>
                 </AnimatePresence>

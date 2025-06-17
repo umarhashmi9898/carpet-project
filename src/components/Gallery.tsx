@@ -4,61 +4,61 @@ import { X, Eye, Award, Star } from 'lucide-react';
 
 const galleryImages = [
   {
-    src: '/IMG-20250614-WA0001.jpg',
+    src: '/1.jpg',
     title: 'Premium Staircase Carpeting',
     category: 'Staircase Flooring',
     price: 'From £55/m²'
   },
   {
-    src: '/IMG-20250614-WA0002.jpg',
+    src: '/2.jpg',
     title: 'Elegant Stairway Installation',
     category: 'Staircase Flooring',
     price: 'From £55/m²'
   },
   {
-    src: '/IMG-20250614-WA0003.jpg',
+    src: '/3.jpg',
     title: 'Modern Staircase Design',
     category: 'Staircase Flooring',
     price: 'From £55/m²'
   },
   {
-    src: '/IMG-20250614-WA0005.jpg',
+    src: '/4.jpg',
     title: 'Classic Stairway Excellence',
     category: 'Staircase Flooring',
     price: 'From £60/m²'
   },
   {
-    src: '/IMG-20250614-WA0008.jpg',
+    src: '/5.jpg',
     title: 'Luxury Laminate Staircase',
     category: 'Laminate Staircase',
     price: 'From £65/m²'
   },
   {
-    src: '/IMG-20250614-WA0001.jpg',
+    src: '/1.jpg',
     title: 'Premium Carpet Installation',
     category: 'Premium Carpet',
     price: 'From £45/m²'
   },
   {
-    src: '/IMG-20250614-WA0002.jpg',
+    src: '/2.jpg',
     title: 'Professional Carpet Fitting',
     category: 'Premium Carpet',
     price: 'From £45/m²'
   },
   {
-    src: '/IMG-20250614-WA0003.jpg',
+    src: '/3.jpg',
     title: 'Luxury Carpet Collection',
     category: 'Premium Carpet',
     price: 'From £45/m²'
   },
   {
-    src: '/IMG-20250614-WA0005.jpg',
+    src: '/4.jpg',
     title: 'Expert Carpet Installation',
     category: 'Premium Carpet',
     price: 'From £50/m²'
   },
   {
-    src: '/IMG-20250614-WA0008.jpg',
+    src: '/5.jpg',
     title: 'Modern Laminate Flooring',
     category: 'Laminate Flooring',
     price: 'From £35/m²'
@@ -191,11 +191,6 @@ const Gallery = () => {
                   alt={image.title}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   loading="lazy"
-                  onError={(e) => {
-                    console.error('Gallery image failed to load:', image.src);
-                    // Fallback to a working Pexels image
-                    e.currentTarget.src = 'https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=1';
-                  }}
                 />
                 
                 {/* Simple Overlay */}
@@ -258,11 +253,6 @@ const Gallery = () => {
                   src={filteredImages[selectedImage].src} 
                   alt={filteredImages[selectedImage].title}
                   className="w-full h-full object-contain"
-                  onError={(e) => {
-                    console.error('Lightbox image failed to load:', filteredImages[selectedImage].src);
-                    // Fallback to a working Pexels image
-                    e.currentTarget.src = 'https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=1';
-                  }}
                 />
               </motion.div>
             </motion.div>

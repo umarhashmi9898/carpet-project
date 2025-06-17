@@ -194,11 +194,6 @@ const MobileOptimized3DCarousel = ({ images }: { images: typeof luxuryFlooringIm
                   alt={currentImage.title}
                   className="w-full h-full object-cover"
                   loading="lazy"
-                  onError={(e) => {
-                    console.error('Image failed to load:', currentImage.img);
-                    // Fallback to a placeholder or default image
-                    e.currentTarget.src = 'https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=1';
-                  }}
                 />
               </motion.div>
             </AnimatePresence>

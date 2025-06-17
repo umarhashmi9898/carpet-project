@@ -239,11 +239,6 @@ const CarpetShowcase = () => {
                       alt={currentCollection.name}
                       className="w-full h-full object-cover"
                       loading="lazy"
-                      onError={(e) => {
-                        console.error('Carpet showcase image failed to load:', currentCollection.image);
-                        // Fallback to a working Pexels image
-                        e.currentTarget.src = 'https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=1';
-                      }}
                     />
                   </motion.div>
                 </AnimatePresence>

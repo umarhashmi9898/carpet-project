@@ -4,19 +4,19 @@ import { X, Eye, Award, Star } from 'lucide-react';
 
 const galleryImages = [
   {
-    src: 'https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=1',
+    src: '/IMG-20250614-WA0001.jpg',
     title: 'Premium Staircase Carpeting',
     category: 'Staircase Flooring',
     price: 'From £55/m²'
   },
   {
-    src: 'https://images.pexels.com/photos/1648776/pexels-photo-1648776.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=1',
+    src: '/IMG-20250614-WA0002.jpg',
     title: 'Elegant Stairway Installation',
     category: 'Staircase Flooring',
     price: 'From £55/m²'
   },
   {
-    src: 'https://images.pexels.com/photos/1125130/pexels-photo-1125130.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=1',
+    src: '/IMG-20250614-WA0003.jpg',
     title: 'Modern Staircase Design',
     category: 'Staircase Flooring',
     price: 'From £55/m²'
@@ -34,34 +34,34 @@ const galleryImages = [
     price: 'From £65/m²'
   },
   {
-    src: 'https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=1',
+    src: '/IMG-20250614-WA0001.jpg',
+    title: 'Premium Carpet Installation',
+    category: 'Premium Carpet',
+    price: 'From £45/m²'
+  },
+  {
+    src: '/IMG-20250614-WA0002.jpg',
+    title: 'Professional Carpet Fitting',
+    category: 'Premium Carpet',
+    price: 'From £45/m²'
+  },
+  {
+    src: '/IMG-20250614-WA0003.jpg',
+    title: 'Luxury Carpet Collection',
+    category: 'Premium Carpet',
+    price: 'From £45/m²'
+  },
+  {
+    src: '/IMG-20250614-WA0005.jpg',
+    title: 'Expert Carpet Installation',
+    category: 'Premium Carpet',
+    price: 'From £50/m²'
+  },
+  {
+    src: '/IMG-20250614-WA0008.jpg',
     title: 'Modern Laminate Flooring',
     category: 'Laminate Flooring',
     price: 'From £35/m²'
-  },
-  {
-    src: 'https://images.pexels.com/photos/1125130/pexels-photo-1125130.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=1',
-    title: 'Contemporary Lino Design',
-    category: 'Lino Flooring',
-    price: 'From £25/m²'
-  },
-  {
-    src: 'https://images.pexels.com/photos/1571468/pexels-photo-1571468.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=1',
-    title: 'Kitchen Laminate Excellence',
-    category: 'Laminate Flooring',
-    price: 'From £35/m²'
-  },
-  {
-    src: 'https://images.pexels.com/photos/1648776/pexels-photo-1648776.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=1',
-    title: 'Bathroom Lino Luxury',
-    category: 'Lino Flooring',
-    price: 'From £25/m²'
-  },
-  {
-    src: 'https://images.pexels.com/photos/1350789/pexels-photo-1350789.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=1',
-    title: 'Premium Carpet Collection',
-    category: 'Premium Carpet',
-    price: 'From £45/m²'
   }
 ];
 
@@ -69,7 +69,7 @@ const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
   const [filter, setFilter] = useState('All');
 
-  const categories = ['All', 'Staircase Flooring', 'Laminate Staircase', 'Premium Carpet', 'Laminate Flooring', 'Lino Flooring'];
+  const categories = ['All', 'Staircase Flooring', 'Laminate Staircase', 'Premium Carpet', 'Laminate Flooring'];
   
   const filteredImages = filter === 'All' 
     ? galleryImages 
@@ -130,9 +130,9 @@ const Gallery = () => {
                 ))}
               </div>
               
-              {/* ROW 3 - LAMINATE & LINO */}
+              {/* ROW 3 - LAMINATE */}
               <div className="flex justify-center gap-3">
-                {categories.slice(4, 6).map((category) => (
+                {categories.slice(4, 5).map((category) => (
                   <motion.button
                     key={category}
                     onClick={() => setFilter(category)}

@@ -29,7 +29,7 @@ const luxuryFlooringImages = [
   },
   { 
     id: 3, 
-    img: "https://images.pexels.com/photos/1125130/pexels-photo-1125130.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=1",
+    img: "/IMG-20250614-WA0003.jpg",
     title: "Modern Staircase",
     subtitle: "Contemporary Design",
     category: "Staircase Carpeting",

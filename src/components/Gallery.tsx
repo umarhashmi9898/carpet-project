@@ -10,7 +10,7 @@ const galleryImages = [
     price: 'From £55/m²'
   },
   {
-    src: '/IMG-20250614-WA0002.jpg',
+    src: 'https://images.pexels.com/photos/1648776/pexels-photo-1648776.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=1',
     title: 'Elegant Stairway Installation',
     category: 'Staircase Flooring',
     price: 'From £55/m²'

@@ -63,57 +63,57 @@ const luxuryFlooringImages = [
   { 
     id: 6, 
     img: "/6.jpg",
-    title: "Hybrid Laminate Design",
-    subtitle: "Wood & Carpet Combination",
-    category: "Hybrid Staircase",
-    price: "From £70/m²",
+    title: "Premium Room Carpeting",
+    subtitle: "Luxury Living Spaces",
+    category: "Room Carpeting",
+    price: "From £40/m²",
     color: "#7C3AED",
     gradient: "from-violet-500 to-purple-600",
-    description: "Innovative hybrid design combining luxury laminate risers with premium carpet treads for ultimate style."
+    description: "Transform your living spaces with our premium room carpeting offering ultimate comfort and style."
   },
   { 
     id: 7, 
     img: "/7.jpg",
-    title: "Contemporary Hybrid",
-    subtitle: "Modern Mixed Materials",
-    category: "Hybrid Staircase",
-    price: "From £70/m²",
+    title: "Geometric Vinyl Design",
+    subtitle: "Modern Pattern Flooring",
+    category: "Designer Vinyl",
+    price: "From £45/m²",
     color: "#059669",
     gradient: "from-emerald-600 to-green-600",
-    description: "Contemporary staircase featuring premium laminate and carpet combination for a sophisticated finish."
+    description: "Stunning geometric vinyl patterns that create bold, contemporary statements in any space."
   },
   { 
     id: 8, 
     img: "/8.jpg",
-    title: "Warm Tone Carpeting",
-    subtitle: "Cozy & Comfortable",
-    category: "Premium Carpet",
+    title: "Herringbone Luxury",
+    subtitle: "Premium Pattern Design",
+    category: "Luxury Vinyl",
     price: "From £50/m²",
     color: "#DC2626",
     gradient: "from-red-600 to-rose-600",
-    description: "Beautiful warm-toned carpet installation creating a welcoming and comfortable staircase environment."
+    description: "Elegant herringbone pattern flooring combining classic design with modern durability."
   },
   { 
     id: 9, 
     img: "/9.jpg",
-    title: "Elegant Navy Runner",
-    subtitle: "Classic Sophistication",
-    category: "Carpet Runner",
-    price: "From £65/m²",
+    title: "Parquet Perfection",
+    subtitle: "Traditional Elegance",
+    category: "Luxury Vinyl",
+    price: "From £55/m²",
     color: "#1E40AF",
     gradient: "from-blue-700 to-indigo-700",
-    description: "Sophisticated navy carpet runner with contrasting trim, perfect for traditional and modern homes."
+    description: "Beautiful parquet-style vinyl flooring bringing timeless elegance to contemporary homes."
   },
   { 
     id: 10, 
     img: "/10.jpg",
-    title: "Professional Hybrid",
-    subtitle: "Expert Installation",
-    category: "Hybrid Staircase",
-    price: "From £75/m²",
+    title: "Professional Room Install",
+    subtitle: "Expert Carpet Fitting",
+    category: "Room Carpeting",
+    price: "From £45/m²",
     color: "#7C2D12",
     gradient: "from-orange-800 to-amber-700",
-    description: "Expert installation of hybrid staircase combining premium materials for exceptional durability and style."
+    description: "Professional room carpet installation with precision fitting and attention to every detail."
   }
 ];
 
@@ -645,7 +645,7 @@ const Hero = () => {
                     </span>
                   </p>
                   <p className="text-base sm:text-lg text-white/80 leading-relaxed max-w-2xl mx-auto xl:mx-0 px-4 sm:px-0">
-                    Transform your home with premium carpet, laminate, and lino flooring solutions.
+                    Transform your home with premium carpet, laminate, and designer vinyl flooring solutions.
                   </p>
                 </div>
               </div>

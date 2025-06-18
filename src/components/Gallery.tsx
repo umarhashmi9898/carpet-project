@@ -35,33 +35,33 @@ const galleryImages = [
   },
   {
     src: '/6.jpg',
-    title: 'Hybrid Laminate Design',
-    category: 'Hybrid Staircase',
-    price: 'From £70/m²'
+    title: 'Premium Room Carpeting',
+    category: 'Room Carpeting',
+    price: 'From £40/m²'
   },
   {
     src: '/7.jpg',
-    title: 'Contemporary Hybrid Installation',
-    category: 'Hybrid Staircase',
-    price: 'From £70/m²'
+    title: 'Geometric Vinyl Design',
+    category: 'Designer Vinyl',
+    price: 'From £45/m²'
   },
   {
     src: '/8.jpg',
-    title: 'Warm Tone Carpet Installation',
-    category: 'Premium Carpet',
+    title: 'Herringbone Luxury Vinyl',
+    category: 'Luxury Vinyl',
     price: 'From £50/m²'
   },
   {
     src: '/9.jpg',
-    title: 'Elegant Navy Carpet Runner',
-    category: 'Carpet Runner',
-    price: 'From £65/m²'
+    title: 'Parquet Pattern Flooring',
+    category: 'Luxury Vinyl',
+    price: 'From £55/m²'
   },
   {
     src: '/10.jpg',
-    title: 'Professional Hybrid Staircase',
-    category: 'Hybrid Staircase',
-    price: 'From £75/m²'
+    title: 'Professional Room Installation',
+    category: 'Room Carpeting',
+    price: 'From £45/m²'
   }
 ];
 
@@ -69,7 +69,7 @@ const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
   const [filter, setFilter] = useState('All');
 
-  const categories = ['All', 'Staircase Flooring', 'Laminate Staircase', 'Hybrid Staircase', 'Premium Carpet', 'Carpet Runner'];
+  const categories = ['All', 'Staircase Flooring', 'Laminate Staircase', 'Room Carpeting', 'Designer Vinyl', 'Luxury Vinyl'];
   
   const filteredImages = filter === 'All' 
     ? galleryImages 
@@ -111,7 +111,7 @@ const Gallery = () => {
                 ))}
               </div>
               
-              {/* ROW 2 - LAMINATE & HYBRID */}
+              {/* ROW 2 - LAMINATE & ROOM */}
               <div className="flex justify-center gap-3">
                 {categories.slice(2, 4).map((category) => (
                   <motion.button
@@ -130,7 +130,7 @@ const Gallery = () => {
                 ))}
               </div>
               
-              {/* ROW 3 - PREMIUM & RUNNER */}
+              {/* ROW 3 - DESIGNER & LUXURY */}
               <div className="flex justify-center gap-3">
                 {categories.slice(4, 6).map((category) => (
                   <motion.button

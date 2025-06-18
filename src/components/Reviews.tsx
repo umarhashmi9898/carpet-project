@@ -176,8 +176,8 @@ const reviews: Review[] = [
     rating: 5,
     text: 'Elegant staircase runner installation exceeded all expectations. The border design is stunning and the professional finish is immaculate. Absolutely love the transformation!',
     service: 'Elegant Staircase Runner',
-    image: '/11.jpg',
-    projectImage: '/11.jpg',
+    image: '/16.jpg',
+    projectImage: '/16.jpg',
     color: '#1F2937',
     gradient: 'from-gray-800 to-slate-700',
     verified: true,
@@ -191,8 +191,8 @@ const reviews: Review[] = [
     rating: 5,
     text: 'Luxury room carpeting installation was perfect from start to finish. The comfort and quality are exceptional. Professional team and excellent customer service throughout.',
     service: 'Luxury Room Carpeting',
-    image: '/12.jpg',
-    projectImage: '/12.jpg',
+    image: '/17.jpg',
+    projectImage: '/17.jpg',
     color: '#4338CA',
     gradient: 'from-indigo-700 to-blue-700',
     verified: true,
@@ -204,10 +204,10 @@ const reviews: Review[] = [
     name: 'Helen Brown',
     location: 'Birmingham, England',
     rating: 5,
-    text: 'Moroccan pattern vinyl flooring is absolutely stunning! The intricate design brings such character to our kitchen. Expert installation and beautiful finish throughout.',
-    service: 'Moroccan Pattern Vinyl',
-    image: '/13.jpg',
-    projectImage: '/13.jpg',
+    text: 'Decorative tile pattern vinyl flooring is absolutely stunning! The intricate design brings such character to our kitchen. Expert installation and beautiful finish throughout.',
+    service: 'Decorative Tile Pattern',
+    image: '/18.jpg',
+    projectImage: '/18.jpg',
     color: '#374151',
     gradient: 'from-gray-700 to-gray-600',
     verified: true,
@@ -221,8 +221,8 @@ const reviews: Review[] = [
     rating: 5,
     text: 'Premium wood effect vinyl looks incredibly authentic! The grain patterns are so realistic and the durability is excellent. Professional installation and great value.',
     service: 'Premium Wood Effect',
-    image: '/14.jpg',
-    projectImage: '/14.jpg',
+    image: '/20.jpg',
+    projectImage: '/20.jpg',
     color: '#92400E',
     gradient: 'from-amber-700 to-yellow-700',
     verified: true,
@@ -236,88 +236,13 @@ const reviews: Review[] = [
     rating: 5,
     text: 'Living room transformation is absolutely perfect! The complete installation was flawless and the premium materials are exceptional. Couldn\'t be happier with the results.',
     service: 'Living Room Perfection',
-    image: '/15.jpg',
-    projectImage: '/15.jpg',
+    image: '/49.jpg',
+    projectImage: '/49.jpg',
     color: '#6B7280',
     gradient: 'from-gray-500 to-gray-600',
     verified: true,
     completionDate: 'September 2023',
     projectValue: '£4,100'
-  },
-  {
-    id: 16,
-    name: 'Thomas Anderson',
-    location: 'Birmingham, England',
-    rating: 5,
-    text: 'Luxury staircase installation with premium runner exceeded all expectations. The craftsmanship is outstanding and the finish is absolutely perfect. Highly professional service.',
-    service: 'Luxury Staircase Installation',
-    image: '/16.jpg',
-    projectImage: '/16.jpg',
-    color: '#7C3AED',
-    gradient: 'from-violet-600 to-purple-700',
-    verified: true,
-    completionDate: 'August 2023',
-    projectValue: '£3,200'
-  },
-  {
-    id: 17,
-    name: 'Maria Garcia',
-    location: 'Birmingham, England',
-    rating: 5,
-    text: 'Premium bedroom carpeting installation was absolutely perfect. The comfort and quality are exceptional. Professional team delivered exactly what we wanted.',
-    service: 'Premium Bedroom Carpeting',
-    image: '/17.jpg',
-    projectImage: '/17.jpg',
-    color: '#059669',
-    gradient: 'from-emerald-600 to-teal-700',
-    verified: true,
-    completionDate: 'July 2023',
-    projectValue: '£2,700'
-  },
-  {
-    id: 18,
-    name: 'Daniel Smith',
-    location: 'Birmingham, England',
-    rating: 5,
-    text: 'Decorative tile pattern vinyl flooring is stunning! The artistic design brings such elegance to our space. Expert installation and beautiful results throughout.',
-    service: 'Decorative Tile Pattern',
-    image: '/18.jpg',
-    projectImage: '/18.jpg',
-    color: '#DC2626',
-    gradient: 'from-red-600 to-pink-700',
-    verified: true,
-    completionDate: 'June 2023',
-    projectValue: '£2,900'
-  },
-  {
-    id: 19,
-    name: 'Laura Thompson',
-    location: 'Birmingham, England',
-    rating: 5,
-    text: 'Classic wood laminate flooring looks absolutely natural! The beauty and durability are exceptional. Professional installation and excellent customer service.',
-    service: 'Classic Wood Laminate',
-    image: '/19.jpg',
-    projectImage: '/19.jpg',
-    color: '#92400E',
-    gradient: 'from-amber-800 to-orange-700',
-    verified: true,
-    completionDate: 'May 2023',
-    projectValue: '£3,600'
-  },
-  {
-    id: 20,
-    name: 'Christopher Lee',
-    location: 'Birmingham, England',
-    rating: 5,
-    text: 'Complete room transformation was absolutely perfect! The full installation service was flawless and the premium materials are outstanding. Couldn\'t be happier!',
-    service: 'Complete Room Transformation',
-    image: '/20.jpg',
-    projectImage: '/20.jpg',
-    color: '#1E40AF',
-    gradient: 'from-blue-800 to-indigo-800',
-    verified: true,
-    completionDate: 'April 2023',
-    projectValue: '£4,500'
   }
 ];
 
@@ -433,7 +358,7 @@ const Reviews = () => {
             Customer <span className="bg-gradient-to-r from-purple-400 to-indigo-600 bg-clip-text text-transparent">Reviews</span>
           </h2>
           <p className="text-lg sm:text-xl text-white/70 max-w-3xl mx-auto leading-relaxed">
-            See what our 20 satisfied customers have to say about our premium flooring services across Birmingham
+            See what our 15 satisfied customers have to say about our premium flooring services across Birmingham
           </p>
         </motion.div>
 
@@ -488,6 +413,10 @@ const Reviews = () => {
                       alt={`${currentReviewData.service} project`}
                       className="w-full h-full object-cover"
                       loading="lazy"
+                      onError={(e) => {
+                        console.log(`Failed to load image: ${currentReviewData.projectImage}`);
+                        e.currentTarget.src = '/1.jpg'; // Fallback to a known working image
+                      }}
                     />
                   </motion.div>
                 </AnimatePresence>

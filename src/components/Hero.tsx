@@ -114,116 +114,6 @@ const luxuryFlooringImages = [
     color: "#7C2D12",
     gradient: "from-orange-800 to-amber-700",
     description: "Professional room carpet installation with precision fitting and attention to every detail."
-  },
-  { 
-    id: 11, 
-    img: "/11.jpg",
-    title: "Elegant Staircase Runner",
-    subtitle: "Premium Carpet Installation",
-    category: "Staircase Carpeting",
-    price: "From £60/m²",
-    color: "#1F2937",
-    gradient: "from-gray-800 to-slate-700",
-    description: "Sophisticated staircase runner installation with elegant borders and professional finishing."
-  },
-  { 
-    id: 12, 
-    img: "/12.jpg",
-    title: "Luxury Room Carpeting",
-    subtitle: "Premium Comfort",
-    category: "Room Carpeting",
-    price: "From £42/m²",
-    color: "#4338CA",
-    gradient: "from-indigo-700 to-blue-700",
-    description: "Luxurious room carpeting providing exceptional comfort and sophisticated style for any space."
-  },
-  { 
-    id: 13, 
-    img: "/13.jpg",
-    title: "Moroccan Pattern Vinyl",
-    subtitle: "Decorative Flooring",
-    category: "Designer Vinyl",
-    price: "From £48/m²",
-    color: "#374151",
-    gradient: "from-gray-700 to-gray-600",
-    description: "Stunning Moroccan-inspired pattern vinyl flooring bringing exotic elegance to modern interiors."
-  },
-  { 
-    id: 14, 
-    img: "/14.jpg",
-    title: "Premium Wood Effect",
-    subtitle: "Luxury Laminate",
-    category: "Luxury Vinyl",
-    price: "From £52/m²",
-    color: "#92400E",
-    gradient: "from-amber-700 to-yellow-700",
-    description: "Premium wood-effect luxury vinyl with authentic grain patterns and superior durability."
-  },
-  { 
-    id: 15, 
-    img: "/15.jpg",
-    title: "Living Room Perfection",
-    subtitle: "Complete Installation",
-    category: "Room Carpeting",
-    price: "From £44/m²",
-    color: "#6B7280",
-    gradient: "from-gray-500 to-gray-600",
-    description: "Complete living room flooring transformation with premium materials and expert installation."
-  },
-  { 
-    id: 16, 
-    img: "/16.jpg",
-    title: "Luxury Staircase Installation",
-    subtitle: "Premium Carpet Runner",
-    category: "Staircase Carpeting",
-    price: "From £58/m²",
-    color: "#7C3AED",
-    gradient: "from-violet-600 to-purple-700",
-    description: "Luxury staircase carpet installation with premium materials and expert craftsmanship."
-  },
-  { 
-    id: 17, 
-    img: "/17.jpg",
-    title: "Premium Bedroom Carpeting",
-    subtitle: "Comfort & Style",
-    category: "Room Carpeting",
-    price: "From £46/m²",
-    color: "#059669",
-    gradient: "from-emerald-600 to-teal-700",
-    description: "Premium bedroom carpeting offering ultimate comfort and sophisticated style for restful spaces."
-  },
-  { 
-    id: 18, 
-    img: "/18.jpg",
-    title: "Decorative Tile Pattern",
-    subtitle: "Designer Vinyl",
-    category: "Designer Vinyl",
-    price: "From £50/m²",
-    color: "#DC2626",
-    gradient: "from-red-600 to-pink-700",
-    description: "Stunning decorative tile pattern vinyl flooring bringing artistic elegance to any interior."
-  },
-  { 
-    id: 19, 
-    img: "/19.jpg",
-    title: "Classic Wood Laminate",
-    subtitle: "Natural Beauty",
-    category: "Luxury Vinyl",
-    price: "From £54/m²",
-    color: "#92400E",
-    gradient: "from-amber-800 to-orange-700",
-    description: "Classic wood laminate flooring with natural beauty and exceptional durability for modern homes."
-  },
-  { 
-    id: 20, 
-    img: "/20.jpg",
-    title: "Complete Room Transformation",
-    subtitle: "Full Installation",
-    category: "Room Carpeting",
-    price: "From £48/m²",
-    color: "#1E40AF",
-    gradient: "from-blue-800 to-indigo-800",
-    description: "Complete room transformation with premium flooring materials and professional installation services."
   }
 ];
 
@@ -359,6 +249,10 @@ const MobileOptimized3DCarousel = ({ images }: { images: typeof luxuryFlooringIm
                   alt={currentImage.title}
                   className="w-full h-full object-cover"
                   loading="lazy"
+                  onError={(e) => {
+                    console.log(`Failed to load image: ${currentImage.img}`);
+                    e.currentTarget.src = '/1.jpg'; // Fallback to a known working image
+                  }}
                 />
               </motion.div>
             </AnimatePresence>

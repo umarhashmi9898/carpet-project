@@ -64,36 +64,6 @@ const galleryImages = [
     price: 'From £45/m²'
   },
   {
-    src: '/11.jpg',
-    title: 'Elegant Staircase Runner',
-    category: 'Staircase Flooring',
-    price: 'From £60/m²'
-  },
-  {
-    src: '/12.jpg',
-    title: 'Luxury Room Carpeting',
-    category: 'Room Carpeting',
-    price: 'From £42/m²'
-  },
-  {
-    src: '/13.jpg',
-    title: 'Moroccan Pattern Vinyl',
-    category: 'Designer Vinyl',
-    price: 'From £48/m²'
-  },
-  {
-    src: '/14.jpg',
-    title: 'Premium Wood Effect',
-    category: 'Luxury Vinyl',
-    price: 'From £52/m²'
-  },
-  {
-    src: '/15.jpg',
-    title: 'Living Room Perfection',
-    category: 'Room Carpeting',
-    price: 'From £44/m²'
-  },
-  {
     src: '/16.jpg',
     title: 'Luxury Staircase Installation',
     category: 'Staircase Flooring',
@@ -112,16 +82,46 @@ const galleryImages = [
     price: 'From £50/m²'
   },
   {
-    src: '/19.jpg',
-    title: 'Classic Wood Laminate',
-    category: 'Luxury Vinyl',
-    price: 'From £54/m²'
-  },
-  {
     src: '/20.jpg',
     title: 'Complete Room Transformation',
     category: 'Room Carpeting',
     price: 'From £48/m²'
+  },
+  {
+    src: '/IMG-20250614-WA0001.jpg',
+    title: 'Premium Carpet Installation',
+    category: 'Room Carpeting',
+    price: 'From £42/m²'
+  },
+  {
+    src: '/IMG-20250614-WA0002.jpg',
+    title: 'Geometric Pattern Vinyl',
+    category: 'Designer Vinyl',
+    price: 'From £47/m²'
+  },
+  {
+    src: '/IMG-20250614-WA0003.jpg',
+    title: 'Herringbone Wood Effect',
+    category: 'Luxury Vinyl',
+    price: 'From £52/m²'
+  },
+  {
+    src: '/IMG-20250614-WA0005.jpg',
+    title: 'Luxury Carpet Corner',
+    category: 'Room Carpeting',
+    price: 'From £44/m²'
+  },
+  {
+    src: '/IMG-20250614-WA0008.jpg',
+    title: 'Elegant Staircase Runner',
+    category: 'Staircase Flooring',
+    price: 'From £60/m²'
+  },
+  {
+    src: '/49.jpg',
+    title: 'Premium Flooring Showcase',
+    category: 'Room Carpeting',
+    price: 'From £46/m²'
   }
 ];
 
@@ -258,6 +258,10 @@ const Gallery = () => {
                   alt={image.title}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   loading="lazy"
+                  onError={(e) => {
+                    console.log(`Failed to load image: ${image.src}`);
+                    e.currentTarget.src = '/1.jpg'; // Fallback to a known working image
+                  }}
                 />
                 
                 {/* Simple Overlay */}

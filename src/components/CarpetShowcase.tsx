@@ -112,116 +112,6 @@ const carpetCollections = [
     description: 'Professional room carpet installation with precision fitting and attention to every detail.',
     color: '#7C2D12',
     gradient: 'from-orange-800 to-amber-700'
-  },
-  {
-    id: 11,
-    name: 'Elegant Staircase Runner',
-    category: 'Staircase Carpeting',
-    image: '/11.jpg',
-    price: 'From £60/m²',
-    features: ['Runner Style', 'Border Design', 'Premium Fit', 'Elegant Finish'],
-    description: 'Sophisticated staircase runner installation with elegant borders and professional finishing.',
-    color: '#1F2937',
-    gradient: 'from-gray-800 to-slate-700'
-  },
-  {
-    id: 12,
-    name: 'Luxury Room Carpeting',
-    category: 'Room Carpeting',
-    image: '/12.jpg',
-    price: 'From £42/m²',
-    features: ['Luxury Comfort', 'Premium Pile', 'Soft Touch', 'Quality Install'],
-    description: 'Luxurious room carpeting providing exceptional comfort and sophisticated style for any space.',
-    color: '#4338CA',
-    gradient: 'from-indigo-700 to-blue-700'
-  },
-  {
-    id: 13,
-    name: 'Moroccan Pattern Vinyl',
-    category: 'Designer Vinyl',
-    image: '/13.jpg',
-    price: 'From £48/m²',
-    features: ['Moroccan Design', 'Intricate Patterns', 'Durable Vinyl', 'Easy Clean'],
-    description: 'Stunning Moroccan-inspired pattern vinyl flooring bringing exotic elegance to modern interiors.',
-    color: '#374151',
-    gradient: 'from-gray-700 to-gray-600'
-  },
-  {
-    id: 14,
-    name: 'Premium Wood Effect',
-    category: 'Luxury Vinyl',
-    image: '/14.jpg',
-    price: 'From £52/m²',
-    features: ['Wood Grain', 'Authentic Look', 'Water Resistant', 'Premium Quality'],
-    description: 'Premium wood-effect luxury vinyl with authentic grain patterns and superior durability.',
-    color: '#92400E',
-    gradient: 'from-amber-700 to-yellow-700'
-  },
-  {
-    id: 15,
-    name: 'Living Room Perfection',
-    category: 'Room Carpeting',
-    image: '/15.jpg',
-    price: 'From £44/m²',
-    features: ['Complete Install', 'Perfect Finish', 'Premium Materials', 'Expert Fitting'],
-    description: 'Complete living room flooring transformation with premium materials and expert installation.',
-    color: '#6B7280',
-    gradient: 'from-gray-500 to-gray-600'
-  },
-  {
-    id: 16,
-    name: 'Luxury Staircase Installation',
-    category: 'Staircase Carpeting',
-    image: '/16.jpg',
-    price: 'From £58/m²',
-    features: ['Premium Runner', 'Border Design', 'Expert Install', 'Luxury Finish'],
-    description: 'Luxury staircase carpet installation with premium materials and expert craftsmanship.',
-    color: '#7C3AED',
-    gradient: 'from-violet-600 to-purple-700'
-  },
-  {
-    id: 17,
-    name: 'Premium Bedroom Carpeting',
-    category: 'Room Carpeting',
-    image: '/17.jpg',
-    price: 'From £46/m²',
-    features: ['Comfort Plus', 'Soft Pile', 'Easy Care', 'Premium Quality'],
-    description: 'Premium bedroom carpeting offering ultimate comfort and sophisticated style for restful spaces.',
-    color: '#059669',
-    gradient: 'from-emerald-600 to-teal-700'
-  },
-  {
-    id: 18,
-    name: 'Decorative Tile Pattern',
-    category: 'Designer Vinyl',
-    image: '/18.jpg',
-    price: 'From £50/m²',
-    features: ['Tile Effect', 'Decorative Design', 'Water Resistant', 'Easy Install'],
-    description: 'Stunning decorative tile pattern vinyl flooring bringing artistic elegance to any interior.',
-    color: '#DC2626',
-    gradient: 'from-red-600 to-pink-700'
-  },
-  {
-    id: 19,
-    name: 'Classic Wood Laminate',
-    category: 'Luxury Vinyl',
-    image: '/19.jpg',
-    price: 'From £54/m²',
-    features: ['Wood Effect', 'Natural Look', 'Durable', 'Easy Maintenance'],
-    description: 'Classic wood laminate flooring with natural beauty and exceptional durability for modern homes.',
-    color: '#92400E',
-    gradient: 'from-amber-800 to-orange-700'
-  },
-  {
-    id: 20,
-    name: 'Complete Room Transformation',
-    category: 'Room Carpeting',
-    image: '/20.jpg',
-    price: 'From £48/m²',
-    features: ['Full Service', 'Premium Install', 'Quality Materials', 'Perfect Finish'],
-    description: 'Complete room transformation with premium flooring materials and professional installation services.',
-    color: '#1E40AF',
-    gradient: 'from-blue-800 to-indigo-800'
   }
 ];
 
@@ -304,7 +194,7 @@ const CarpetShowcase = () => {
             Premium <span className="bg-gradient-to-r from-purple-400 to-indigo-600 bg-clip-text text-transparent">Flooring Collections</span>
           </h2>
           <p className="text-lg sm:text-xl text-white/70 max-w-3xl mx-auto leading-relaxed">
-            Explore our complete range of 20 premium flooring solutions, each designed to bring luxury and comfort to your home
+            Explore our complete range of 10 premium flooring solutions, each designed to bring luxury and comfort to your home
           </p>
         </motion.div>
 
@@ -317,7 +207,7 @@ const CarpetShowcase = () => {
               disabled={isTransitioning}
               whileHover={{ scale: 1.1, x: -2 }}
               whileTap={{ scale: 0.95 }}
-              className="w-8 h-8 sm:w-9 sm:h-9 bg-white/10 backdrop-blur-xl border border-white/30 rounded-lg flex items-center justify-center text-white transition-all disabled:opacity-50 shadow-xl hover:bg-white/20"
+              className="w-8 h-8 sm:w-9 sm:h-9 lg:w-10 lg:h-10 bg-white/10 backdrop-blur-xl border border-white/30 rounded-lg flex items-center justify-center text-white transition-all disabled:opacity-50 shadow-xl hover:bg-white/20"
             >
               <ChevronLeft className="w-4 h-4 sm:w-5 sm:h-5" />
             </motion.button>
@@ -347,7 +237,7 @@ const CarpetShowcase = () => {
               disabled={isTransitioning}
               whileHover={{ scale: 1.1, x: 2 }}
               whileTap={{ scale: 0.95 }}
-              className="w-8 h-8 sm:w-9 sm:h-9 bg-white/10 backdrop-blur-xl border border-white/30 rounded-lg flex items-center justify-center text-white transition-all disabled:opacity-50 shadow-xl hover:bg-white/20"
+              className="w-8 h-8 sm:w-9 sm:h-9 lg:w-10 lg:h-10 bg-white/10 backdrop-blur-xl border border-white/30 rounded-lg flex items-center justify-center text-white transition-all disabled:opacity-50 shadow-xl hover:bg-white/20"
             >
               <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5" />
             </motion.button>
@@ -404,6 +294,10 @@ const CarpetShowcase = () => {
                       alt={currentCollection.name}
                       className="w-full h-full object-cover"
                       loading="lazy"
+                      onError={(e) => {
+                        console.log(`Failed to load image: ${currentCollection.image}`);
+                        e.currentTarget.src = '/1.jpg'; // Fallback to a known working image
+                      }}
                     />
                   </motion.div>
                 </AnimatePresence>
@@ -572,14 +466,14 @@ const CarpetShowcase = () => {
           viewport={{ once: true }}
         >
           <motion.a
-            href="https://wa.me/447949087460?text=I'd like to explore your complete flooring collection of 20 premium options"
+            href="https://wa.me/447949087460?text=I'd like to explore your complete flooring collection of 10 premium options"
             className="group inline-flex items-center space-x-3 bg-gradient-to-r from-purple-500 to-indigo-600 text-white px-8 sm:px-10 py-4 sm:py-5 rounded-2xl font-bold text-lg sm:text-xl shadow-2xl hover:shadow-purple-500/25 transition-all relative overflow-hidden"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.98 }}
           >
             <div className="absolute inset-0 bg-gradient-to-r from-purple-400 to-indigo-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             <Home className="w-5 h-5 sm:w-6 sm:h-6 relative z-10" />
-            <span className="relative z-10">Explore All 20 Collections</span>
+            <span className="relative z-10">Explore All 10 Collections</span>
             <motion.div
               className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -skew-x-12"
               initial={{ x: '-100%' }}

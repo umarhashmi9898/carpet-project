@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion';
 import { ArrowRight, Star, MapPin, Clock, Phone, Sparkles, Award, Shield, ChevronLeft, ChevronRight, Play, Pause, RotateCcw } from 'lucide-react';
 import { gsap } from 'gsap';
@@ -169,6 +169,61 @@ const luxuryFlooringImages = [
     color: "#6B7280",
     gradient: "from-gray-500 to-gray-600",
     description: "Complete living room flooring transformation with premium materials and expert installation."
+  },
+  { 
+    id: 16, 
+    img: "/16.jpg",
+    title: "Luxury Staircase Installation",
+    subtitle: "Premium Carpet Runner",
+    category: "Staircase Carpeting",
+    price: "From £58/m²",
+    color: "#7C3AED",
+    gradient: "from-violet-600 to-purple-700",
+    description: "Luxury staircase carpet installation with premium materials and expert craftsmanship."
+  },
+  { 
+    id: 17, 
+    img: "/17.jpg",
+    title: "Premium Bedroom Carpeting",
+    subtitle: "Comfort & Style",
+    category: "Room Carpeting",
+    price: "From £46/m²",
+    color: "#059669",
+    gradient: "from-emerald-600 to-teal-700",
+    description: "Premium bedroom carpeting offering ultimate comfort and sophisticated style for restful spaces."
+  },
+  { 
+    id: 18, 
+    img: "/18.jpg",
+    title: "Decorative Tile Pattern",
+    subtitle: "Designer Vinyl",
+    category: "Designer Vinyl",
+    price: "From £50/m²",
+    color: "#DC2626",
+    gradient: "from-red-600 to-pink-700",
+    description: "Stunning decorative tile pattern vinyl flooring bringing artistic elegance to any interior."
+  },
+  { 
+    id: 19, 
+    img: "/19.jpg",
+    title: "Classic Wood Laminate",
+    subtitle: "Natural Beauty",
+    category: "Luxury Vinyl",
+    price: "From £54/m²",
+    color: "#92400E",
+    gradient: "from-amber-800 to-orange-700",
+    description: "Classic wood laminate flooring with natural beauty and exceptional durability for modern homes."
+  },
+  { 
+    id: 20, 
+    img: "/20.jpg",
+    title: "Complete Room Transformation",
+    subtitle: "Full Installation",
+    category: "Room Carpeting",
+    price: "From £48/m²",
+    color: "#1E40AF",
+    gradient: "from-blue-800 to-indigo-800",
+    description: "Complete room transformation with premium flooring materials and professional installation services."
   }
 ];
 
@@ -524,9 +579,9 @@ const MobileOptimized3DCarousel = ({ images }: { images: typeof luxuryFlooringIm
             {/* SEPARATOR */}
             <div className="w-px h-4 sm:h-5 bg-white/30" />
             
-            {/* DOTS - MOBILE RESPONSIVE */}
+            {/* DOTS - MOBILE RESPONSIVE - SHOW FIRST 10 */}
             <div className="flex items-center space-x-1 sm:space-x-1.5">
-              {images.map((_, index) => (
+              {images.slice(0, 10).map((_, index) => (
                 <motion.button
                   key={index}
                   onClick={() => goToSlide(index)}
@@ -550,6 +605,9 @@ const MobileOptimized3DCarousel = ({ images }: { images: typeof luxuryFlooringIm
                   )}
                 </motion.button>
               ))}
+              {images.length > 10 && (
+                <span className="text-white/60 text-xs">+{images.length - 10}</span>
+              )}
             </div>
           </div>
         </div>

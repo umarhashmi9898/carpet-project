@@ -167,6 +167,61 @@ const carpetCollections = [
     description: 'Complete living room flooring transformation with premium materials and expert installation.',
     color: '#6B7280',
     gradient: 'from-gray-500 to-gray-600'
+  },
+  {
+    id: 16,
+    name: 'Luxury Staircase Installation',
+    category: 'Staircase Carpeting',
+    image: '/16.jpg',
+    price: 'From £58/m²',
+    features: ['Premium Runner', 'Border Design', 'Expert Install', 'Luxury Finish'],
+    description: 'Luxury staircase carpet installation with premium materials and expert craftsmanship.',
+    color: '#7C3AED',
+    gradient: 'from-violet-600 to-purple-700'
+  },
+  {
+    id: 17,
+    name: 'Premium Bedroom Carpeting',
+    category: 'Room Carpeting',
+    image: '/17.jpg',
+    price: 'From £46/m²',
+    features: ['Comfort Plus', 'Soft Pile', 'Easy Care', 'Premium Quality'],
+    description: 'Premium bedroom carpeting offering ultimate comfort and sophisticated style for restful spaces.',
+    color: '#059669',
+    gradient: 'from-emerald-600 to-teal-700'
+  },
+  {
+    id: 18,
+    name: 'Decorative Tile Pattern',
+    category: 'Designer Vinyl',
+    image: '/18.jpg',
+    price: 'From £50/m²',
+    features: ['Tile Effect', 'Decorative Design', 'Water Resistant', 'Easy Install'],
+    description: 'Stunning decorative tile pattern vinyl flooring bringing artistic elegance to any interior.',
+    color: '#DC2626',
+    gradient: 'from-red-600 to-pink-700'
+  },
+  {
+    id: 19,
+    name: 'Classic Wood Laminate',
+    category: 'Luxury Vinyl',
+    image: '/19.jpg',
+    price: 'From £54/m²',
+    features: ['Wood Effect', 'Natural Look', 'Durable', 'Easy Maintenance'],
+    description: 'Classic wood laminate flooring with natural beauty and exceptional durability for modern homes.',
+    color: '#92400E',
+    gradient: 'from-amber-800 to-orange-700'
+  },
+  {
+    id: 20,
+    name: 'Complete Room Transformation',
+    category: 'Room Carpeting',
+    image: '/20.jpg',
+    price: 'From £48/m²',
+    features: ['Full Service', 'Premium Install', 'Quality Materials', 'Perfect Finish'],
+    description: 'Complete room transformation with premium flooring materials and professional installation services.',
+    color: '#1E40AF',
+    gradient: 'from-blue-800 to-indigo-800'
   }
 ];
 
@@ -249,7 +304,7 @@ const CarpetShowcase = () => {
             Premium <span className="bg-gradient-to-r from-purple-400 to-indigo-600 bg-clip-text text-transparent">Flooring Collections</span>
           </h2>
           <p className="text-lg sm:text-xl text-white/70 max-w-3xl mx-auto leading-relaxed">
-            Explore our exquisite range of premium flooring solutions, each designed to bring luxury and comfort to your home
+            Explore our complete range of 20 premium flooring solutions, each designed to bring luxury and comfort to your home
           </p>
         </motion.div>
 
@@ -468,9 +523,9 @@ const CarpetShowcase = () => {
         >
           <div className="bg-black/80 backdrop-blur-2xl rounded-2xl px-6 py-4 border border-white/20 shadow-2xl">
             <div className="flex items-center space-x-4">
-              {/* Dots navigation */}
+              {/* Dots navigation - Show first 10 dots */}
               <div className="flex items-center space-x-2">
-                {carpetCollections.map((_, index) => (
+                {carpetCollections.slice(0, 10).map((_, index) => (
                   <motion.button
                     key={index}
                     onClick={() => {
@@ -500,6 +555,9 @@ const CarpetShowcase = () => {
                     )}
                   </motion.button>
                 ))}
+                {carpetCollections.length > 10 && (
+                  <span className="text-white/60 text-sm ml-2">+{carpetCollections.length - 10}</span>
+                )}
               </div>
             </div>
           </div>
@@ -514,14 +572,14 @@ const CarpetShowcase = () => {
           viewport={{ once: true }}
         >
           <motion.a
-            href="https://wa.me/447949087460?text=I'd like to explore your premium flooring collections"
+            href="https://wa.me/447949087460?text=I'd like to explore your complete flooring collection of 20 premium options"
             className="group inline-flex items-center space-x-3 bg-gradient-to-r from-purple-500 to-indigo-600 text-white px-8 sm:px-10 py-4 sm:py-5 rounded-2xl font-bold text-lg sm:text-xl shadow-2xl hover:shadow-purple-500/25 transition-all relative overflow-hidden"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.98 }}
           >
             <div className="absolute inset-0 bg-gradient-to-r from-purple-400 to-indigo-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             <Home className="w-5 h-5 sm:w-6 sm:h-6 relative z-10" />
-            <span className="relative z-10">Explore All Collections</span>
+            <span className="relative z-10">Explore All 20 Collections</span>
             <motion.div
               className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -skew-x-12"
               initial={{ x: '-100%' }}

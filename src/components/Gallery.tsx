@@ -92,6 +92,36 @@ const galleryImages = [
     title: 'Living Room Perfection',
     category: 'Room Carpeting',
     price: 'From £44/m²'
+  },
+  {
+    src: '/16.jpg',
+    title: 'Luxury Staircase Installation',
+    category: 'Staircase Flooring',
+    price: 'From £58/m²'
+  },
+  {
+    src: '/17.jpg',
+    title: 'Premium Bedroom Carpeting',
+    category: 'Room Carpeting',
+    price: 'From £46/m²'
+  },
+  {
+    src: '/18.jpg',
+    title: 'Decorative Tile Pattern',
+    category: 'Designer Vinyl',
+    price: 'From £50/m²'
+  },
+  {
+    src: '/19.jpg',
+    title: 'Classic Wood Laminate',
+    category: 'Luxury Vinyl',
+    price: 'From £54/m²'
+  },
+  {
+    src: '/20.jpg',
+    title: 'Complete Room Transformation',
+    category: 'Room Carpeting',
+    price: 'From £48/m²'
   }
 ];
 
@@ -115,7 +145,7 @@ const Gallery = () => {
             Project <span className="bg-gradient-to-r from-purple-400 to-indigo-600 bg-clip-text text-transparent">Gallery</span>
           </h2>
           <p className="text-xl text-white/70 max-w-3xl mx-auto mb-12">
-            Explore our portfolio of luxury flooring installations across Birmingham and West Midlands
+            Explore our complete portfolio of 20 luxury flooring installations across Birmingham and West Midlands
           </p>
 
           {/* PERFECT MOBILE FILTER BUTTONS */}
@@ -199,23 +229,30 @@ const Gallery = () => {
               ))}
             </div>
           </div>
+
+          {/* Results Counter */}
+          <div className="mt-6">
+            <p className="text-white/60 text-sm">
+              Showing <span className="text-purple-400 font-semibold">{filteredImages.length}</span> of <span className="text-purple-400 font-semibold">{galleryImages.length}</span> projects
+            </p>
+          </div>
         </div>
 
-        {/* Clean Grid Layout */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+        {/* Clean Grid Layout - RESPONSIVE FOR ALL 20 IMAGES */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-6 lg:gap-8">
           {filteredImages.map((image, index) => (
             <motion.div 
-              key={index}
+              key={`${image.src}-${index}`}
               className="group relative bg-white/5 rounded-2xl overflow-hidden cursor-pointer border-2 border-[#B57EFA]/30 hover:border-[#B57EFA] transition-all duration-300"
-              onClick={() => setSelectedImage(index)}
+              onClick={() => setSelectedImage(galleryImages.findIndex(img => img.src === image.src))}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
+              transition={{ duration: 0.5, delay: index * 0.05 }}
               viewport={{ once: true }}
               whileHover={{ y: -8, boxShadow: "0 20px 40px rgba(181, 126, 250, 0.3)" }}
             >
               {/* Image */}
-              <div className="relative h-64 overflow-hidden">
+              <div className="relative h-48 sm:h-56 lg:h-64 overflow-hidden">
                 <img 
                   src={image.src} 
                   alt={image.title}
@@ -232,28 +269,35 @@ const Gallery = () => {
 
                 {/* Category Badge */}
                 <div className="absolute top-4 left-4">
-                  <span className="bg-black/60 backdrop-blur-sm text-white px-3 py-1 rounded-full text-sm font-medium border border-[#B57EFA]/50">
+                  <span className="bg-black/60 backdrop-blur-sm text-white px-3 py-1 rounded-full text-xs font-medium border border-[#B57EFA]/50">
                     {image.category}
                   </span>
                 </div>
               </div>
               
               {/* Content */}
-              <div className="p-6 border-t border-[#B57EFA]/20">
-                <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-purple-400 transition-colors">
+              <div className="p-4 lg:p-6 border-t border-[#B57EFA]/20">
+                <h3 className="text-base lg:text-lg font-semibold text-white mb-2 group-hover:text-purple-400 transition-colors line-clamp-2">
                   {image.title}
                 </h3>
                 <div className="flex items-center justify-between">
-                  <span className="text-[#B57EFA] font-medium">{image.price}</span>
+                  <span className="text-[#B57EFA] font-medium text-sm lg:text-base">{image.price}</span>
                   <div className="flex items-center space-x-1">
-                    <Star className="w-4 h-4 text-yellow-400" fill="currentColor" />
-                    <span className="text-white/60 text-sm">Premium</span>
+                    <Star className="w-3 h-3 lg:w-4 lg:h-4 text-yellow-400" fill="currentColor" />
+                    <span className="text-white/60 text-xs lg:text-sm">Premium</span>
                   </div>
                 </div>
               </div>
             </motion.div>
           ))}
         </div>
+
+        {/* Show message if no results */}
+        {filteredImages.length === 0 && (
+          <div className="text-center py-12">
+            <p className="text-white/60 text-lg">No projects found for this category.</p>
+          </div>
+        )}
 
         {/* Lightbox */}
         <AnimatePresence>
@@ -280,10 +324,19 @@ const Gallery = () => {
                 onClick={(e) => e.stopPropagation()}
               >
                 <img 
-                  src={filteredImages[selectedImage].src} 
-                  alt={filteredImages[selectedImage].title}
+                  src={galleryImages[selectedImage].src} 
+                  alt={galleryImages[selectedImage].title}
                   className="w-full h-full object-contain"
                 />
+                
+                {/* Image Info Overlay */}
+                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6">
+                  <h3 className="text-white text-xl font-bold mb-2">{galleryImages[selectedImage].title}</h3>
+                  <div className="flex items-center justify-between">
+                    <span className="text-purple-400 font-semibold">{galleryImages[selectedImage].price}</span>
+                    <span className="text-white/70">{galleryImages[selectedImage].category}</span>
+                  </div>
+                </div>
               </motion.div>
             </motion.div>
           )}

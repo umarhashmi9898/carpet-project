@@ -243,6 +243,81 @@ const reviews: Review[] = [
     verified: true,
     completionDate: 'September 2023',
     projectValue: '£4,100'
+  },
+  {
+    id: 16,
+    name: 'Thomas Anderson',
+    location: 'Birmingham, England',
+    rating: 5,
+    text: 'Luxury staircase installation with premium runner exceeded all expectations. The craftsmanship is outstanding and the finish is absolutely perfect. Highly professional service.',
+    service: 'Luxury Staircase Installation',
+    image: '/16.jpg',
+    projectImage: '/16.jpg',
+    color: '#7C3AED',
+    gradient: 'from-violet-600 to-purple-700',
+    verified: true,
+    completionDate: 'August 2023',
+    projectValue: '£3,200'
+  },
+  {
+    id: 17,
+    name: 'Maria Garcia',
+    location: 'Birmingham, England',
+    rating: 5,
+    text: 'Premium bedroom carpeting installation was absolutely perfect. The comfort and quality are exceptional. Professional team delivered exactly what we wanted.',
+    service: 'Premium Bedroom Carpeting',
+    image: '/17.jpg',
+    projectImage: '/17.jpg',
+    color: '#059669',
+    gradient: 'from-emerald-600 to-teal-700',
+    verified: true,
+    completionDate: 'July 2023',
+    projectValue: '£2,700'
+  },
+  {
+    id: 18,
+    name: 'Daniel Smith',
+    location: 'Birmingham, England',
+    rating: 5,
+    text: 'Decorative tile pattern vinyl flooring is stunning! The artistic design brings such elegance to our space. Expert installation and beautiful results throughout.',
+    service: 'Decorative Tile Pattern',
+    image: '/18.jpg',
+    projectImage: '/18.jpg',
+    color: '#DC2626',
+    gradient: 'from-red-600 to-pink-700',
+    verified: true,
+    completionDate: 'June 2023',
+    projectValue: '£2,900'
+  },
+  {
+    id: 19,
+    name: 'Laura Thompson',
+    location: 'Birmingham, England',
+    rating: 5,
+    text: 'Classic wood laminate flooring looks absolutely natural! The beauty and durability are exceptional. Professional installation and excellent customer service.',
+    service: 'Classic Wood Laminate',
+    image: '/19.jpg',
+    projectImage: '/19.jpg',
+    color: '#92400E',
+    gradient: 'from-amber-800 to-orange-700',
+    verified: true,
+    completionDate: 'May 2023',
+    projectValue: '£3,600'
+  },
+  {
+    id: 20,
+    name: 'Christopher Lee',
+    location: 'Birmingham, England',
+    rating: 5,
+    text: 'Complete room transformation was absolutely perfect! The full installation service was flawless and the premium materials are outstanding. Couldn\'t be happier!',
+    service: 'Complete Room Transformation',
+    image: '/20.jpg',
+    projectImage: '/20.jpg',
+    color: '#1E40AF',
+    gradient: 'from-blue-800 to-indigo-800',
+    verified: true,
+    completionDate: 'April 2023',
+    projectValue: '£4,500'
   }
 ];
 
@@ -358,7 +433,7 @@ const Reviews = () => {
             Customer <span className="bg-gradient-to-r from-purple-400 to-indigo-600 bg-clip-text text-transparent">Reviews</span>
           </h2>
           <p className="text-lg sm:text-xl text-white/70 max-w-3xl mx-auto leading-relaxed">
-            See what our satisfied customers have to say about our premium flooring services across Birmingham
+            See what our 20 satisfied customers have to say about our premium flooring services across Birmingham
           </p>
         </motion.div>
 
@@ -587,6 +662,7 @@ const Reviews = () => {
           </motion.div>
 
           {/* DESKTOP DOTS NAVIGATION ONLY */}
+          
           <div className="hidden lg:block mt-8">
             <div className="flex items-center justify-center">
               <div className="bg-black/80 backdrop-blur-2xl rounded-2xl px-6 py-4 border border-white/20 shadow-2xl">
@@ -613,9 +689,9 @@ const Reviews = () => {
                   {/* Separator */}
                   <div className="w-px h-6 bg-white/30" />
                   
-                  {/* Dots navigation */}
+                  {/* Dots navigation - Show first 10 dots */}
                   <div className="flex items-center space-x-2">
-                    {reviews.map((_, index) => (
+                    {reviews.slice(0, 10).map((_, index) => (
                       <motion.button
                         key={index}
                         onClick={() => {
@@ -646,6 +722,9 @@ const Reviews = () => {
                         )}
                       </motion.button>
                     ))}
+                    {reviews.length > 10 && (
+                      <span className="text-white/60 text-sm ml-2">+{reviews.length - 10}</span>
+                    )}
                   </div>
                 </div>
               </div>

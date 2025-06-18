@@ -34,34 +34,34 @@ const galleryImages = [
     price: 'From £65/m²'
   },
   {
-    src: '/1.jpg',
-    title: 'Premium Carpet Installation',
-    category: 'Premium Carpet',
-    price: 'From £45/m²'
+    src: '/6.jpg',
+    title: 'Hybrid Laminate Design',
+    category: 'Hybrid Staircase',
+    price: 'From £70/m²'
   },
   {
-    src: '/2.jpg',
-    title: 'Professional Carpet Fitting',
-    category: 'Premium Carpet',
-    price: 'From £45/m²'
+    src: '/7.jpg',
+    title: 'Contemporary Hybrid Installation',
+    category: 'Hybrid Staircase',
+    price: 'From £70/m²'
   },
   {
-    src: '/3.jpg',
-    title: 'Luxury Carpet Collection',
-    category: 'Premium Carpet',
-    price: 'From £45/m²'
-  },
-  {
-    src: '/4.jpg',
-    title: 'Expert Carpet Installation',
+    src: '/8.jpg',
+    title: 'Warm Tone Carpet Installation',
     category: 'Premium Carpet',
     price: 'From £50/m²'
   },
   {
-    src: '/5.jpg',
-    title: 'Modern Laminate Flooring',
-    category: 'Laminate Flooring',
-    price: 'From £35/m²'
+    src: '/9.jpg',
+    title: 'Elegant Navy Carpet Runner',
+    category: 'Carpet Runner',
+    price: 'From £65/m²'
+  },
+  {
+    src: '/10.jpg',
+    title: 'Professional Hybrid Staircase',
+    category: 'Hybrid Staircase',
+    price: 'From £75/m²'
   }
 ];
 
@@ -69,7 +69,7 @@ const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
   const [filter, setFilter] = useState('All');
 
-  const categories = ['All', 'Staircase Flooring', 'Laminate Staircase', 'Premium Carpet', 'Laminate Flooring'];
+  const categories = ['All', 'Staircase Flooring', 'Laminate Staircase', 'Hybrid Staircase', 'Premium Carpet', 'Carpet Runner'];
   
   const filteredImages = filter === 'All' 
     ? galleryImages 
@@ -111,7 +111,7 @@ const Gallery = () => {
                 ))}
               </div>
               
-              {/* ROW 2 - LAMINATE STAIRCASE & PREMIUM CARPET */}
+              {/* ROW 2 - LAMINATE & HYBRID */}
               <div className="flex justify-center gap-3">
                 {categories.slice(2, 4).map((category) => (
                   <motion.button
@@ -130,9 +130,9 @@ const Gallery = () => {
                 ))}
               </div>
               
-              {/* ROW 3 - LAMINATE */}
+              {/* ROW 3 - PREMIUM & RUNNER */}
               <div className="flex justify-center gap-3">
-                {categories.slice(4, 5).map((category) => (
+                {categories.slice(4, 6).map((category) => (
                   <motion.button
                     key={category}
                     onClick={() => setFilter(category)}

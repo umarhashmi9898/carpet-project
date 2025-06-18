@@ -59,6 +59,61 @@ const luxuryFlooringImages = [
     color: "#3B82F6",
     gradient: "from-blue-500 to-indigo-600",
     description: "Revolutionary laminate staircase installation combining the beauty of wood with superior durability."
+  },
+  { 
+    id: 6, 
+    img: "/6.jpg",
+    title: "Hybrid Laminate Design",
+    subtitle: "Wood & Carpet Combination",
+    category: "Hybrid Staircase",
+    price: "From £70/m²",
+    color: "#7C3AED",
+    gradient: "from-violet-500 to-purple-600",
+    description: "Innovative hybrid design combining luxury laminate risers with premium carpet treads for ultimate style."
+  },
+  { 
+    id: 7, 
+    img: "/7.jpg",
+    title: "Contemporary Hybrid",
+    subtitle: "Modern Mixed Materials",
+    category: "Hybrid Staircase",
+    price: "From £70/m²",
+    color: "#059669",
+    gradient: "from-emerald-600 to-green-600",
+    description: "Contemporary staircase featuring premium laminate and carpet combination for a sophisticated finish."
+  },
+  { 
+    id: 8, 
+    img: "/8.jpg",
+    title: "Warm Tone Carpeting",
+    subtitle: "Cozy & Comfortable",
+    category: "Premium Carpet",
+    price: "From £50/m²",
+    color: "#DC2626",
+    gradient: "from-red-600 to-rose-600",
+    description: "Beautiful warm-toned carpet installation creating a welcoming and comfortable staircase environment."
+  },
+  { 
+    id: 9, 
+    img: "/9.jpg",
+    title: "Elegant Navy Runner",
+    subtitle: "Classic Sophistication",
+    category: "Carpet Runner",
+    price: "From £65/m²",
+    color: "#1E40AF",
+    gradient: "from-blue-700 to-indigo-700",
+    description: "Sophisticated navy carpet runner with contrasting trim, perfect for traditional and modern homes."
+  },
+  { 
+    id: 10, 
+    img: "/10.jpg",
+    title: "Professional Hybrid",
+    subtitle: "Expert Installation",
+    category: "Hybrid Staircase",
+    price: "From £75/m²",
+    color: "#7C2D12",
+    gradient: "from-orange-800 to-amber-700",
+    description: "Expert installation of hybrid staircase combining premium materials for exceptional durability and style."
   }
 ];
 

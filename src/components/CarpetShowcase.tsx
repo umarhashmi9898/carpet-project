@@ -57,6 +57,61 @@ const carpetCollections = [
     description: 'Revolutionary laminate staircase installation combining the beauty of wood with superior durability.',
     color: '#10B981',
     gradient: 'from-emerald-500 to-teal-600'
+  },
+  {
+    id: 6,
+    name: 'Hybrid Laminate Design',
+    category: 'Hybrid Staircase',
+    image: '/6.jpg',
+    price: 'From £70/m²',
+    features: ['Mixed Materials', 'Premium Finish', 'Expert Install', 'Modern Style'],
+    description: 'Innovative hybrid design combining luxury laminate risers with premium carpet treads for ultimate style.',
+    color: '#7C3AED',
+    gradient: 'from-violet-500 to-purple-600'
+  },
+  {
+    id: 7,
+    name: 'Contemporary Hybrid',
+    category: 'Hybrid Staircase',
+    image: '/7.jpg',
+    price: 'From £70/m²',
+    features: ['Contemporary', 'Durable Mix', 'Professional', 'Stylish'],
+    description: 'Contemporary staircase featuring premium laminate and carpet combination for a sophisticated finish.',
+    color: '#059669',
+    gradient: 'from-emerald-600 to-green-600'
+  },
+  {
+    id: 8,
+    name: 'Warm Tone Carpeting',
+    category: 'Premium Carpet',
+    image: '/8.jpg',
+    price: 'From £50/m²',
+    features: ['Warm Tones', 'Cozy Feel', 'Quality Pile', 'Comfort Plus'],
+    description: 'Beautiful warm-toned carpet installation creating a welcoming and comfortable staircase environment.',
+    color: '#DC2626',
+    gradient: 'from-red-600 to-rose-600'
+  },
+  {
+    id: 9,
+    name: 'Elegant Navy Runner',
+    category: 'Carpet Runner',
+    image: '/9.jpg',
+    price: 'From £65/m²',
+    features: ['Navy Design', 'Contrast Trim', 'Sophisticated', 'Traditional'],
+    description: 'Sophisticated navy carpet runner with contrasting trim, perfect for traditional and modern homes.',
+    color: '#1E40AF',
+    gradient: 'from-blue-700 to-indigo-700'
+  },
+  {
+    id: 10,
+    name: 'Professional Hybrid',
+    category: 'Hybrid Staircase',
+    image: '/10.jpg',
+    price: 'From £75/m²',
+    features: ['Expert Install', 'Premium Mix', 'Durable', 'Stylish Finish'],
+    description: 'Expert installation of hybrid staircase combining premium materials for exceptional durability and style.',
+    color: '#7C2D12',
+    gradient: 'from-orange-800 to-amber-700'
   }
 ];
 

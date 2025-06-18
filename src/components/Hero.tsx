@@ -402,58 +402,58 @@ const MobileOptimized3DCarousel = ({ images }: { images: typeof luxuryFlooringIm
         </div>
       </div>
 
-      {/* ENHANCED CONTROL PANEL - PROPERLY SIZED TO MATCH CARD */}
-      <div className="mt-6 sm:mt-8 flex justify-center">
-        <div className="bg-black/90 backdrop-blur-2xl rounded-2xl sm:rounded-3xl px-6 sm:px-8 lg:px-10 py-4 sm:py-5 lg:py-6 border border-white/30 shadow-2xl w-full max-w-sm sm:max-w-md">
-          <div className="flex items-center justify-between space-x-4 sm:space-x-6">
-            {/* ENHANCED COUNTER - LARGER SIZE */}
-            <div className="flex items-center space-x-2 sm:space-x-3">
+      {/* CONTROL PANEL - MOBILE RESPONSIVE */}
+      <div className="mt-4 sm:mt-6 flex justify-center">
+        <div className="bg-black/80 backdrop-blur-2xl rounded-xl sm:rounded-2xl px-4 sm:px-6 py-2 sm:py-3 border border-white/20 shadow-2xl">
+          <div className="flex items-center space-x-3 sm:space-x-4">
+            {/* COUNTER - MOBILE RESPONSIVE */}
+            <div className="flex items-center space-x-1.5 sm:space-x-2">
               <motion.span 
                 key={`counter-${currentIndex}`}
                 initial={{ scale: 0.9, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
-                className="text-white font-bold text-lg sm:text-xl lg:text-2xl"
+                className="text-white font-bold text-sm sm:text-base"
               >
                 {String(currentIndex + 1).padStart(2, '0')}
               </motion.span>
               <div 
-                className="w-6 sm:w-8 lg:w-10 h-0.5 sm:h-1 rounded-full transition-all duration-500"
+                className="w-4 sm:w-6 h-0.5 rounded-full transition-all duration-500"
                 style={{ backgroundColor: currentImage.color }}
               />
-              <span className="text-white/60 text-lg sm:text-xl lg:text-2xl">
+              <span className="text-white/60 text-sm sm:text-base">
                 {String(images.length).padStart(2, '0')}
               </span>
             </div>
             
-            {/* ENHANCED SEPARATOR */}
-            <div className="w-px h-6 sm:h-8 lg:h-10 bg-white/30" />
+            {/* SEPARATOR */}
+            <div className="w-px h-4 sm:h-5 bg-white/30" />
             
-            {/* ENHANCED CONTROL BUTTONS - LARGER SIZE */}
-            <div className="flex items-center space-x-2 sm:space-x-3">
+            {/* CONTROL BUTTONS - MOBILE RESPONSIVE */}
+            <div className="flex items-center space-x-1.5 sm:space-x-2">
               <motion.button
                 onClick={togglePlayPause}
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
-                className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 bg-white/10 backdrop-blur-md rounded-lg sm:rounded-xl border border-white/20 flex items-center justify-center text-white hover:bg-white/20 transition-all shadow-lg"
+                className="w-6 h-6 sm:w-7 sm:h-7 bg-white/10 backdrop-blur-md rounded-md sm:rounded-lg border border-white/20 flex items-center justify-center text-white hover:bg-white/20 transition-all"
               >
-                {isPlaying ? <Pause className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" /> : <Play className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />}
+                {isPlaying ? <Pause className="w-3 h-3 sm:w-3.5 sm:h-3.5" /> : <Play className="w-3 h-3 sm:w-3.5 sm:h-3.5" />}
               </motion.button>
               
               <motion.button
                 onClick={resetCarousel}
                 whileHover={{ scale: 1.1, rotate: 180 }}
                 whileTap={{ scale: 0.9 }}
-                className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 bg-white/10 backdrop-blur-md rounded-lg sm:rounded-xl border border-white/20 flex items-center justify-center text-white hover:bg-white/20 transition-all shadow-lg"
+                className="w-6 h-6 sm:w-7 sm:h-7 bg-white/10 backdrop-blur-md rounded-md sm:rounded-lg border border-white/20 flex items-center justify-center text-white hover:bg-white/20 transition-all"
               >
-                <RotateCcw className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />
+                <RotateCcw className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
               </motion.button>
             </div>
             
-            {/* ENHANCED SEPARATOR */}
-            <div className="w-px h-6 sm:h-8 lg:h-10 bg-white/30" />
+            {/* SEPARATOR */}
+            <div className="w-px h-4 sm:h-5 bg-white/30" />
             
-            {/* ENHANCED DOTS - LARGER SIZE */}
-            <div className="flex items-center space-x-1.5 sm:space-x-2 lg:space-x-3">
+            {/* DOTS - MOBILE RESPONSIVE - ALL 8 IMAGES */}
+            <div className="flex items-center space-x-1 sm:space-x-1.5">
               {images.map((_, index) => (
                 <motion.button
                   key={index}
@@ -461,7 +461,7 @@ const MobileOptimized3DCarousel = ({ images }: { images: typeof luxuryFlooringIm
                   disabled={isTransitioning}
                   whileHover={{ scale: 1.3 }}
                   whileTap={{ scale: 0.9 }}
-                  className={`relative w-3 h-3 sm:w-4 sm:h-4 lg:w-5 lg:h-5 rounded-full transition-all duration-300 ${
+                  className={`relative w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full transition-all duration-300 ${
                     index === currentIndex ? 'scale-110 sm:scale-125' : ''
                   }`}
                   style={{

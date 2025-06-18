@@ -114,6 +114,61 @@ const luxuryFlooringImages = [
     color: "#7C2D12",
     gradient: "from-orange-800 to-amber-700",
     description: "Professional room carpet installation with precision fitting and attention to every detail."
+  },
+  { 
+    id: 11, 
+    img: "/11.jpg",
+    title: "Elegant Staircase Runner",
+    subtitle: "Premium Carpet Installation",
+    category: "Staircase Carpeting",
+    price: "From £60/m²",
+    color: "#1F2937",
+    gradient: "from-gray-800 to-slate-700",
+    description: "Sophisticated staircase runner installation with elegant borders and professional finishing."
+  },
+  { 
+    id: 12, 
+    img: "/12.jpg",
+    title: "Luxury Room Carpeting",
+    subtitle: "Premium Comfort",
+    category: "Room Carpeting",
+    price: "From £42/m²",
+    color: "#4338CA",
+    gradient: "from-indigo-700 to-blue-700",
+    description: "Luxurious room carpeting providing exceptional comfort and sophisticated style for any space."
+  },
+  { 
+    id: 13, 
+    img: "/13.jpg",
+    title: "Moroccan Pattern Vinyl",
+    subtitle: "Decorative Flooring",
+    category: "Designer Vinyl",
+    price: "From £48/m²",
+    color: "#374151",
+    gradient: "from-gray-700 to-gray-600",
+    description: "Stunning Moroccan-inspired pattern vinyl flooring bringing exotic elegance to modern interiors."
+  },
+  { 
+    id: 14, 
+    img: "/14.jpg",
+    title: "Premium Wood Effect",
+    subtitle: "Luxury Laminate",
+    category: "Luxury Vinyl",
+    price: "From £52/m²",
+    color: "#92400E",
+    gradient: "from-amber-700 to-yellow-700",
+    description: "Premium wood-effect luxury vinyl with authentic grain patterns and superior durability."
+  },
+  { 
+    id: 15, 
+    img: "/15.jpg",
+    title: "Living Room Perfection",
+    subtitle: "Complete Installation",
+    category: "Room Carpeting",
+    price: "From £44/m²",
+    color: "#6B7280",
+    gradient: "from-gray-500 to-gray-600",
+    description: "Complete living room flooring transformation with premium materials and expert installation."
   }
 ];
 

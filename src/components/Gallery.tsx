@@ -62,6 +62,36 @@ const galleryImages = [
     title: 'Professional Room Installation',
     category: 'Room Carpeting',
     price: 'From £45/m²'
+  },
+  {
+    src: '/11.jpg',
+    title: 'Elegant Staircase Runner',
+    category: 'Staircase Flooring',
+    price: 'From £60/m²'
+  },
+  {
+    src: '/12.jpg',
+    title: 'Luxury Room Carpeting',
+    category: 'Room Carpeting',
+    price: 'From £42/m²'
+  },
+  {
+    src: '/13.jpg',
+    title: 'Moroccan Pattern Vinyl',
+    category: 'Designer Vinyl',
+    price: 'From £48/m²'
+  },
+  {
+    src: '/14.jpg',
+    title: 'Premium Wood Effect',
+    category: 'Luxury Vinyl',
+    price: 'From £52/m²'
+  },
+  {
+    src: '/15.jpg',
+    title: 'Living Room Perfection',
+    category: 'Room Carpeting',
+    price: 'From £44/m²'
   }
 ];
 

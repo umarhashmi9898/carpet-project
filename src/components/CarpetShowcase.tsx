@@ -112,6 +112,61 @@ const carpetCollections = [
     description: 'Professional room carpet installation with precision fitting and attention to every detail.',
     color: '#7C2D12',
     gradient: 'from-orange-800 to-amber-700'
+  },
+  {
+    id: 11,
+    name: 'Elegant Staircase Runner',
+    category: 'Staircase Carpeting',
+    image: '/11.jpg',
+    price: 'From £60/m²',
+    features: ['Runner Style', 'Border Design', 'Premium Fit', 'Elegant Finish'],
+    description: 'Sophisticated staircase runner installation with elegant borders and professional finishing.',
+    color: '#1F2937',
+    gradient: 'from-gray-800 to-slate-700'
+  },
+  {
+    id: 12,
+    name: 'Luxury Room Carpeting',
+    category: 'Room Carpeting',
+    image: '/12.jpg',
+    price: 'From £42/m²',
+    features: ['Luxury Comfort', 'Premium Pile', 'Soft Touch', 'Quality Install'],
+    description: 'Luxurious room carpeting providing exceptional comfort and sophisticated style for any space.',
+    color: '#4338CA',
+    gradient: 'from-indigo-700 to-blue-700'
+  },
+  {
+    id: 13,
+    name: 'Moroccan Pattern Vinyl',
+    category: 'Designer Vinyl',
+    image: '/13.jpg',
+    price: 'From £48/m²',
+    features: ['Moroccan Design', 'Intricate Patterns', 'Durable Vinyl', 'Easy Clean'],
+    description: 'Stunning Moroccan-inspired pattern vinyl flooring bringing exotic elegance to modern interiors.',
+    color: '#374151',
+    gradient: 'from-gray-700 to-gray-600'
+  },
+  {
+    id: 14,
+    name: 'Premium Wood Effect',
+    category: 'Luxury Vinyl',
+    image: '/14.jpg',
+    price: 'From £52/m²',
+    features: ['Wood Grain', 'Authentic Look', 'Water Resistant', 'Premium Quality'],
+    description: 'Premium wood-effect luxury vinyl with authentic grain patterns and superior durability.',
+    color: '#92400E',
+    gradient: 'from-amber-700 to-yellow-700'
+  },
+  {
+    id: 15,
+    name: 'Living Room Perfection',
+    category: 'Room Carpeting',
+    image: '/15.jpg',
+    price: 'From £44/m²',
+    features: ['Complete Install', 'Perfect Finish', 'Premium Materials', 'Expert Fitting'],
+    description: 'Complete living room flooring transformation with premium materials and expert installation.',
+    color: '#6B7280',
+    gradient: 'from-gray-500 to-gray-600'
   }
 ];
 

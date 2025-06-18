@@ -2,13 +2,14 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Home, Layers, Palette, ArrowRight, Star, Award, CheckCircle } from 'lucide-react';
 
+// OPTIMIZED SERVICES - UPDATED TO MATCH ACTUAL IMAGE CONTENT
 const services = [
   {
     icon: Home,
     title: 'Premium Carpet',
     description: 'Luxurious carpets that combine comfort with elegance, perfect for any room in your home.',
     features: ['Stain Resistant', 'Luxury Textures', 'Sound Dampening', 'Easy Maintenance'],
-    image: '/10.jpg',
+    image: '/6.jpg', // Luxury bedroom carpet
     gradient: 'from-purple-500 to-indigo-600',
     price: 'From £40/m²',
     subtitle: 'Professional Installation',
@@ -20,9 +21,9 @@ const services = [
     title: 'Designer Vinyl',
     description: 'Stunning designer vinyl flooring with geometric patterns and luxury finishes for modern spaces.',
     features: ['Water Resistant', 'Pattern Designs', 'Easy Installation', 'Long Lasting'],
-    image: '/7.jpg',
+    image: '/3.jpg', // Geometric pattern vinyl
     gradient: 'from-emerald-500 to-teal-600',
-    price: 'From £45/m²',
+    price: 'From £48/m²',
     subtitle: 'Professional Installation',
     iconBg: 'from-emerald-500/20 to-teal-500/20',
     borderColor: 'border-emerald-500/30'
@@ -32,9 +33,9 @@ const services = [
     title: 'Luxury Vinyl',
     description: 'Premium luxury vinyl with herringbone and parquet patterns offering style and practicality.',
     features: ['Luxury Patterns', 'Easy Clean', 'Comfort Underfoot', 'Design Variety'],
-    image: '/8.jpg',
+    image: '/8.jpg', // Herringbone luxury vinyl
     gradient: 'from-amber-500 to-orange-600',
-    price: 'From £50/m²',
+    price: 'From £55/m²',
     subtitle: 'Professional Installation',
     iconBg: 'from-amber-500/20 to-orange-500/20',
     borderColor: 'border-amber-500/30'

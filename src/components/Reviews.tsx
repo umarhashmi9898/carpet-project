@@ -18,13 +18,14 @@ interface Review {
   projectValue: string;
 }
 
+// OPTIMIZED REVIEWS - REMOVED DUPLICATES, ORGANIZED BY ACTUAL PROJECTS
 const reviews: Review[] = [
   {
     id: 1,
     name: 'Sarah Johnson',
     location: 'Birmingham, England',
     rating: 5,
-    text: 'Absolutely brilliant service! The team transformed our staircase with gorgeous carpet from their extensive collection. Professional, punctual, and the quality is outstanding. Every detail was spot on.',
+    text: 'Absolutely brilliant service! The team transformed our staircase with gorgeous black carpet featuring elegant border trim. Professional, punctual, and the quality is outstanding.',
     service: 'Premium Staircase Carpeting',
     image: '/1.jpg',
     projectImage: '/1.jpg',
@@ -39,38 +40,38 @@ const reviews: Review[] = [
     name: 'Michael Thompson',
     location: 'Birmingham, England',
     rating: 5,
-    text: 'Exceptional staircase installation throughout our home. The attention to detail was impressive and the finish is absolutely perfect. Highly recommended! The team was professional throughout.',
-    service: 'Elegant Stairway Installation',
+    text: 'Exceptional blue-grey carpet installation in our bedroom. The comfort underfoot is incredible and the professional finish is absolutely perfect. Highly recommended!',
+    service: 'Premium Room Carpeting',
     image: '/2.jpg',
     projectImage: '/2.jpg',
     color: '#10B981',
     gradient: 'from-emerald-500 to-teal-600',
     verified: true,
     completionDate: 'October 2024',
-    projectValue: '£3,200'
+    projectValue: '£1,800'
   },
   {
     id: 3,
     name: 'Emma Wilson',
     location: 'Birmingham, England',
     rating: 5,
-    text: 'Fantastic staircase carpeting for our home. The showroom had an amazing variety and the team helped us choose the perfect option. Couldn\'t be happier with the transformation!',
-    service: 'Modern Staircase Design',
+    text: 'Stunning geometric vinyl flooring in our kitchen! The bold black and white pattern creates such a striking focal point. Expert installation and beautiful finish throughout.',
+    service: 'Geometric Pattern Vinyl',
     image: '/3.jpg',
     projectImage: '/3.jpg',
     color: '#F59E0B',
     gradient: 'from-amber-500 to-orange-600',
     verified: true,
     completionDate: 'September 2024',
-    projectValue: '£1,800'
+    projectValue: '£2,200'
   },
   {
     id: 4,
     name: 'David Roberts',
     location: 'Birmingham, England',
     rating: 5,
-    text: 'Outstanding staircase carpeting project. The precision and craftsmanship were first-class. The door-to-door service made everything so convenient. Will definitely use again for our next project.',
-    service: 'Classic Stairway Excellence',
+    text: 'Beautiful grey wood effect laminate flooring looks incredibly authentic! The grain patterns are so realistic and the durability is excellent. Professional installation throughout.',
+    service: 'Grey Wood Effect Laminate',
     image: '/4.jpg',
     projectImage: '/4.jpg',
     color: '#EF4444',
@@ -84,23 +85,23 @@ const reviews: Review[] = [
     name: 'Lisa Anderson',
     location: 'Birmingham, England',
     rating: 5,
-    text: 'Brilliant transformation of our stairs with luxury laminate. The team was knowledgeable and helped us select from their wonderful range. Exceeded all expectations! Superb workmanship.',
-    service: 'Luxury Laminate Staircase',
+    text: 'Rich dark wood laminate in our living room is absolutely perfect! The traditional look complements our fireplace beautifully. Exceeded all expectations with superb workmanship.',
+    service: 'Dark Wood Living Room',
     image: '/5.jpg',
     projectImage: '/5.jpg',
     color: '#3B82F6',
     gradient: 'from-blue-500 to-indigo-600',
     verified: true,
     completionDate: 'July 2024',
-    projectValue: '£2,100'
+    projectValue: '£3,100'
   },
   {
     id: 6,
     name: 'James Mitchell',
     location: 'Birmingham, England',
     rating: 5,
-    text: 'Amazing room carpeting installation! The quality is exceptional and the comfort underfoot is incredible. Professional service from start to finish. Highly recommend SYN Carpets.',
-    service: 'Premium Room Carpeting',
+    text: 'Amazing luxury bedroom carpeting! The quality is exceptional and the comfort underfoot is incredible. Professional service from start to finish. Highly recommend SYN Carpets.',
+    service: 'Luxury Bedroom Carpeting',
     image: '/6.jpg',
     projectImage: '/6.jpg',
     color: '#7C3AED',
@@ -114,22 +115,22 @@ const reviews: Review[] = [
     name: 'Rachel Green',
     location: 'Birmingham, England',
     rating: 5,
-    text: 'Stunning geometric vinyl flooring exceeded our expectations. The bold pattern perfectly complements our modern home. Excellent craftsmanship and attention to detail throughout.',
-    service: 'Geometric Vinyl Design',
+    text: 'Contemporary geometric vinyl flooring exceeded our expectations. The bold pattern perfectly complements our modern kitchen. Excellent craftsmanship and attention to detail.',
+    service: 'Contemporary Geometric Vinyl',
     image: '/7.jpg',
     projectImage: '/7.jpg',
     color: '#059669',
     gradient: 'from-emerald-600 to-green-600',
     verified: true,
     completionDate: 'May 2024',
-    projectValue: '£3,100'
+    projectValue: '£2,500'
   },
   {
     id: 8,
     name: 'Mark Davies',
     location: 'Birmingham, England',
     rating: 5,
-    text: 'Beautiful herringbone luxury vinyl that transformed our space completely. The pattern is stunning and the quality is exceptional. Couldn\'t be happier with the results.',
+    text: 'Beautiful herringbone luxury vinyl transformed our space completely. The classic pattern is stunning and the quality is exceptional. Couldn\'t be happier with the results.',
     service: 'Herringbone Luxury Vinyl',
     image: '/8.jpg',
     projectImage: '/8.jpg',
@@ -138,111 +139,6 @@ const reviews: Review[] = [
     verified: true,
     completionDate: 'April 2024',
     projectValue: '£1,900'
-  },
-  {
-    id: 9,
-    name: 'Sophie Turner',
-    location: 'Birmingham, England',
-    rating: 5,
-    text: 'Elegant parquet pattern flooring looks absolutely perfect! The timeless design adds such sophistication to our home. Professional installation and excellent customer service.',
-    service: 'Parquet Pattern Flooring',
-    image: '/9.jpg',
-    projectImage: '/9.jpg',
-    color: '#1E40AF',
-    gradient: 'from-blue-700 to-indigo-700',
-    verified: true,
-    completionDate: 'March 2024',
-    projectValue: '£2,300'
-  },
-  {
-    id: 10,
-    name: 'Andrew Clark',
-    location: 'Birmingham, England',
-    rating: 5,
-    text: 'Professional room carpet installation was flawless. The precision fitting and attention to detail creates such a luxurious finish. Expert workmanship and great value for money.',
-    service: 'Professional Room Installation',
-    image: '/10.jpg',
-    projectImage: '/10.jpg',
-    color: '#7C2D12',
-    gradient: 'from-orange-800 to-amber-700',
-    verified: true,
-    completionDate: 'February 2024',
-    projectValue: '£3,400'
-  },
-  {
-    id: 11,
-    name: 'Catherine Williams',
-    location: 'Birmingham, England',
-    rating: 5,
-    text: 'Elegant staircase runner installation exceeded all expectations. The border design is stunning and the professional finish is immaculate. Absolutely love the transformation!',
-    service: 'Elegant Staircase Runner',
-    image: '/16.jpg',
-    projectImage: '/16.jpg',
-    color: '#1F2937',
-    gradient: 'from-gray-800 to-slate-700',
-    verified: true,
-    completionDate: 'January 2024',
-    projectValue: '£2,900'
-  },
-  {
-    id: 12,
-    name: 'Robert Taylor',
-    location: 'Birmingham, England',
-    rating: 5,
-    text: 'Luxury room carpeting installation was perfect from start to finish. The comfort and quality are exceptional. Professional team and excellent customer service throughout.',
-    service: 'Luxury Room Carpeting',
-    image: '/17.jpg',
-    projectImage: '/17.jpg',
-    color: '#4338CA',
-    gradient: 'from-indigo-700 to-blue-700',
-    verified: true,
-    completionDate: 'December 2023',
-    projectValue: '£2,500'
-  },
-  {
-    id: 13,
-    name: 'Helen Brown',
-    location: 'Birmingham, England',
-    rating: 5,
-    text: 'Decorative tile pattern vinyl flooring is absolutely stunning! The intricate design brings such character to our kitchen. Expert installation and beautiful finish throughout.',
-    service: 'Decorative Tile Pattern',
-    image: '/18.jpg',
-    projectImage: '/18.jpg',
-    color: '#374151',
-    gradient: 'from-gray-700 to-gray-600',
-    verified: true,
-    completionDate: 'November 2023',
-    projectValue: '£2,200'
-  },
-  {
-    id: 14,
-    name: 'Peter Davis',
-    location: 'Birmingham, England',
-    rating: 5,
-    text: 'Premium wood effect vinyl looks incredibly authentic! The grain patterns are so realistic and the durability is excellent. Professional installation and great value.',
-    service: 'Premium Wood Effect',
-    image: '/20.jpg',
-    projectImage: '/20.jpg',
-    color: '#92400E',
-    gradient: 'from-amber-700 to-yellow-700',
-    verified: true,
-    completionDate: 'October 2023',
-    projectValue: '£3,800'
-  },
-  {
-    id: 15,
-    name: 'Jennifer Wilson',
-    location: 'Birmingham, England',
-    rating: 5,
-    text: 'Living room transformation is absolutely perfect! The complete installation was flawless and the premium materials are exceptional. Couldn\'t be happier with the results.',
-    service: 'Living Room Perfection',
-    image: '/49.jpg',
-    projectImage: '/49.jpg',
-    color: '#6B7280',
-    gradient: 'from-gray-500 to-gray-600',
-    verified: true,
-    completionDate: 'September 2023',
-    projectValue: '£4,100'
   }
 ];
 
@@ -358,7 +254,7 @@ const Reviews = () => {
             Customer <span className="bg-gradient-to-r from-purple-400 to-indigo-600 bg-clip-text text-transparent">Reviews</span>
           </h2>
           <p className="text-lg sm:text-xl text-white/70 max-w-3xl mx-auto leading-relaxed">
-            See what our 15 satisfied customers have to say about our premium flooring services across Birmingham
+            See what our 8 satisfied customers have to say about our premium flooring services across Birmingham
           </p>
         </motion.div>
 
@@ -618,9 +514,9 @@ const Reviews = () => {
                   {/* Separator */}
                   <div className="w-px h-6 bg-white/30" />
                   
-                  {/* Dots navigation - Show first 10 dots */}
+                  {/* Dots navigation - All 8 reviews */}
                   <div className="flex items-center space-x-2">
-                    {reviews.slice(0, 10).map((_, index) => (
+                    {reviews.map((_, index) => (
                       <motion.button
                         key={index}
                         onClick={() => {
@@ -651,9 +547,6 @@ const Reviews = () => {
                         )}
                       </motion.button>
                     ))}
-                    {reviews.length > 10 && (
-                      <span className="text-white/60 text-sm ml-2">+{reviews.length - 10}</span>
-                    )}
                   </div>
                 </div>
               </div>

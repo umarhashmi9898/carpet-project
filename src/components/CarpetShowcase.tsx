@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Star, Award, Palette, Home, ChevronLeft, ChevronRight, Eye, ArrowRight } from 'lucide-react';
 
+// OPTIMIZED CARPET COLLECTIONS - REMOVED DUPLICATES, ORGANIZED BY TYPE
 const carpetCollections = [
   {
     id: 1,
@@ -10,108 +11,86 @@ const carpetCollections = [
     image: '/1.jpg',
     price: 'From £55/m²',
     features: ['Stain Resistant', 'Ultra Soft', 'Sound Dampening', 'Easy Care'],
-    description: 'Experience ultimate luxury with our premium staircase carpet collection, featuring rich textures and superior comfort.',
+    description: 'Experience ultimate luxury with our premium black staircase carpet featuring elegant border trim and superior comfort.',
     color: '#8B5CF6',
     gradient: 'from-purple-500 to-indigo-600'
   },
   {
     id: 2,
-    name: 'Elegant Stairway Design',
-    category: 'Staircase Carpeting',
+    name: 'Blue-Grey Room Carpet',
+    category: 'Room Carpeting',
     image: '/2.jpg',
-    price: 'From £55/m²',
-    features: ['Luxury Pile', 'Fade Resistant', 'Durable', 'Premium Quality'],
-    description: 'Make a bold statement with our elegant stairway carpet collection, perfect for creating warm and inviting spaces.',
-    color: '#EF4444',
-    gradient: 'from-red-500 to-pink-600'
-  },
-  {
-    id: 3,
-    name: 'Modern Staircase Style',
-    category: 'Staircase Carpeting',
-    image: '/3.jpg',
-    price: 'From £55/m²',
-    features: ['Modern Design', 'Soft Touch', 'Long Lasting', 'Easy Maintenance'],
-    description: 'Contemporary styling meets traditional comfort in our modern staircase carpet range.',
-    color: '#7C3AED',
-    gradient: 'from-violet-500 to-purple-600'
-  },
-  {
-    id: 4,
-    name: 'Classic Stairway Excellence',
-    category: 'Staircase Carpeting',
-    image: '/4.jpg',
-    price: 'From £60/m²',
-    features: ['Classic Style', 'Rich Texture', 'Comfort Plus', 'Quality Assured'],
-    description: 'Timeless elegance with our classic stairway carpet collection, bringing sophistication to any home.',
-    color: '#DC2626',
-    gradient: 'from-red-600 to-rose-600'
-  },
-  {
-    id: 5,
-    name: 'Luxury Laminate Staircase',
-    category: 'Laminate Staircase',
-    image: '/5.jpg',
-    price: 'From £65/m²',
-    features: ['Wood Effect', 'Water Resistant', 'Durable Finish', 'Premium Install'],
-    description: 'Revolutionary laminate staircase installation combining the beauty of wood with superior durability.',
+    price: 'From £42/m²',
+    features: ['Premium Comfort', 'Fade Resistant', 'Durable', 'Premium Quality'],
+    description: 'Transform your living spaces with our premium blue-grey carpet offering exceptional comfort and style.',
     color: '#10B981',
     gradient: 'from-emerald-500 to-teal-600'
   },
   {
+    id: 3,
+    name: 'Geometric Vinyl Pattern',
+    category: 'Designer Vinyl',
+    image: '/3.jpg',
+    price: 'From £48/m²',
+    features: ['Bold Design', 'Water Resistant', 'Easy Clean', 'Modern Style'],
+    description: 'Stunning geometric vinyl patterns that create bold, contemporary statements in any space.',
+    color: '#F59E0B',
+    gradient: 'from-amber-500 to-orange-600'
+  },
+  {
+    id: 4,
+    name: 'Grey Wood Laminate',
+    category: 'Luxury Vinyl',
+    image: '/4.jpg',
+    price: 'From £45/m²',
+    features: ['Wood Effect', 'Realistic Grain', 'Durable Finish', 'Easy Install'],
+    description: 'Authentic grey wood effect laminate combining the beauty of natural wood with superior durability.',
+    color: '#EF4444',
+    gradient: 'from-red-500 to-pink-600'
+  },
+  {
+    id: 5,
+    name: 'Dark Wood Living Room',
+    category: 'Luxury Vinyl',
+    image: '/5.jpg',
+    price: 'From £50/m²',
+    features: ['Rich Finish', 'Traditional Look', 'Premium Install', 'Long Lasting'],
+    description: 'Rich dark wood effect flooring perfect for traditional living spaces with fireplaces.',
+    color: '#3B82F6',
+    gradient: 'from-blue-500 to-indigo-600'
+  },
+  {
     id: 6,
-    name: 'Premium Room Carpeting',
+    name: 'Luxury Bedroom Carpet',
     category: 'Room Carpeting',
     image: '/6.jpg',
     price: 'From £40/m²',
-    features: ['Luxury Comfort', 'Stain Resistant', 'Easy Care', 'Premium Quality'],
-    description: 'Transform your living spaces with our premium room carpeting offering ultimate comfort and style.',
+    features: ['Ultimate Comfort', 'Soft Touch', 'Quality Assured', 'Professional'],
+    description: 'Premium bedroom carpeting offering ultimate comfort and elegant style for peaceful spaces.',
     color: '#7C3AED',
     gradient: 'from-violet-500 to-purple-600'
   },
   {
     id: 7,
-    name: 'Geometric Vinyl Design',
+    name: 'Contemporary Kitchen Vinyl',
     category: 'Designer Vinyl',
     image: '/7.jpg',
-    price: 'From £45/m²',
-    features: ['Bold Patterns', 'Water Resistant', 'Easy Install', 'Modern Style'],
-    description: 'Stunning geometric vinyl patterns that create bold, contemporary statements in any space.',
+    price: 'From £52/m²',
+    features: ['Geometric Pattern', 'Water Resistant', 'Easy Maintenance', 'Bold Style'],
+    description: 'Bold geometric vinyl patterns perfect for creating stunning focal points in kitchen spaces.',
     color: '#059669',
     gradient: 'from-emerald-600 to-green-600'
   },
   {
     id: 8,
-    name: 'Herringbone Luxury',
+    name: 'Herringbone Luxury Vinyl',
     category: 'Luxury Vinyl',
     image: '/8.jpg',
-    price: 'From £50/m²',
-    features: ['Classic Pattern', 'Premium Finish', 'Durable', 'Elegant Design'],
-    description: 'Elegant herringbone pattern flooring combining classic design with modern durability.',
+    price: 'From £55/m²',
+    features: ['Classic Pattern', 'Premium Quality', 'Elegant Design', 'Expert Install'],
+    description: 'Elegant herringbone pattern luxury vinyl combining classic design with modern durability.',
     color: '#DC2626',
     gradient: 'from-red-600 to-rose-600'
-  },
-  {
-    id: 9,
-    name: 'Parquet Perfection',
-    category: 'Luxury Vinyl',
-    image: '/9.jpg',
-    price: 'From £55/m²',
-    features: ['Parquet Style', 'Premium Quality', 'Easy Maintenance', 'Timeless'],
-    description: 'Beautiful parquet-style vinyl flooring bringing timeless elegance to contemporary homes.',
-    color: '#1E40AF',
-    gradient: 'from-blue-700 to-indigo-700'
-  },
-  {
-    id: 10,
-    name: 'Professional Room Install',
-    category: 'Room Carpeting',
-    image: '/10.jpg',
-    price: 'From £45/m²',
-    features: ['Expert Install', 'Quality Carpet', 'Perfect Finish', 'Professional'],
-    description: 'Professional room carpet installation with precision fitting and attention to every detail.',
-    color: '#7C2D12',
-    gradient: 'from-orange-800 to-amber-700'
   }
 ];
 
@@ -194,7 +173,7 @@ const CarpetShowcase = () => {
             Premium <span className="bg-gradient-to-r from-purple-400 to-indigo-600 bg-clip-text text-transparent">Flooring Collections</span>
           </h2>
           <p className="text-lg sm:text-xl text-white/70 max-w-3xl mx-auto leading-relaxed">
-            Explore our complete range of 10 premium flooring solutions, each designed to bring luxury and comfort to your home
+            Explore our curated range of 8 premium flooring solutions, each designed to bring luxury and comfort to your home
           </p>
         </motion.div>
 
@@ -417,9 +396,9 @@ const CarpetShowcase = () => {
         >
           <div className="bg-black/80 backdrop-blur-2xl rounded-2xl px-6 py-4 border border-white/20 shadow-2xl">
             <div className="flex items-center space-x-4">
-              {/* Dots navigation - Show first 10 dots */}
+              {/* Dots navigation - All 8 collections */}
               <div className="flex items-center space-x-2">
-                {carpetCollections.slice(0, 10).map((_, index) => (
+                {carpetCollections.map((_, index) => (
                   <motion.button
                     key={index}
                     onClick={() => {
@@ -449,9 +428,6 @@ const CarpetShowcase = () => {
                     )}
                   </motion.button>
                 ))}
-                {carpetCollections.length > 10 && (
-                  <span className="text-white/60 text-sm ml-2">+{carpetCollections.length - 10}</span>
-                )}
               </div>
             </div>
           </div>
@@ -466,14 +442,14 @@ const CarpetShowcase = () => {
           viewport={{ once: true }}
         >
           <motion.a
-            href="https://wa.me/447949087460?text=I'd like to explore your complete flooring collection of 10 premium options"
+            href="https://wa.me/447949087460?text=I'd like to explore your complete flooring collection of 8 premium options"
             className="group inline-flex items-center space-x-3 bg-gradient-to-r from-purple-500 to-indigo-600 text-white px-8 sm:px-10 py-4 sm:py-5 rounded-2xl font-bold text-lg sm:text-xl shadow-2xl hover:shadow-purple-500/25 transition-all relative overflow-hidden"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.98 }}
           >
             <div className="absolute inset-0 bg-gradient-to-r from-purple-400 to-indigo-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             <Home className="w-5 h-5 sm:w-6 sm:h-6 relative z-10" />
-            <span className="relative z-10">Explore All 10 Collections</span>
+            <span className="relative z-10">Explore All 8 Collections</span>
             <motion.div
               className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -skew-x-12"
               initial={{ x: '-100%' }}

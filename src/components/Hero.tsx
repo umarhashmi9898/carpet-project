@@ -4,6 +4,7 @@ import { ArrowRight, Star, MapPin, Clock, Phone, Sparkles, Award, Shield, Chevro
 import { gsap } from 'gsap';
 import LoadingScreen from './LoadingScreen';
 
+// OPTIMIZED LUXURY FLOORING IMAGES - REMOVED DUPLICATES, ORGANIZED BY TYPE
 const luxuryFlooringImages = [
   { 
     id: 1, 
@@ -14,73 +15,73 @@ const luxuryFlooringImages = [
     price: "From £55/m²",
     color: "#8B5CF6",
     gradient: "from-purple-500 to-indigo-600",
-    description: "Transform your staircase with our premium carpet collection featuring luxury textures and superior comfort."
+    description: "Transform your staircase with our premium black carpet featuring elegant border trim and superior comfort."
   },
   { 
     id: 2, 
     img: "/2.jpg",
-    title: "Elegant Stairway",
+    title: "Blue-Grey Room Carpet",
     subtitle: "Professional Installation",
-    category: "Staircase Carpeting",
-    price: "From £55/m²",
+    category: "Room Carpeting",
+    price: "From £42/m²",
     color: "#10B981",
     gradient: "from-emerald-500 to-teal-600",
-    description: "Experience professional staircase carpeting with precision installation and premium materials."
+    description: "Experience professional room carpeting with premium blue-grey materials and precision installation."
   },
   { 
     id: 3, 
     img: "/3.jpg",
-    title: "Modern Staircase",
+    title: "Geometric Vinyl Pattern",
     subtitle: "Contemporary Design",
-    category: "Staircase Carpeting",
-    price: "From £55/m²",
+    category: "Designer Vinyl",
+    price: "From £48/m²",
     color: "#F59E0B",
     gradient: "from-amber-500 to-orange-600",
-    description: "Discover our contemporary staircase carpeting offering style, comfort, and unmatched durability."
+    description: "Discover our stunning geometric vinyl patterns offering bold style and unmatched durability."
   },
   { 
     id: 4, 
     img: "/4.jpg",
-    title: "Classic Stairway",
+    title: "Grey Wood Laminate",
     subtitle: "Traditional Excellence",
-    category: "Staircase Carpeting",
-    price: "From £60/m²",
+    category: "Luxury Vinyl",
+    price: "From £45/m²",
     color: "#EF4444",
     gradient: "from-red-500 to-pink-600",
-    description: "Create the perfect staircase with our classic carpet solutions designed for ultimate comfort and style."
+    description: "Create the perfect flooring with our grey wood effect laminate designed for ultimate comfort and style."
   },
   { 
     id: 5, 
     img: "/5.jpg",
-    title: "Luxury Laminate Stairs",
+    title: "Dark Wood Living Room",
     subtitle: "Premium Wood Effect",
-    category: "Laminate Staircase",
-    price: "From £65/m²",
+    category: "Luxury Vinyl",
+    price: "From £50/m²",
     color: "#3B82F6",
     gradient: "from-blue-500 to-indigo-600",
-    description: "Revolutionary laminate staircase installation combining the beauty of wood with superior durability."
+    description: "Rich dark wood effect flooring combining the beauty of traditional wood with superior durability."
   },
   { 
     id: 6, 
     img: "/6.jpg",
-    title: "Premium Room Carpeting",
-    subtitle: "Luxury Living Spaces",
+    title: "Luxury Bedroom Carpet",
+    subtitle: "Premium Comfort",
     category: "Room Carpeting",
     price: "From £40/m²",
     color: "#7C3AED",
     gradient: "from-violet-500 to-purple-600",
-    description: "Transform your living spaces with our premium room carpeting offering ultimate comfort and style."
+    description: "Transform your bedroom with our luxury carpet offering ultimate comfort and elegant style."
   },
   { 
     id: 7, 
     img: "/7.jpg",
-    title: "Geometric Vinyl Design",
+    title: "Kitchen Geometric Vinyl",
     subtitle: "Modern Pattern Flooring",
     category: "Designer Vinyl",
-    price: "From £45/m²",
+    price: "From £52/m²",
     color: "#059669",
     gradient: "from-emerald-600 to-green-600",
-    description: "Stunning geometric vinyl patterns that create bold, contemporary statements in any space."
+    description: "Bold geometric vinyl patterns that create stunning, contemporary statements in kitchen spaces."
   },
   { 
     id: 8, 
@@ -88,32 +89,10 @@ const luxuryFlooringImages = [
     title: "Herringbone Luxury",
     subtitle: "Premium Pattern Design",
     category: "Luxury Vinyl",
-    price: "From £50/m²",
+    price: "From £55/m²",
     color: "#DC2626",
     gradient: "from-red-600 to-rose-600",
-    description: "Elegant herringbone pattern flooring combining classic design with modern durability."
-  },
-  { 
-    id: 9, 
-    img: "/9.jpg",
-    title: "Parquet Perfection",
-    subtitle: "Traditional Elegance",
-    category: "Luxury Vinyl",
-    price: "From £55/m²",
-    color: "#1E40AF",
-    gradient: "from-blue-700 to-indigo-700",
-    description: "Beautiful parquet-style vinyl flooring bringing timeless elegance to contemporary homes."
-  },
-  { 
-    id: 10, 
-    img: "/10.jpg",
-    title: "Professional Room Install",
-    subtitle: "Expert Carpet Fitting",
-    category: "Room Carpeting",
-    price: "From £45/m²",
-    color: "#7C2D12",
-    gradient: "from-orange-800 to-amber-700",
-    description: "Professional room carpet installation with precision fitting and attention to every detail."
+    description: "Elegant herringbone pattern flooring combining classic design with modern durability and style."
   }
 ];
 
@@ -473,9 +452,9 @@ const MobileOptimized3DCarousel = ({ images }: { images: typeof luxuryFlooringIm
             {/* SEPARATOR */}
             <div className="w-px h-4 sm:h-5 bg-white/30" />
             
-            {/* DOTS - MOBILE RESPONSIVE - SHOW FIRST 10 */}
+            {/* DOTS - MOBILE RESPONSIVE - ALL 8 IMAGES */}
             <div className="flex items-center space-x-1 sm:space-x-1.5">
-              {images.slice(0, 10).map((_, index) => (
+              {images.map((_, index) => (
                 <motion.button
                   key={index}
                   onClick={() => goToSlide(index)}
@@ -499,9 +478,6 @@ const MobileOptimized3DCarousel = ({ images }: { images: typeof luxuryFlooringIm
                   )}
                 </motion.button>
               ))}
-              {images.length > 10 && (
-                <span className="text-white/60 text-xs">+{images.length - 10}</span>
-              )}
             </div>
           </div>
         </div>

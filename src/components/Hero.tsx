@@ -12,7 +12,6 @@ const luxuryFlooringImages = [
     title: "Premium Staircase",
     subtitle: "Luxury Carpet Installation",
     category: "Staircase Carpeting",
-    price: "From £55/m²",
     color: "#8B5CF6",
     gradient: "from-purple-500 to-indigo-600",
     description: "Transform your staircase with our premium black carpet featuring elegant border trim and superior comfort."
@@ -23,7 +22,6 @@ const luxuryFlooringImages = [
     title: "Blue-Grey Room Carpet",
     subtitle: "Professional Installation",
     category: "Room Carpeting",
-    price: "From £42/m²",
     color: "#10B981",
     gradient: "from-emerald-500 to-teal-600",
     description: "Experience professional room carpeting with premium blue-grey materials and precision installation."
@@ -34,7 +32,6 @@ const luxuryFlooringImages = [
     title: "Geometric Vinyl Pattern",
     subtitle: "Contemporary Design",
     category: "Designer Vinyl",
-    price: "From £48/m²",
     color: "#F59E0B",
     gradient: "from-amber-500 to-orange-600",
     description: "Discover our stunning geometric vinyl patterns offering bold style and unmatched durability."
@@ -45,7 +42,6 @@ const luxuryFlooringImages = [
     title: "Grey Wood Laminate",
     subtitle: "Traditional Excellence",
     category: "Luxury Vinyl",
-    price: "From £45/m²",
     color: "#EF4444",
     gradient: "from-red-500 to-pink-600",
     description: "Create the perfect flooring with our grey wood effect laminate designed for ultimate comfort and style."
@@ -56,7 +52,6 @@ const luxuryFlooringImages = [
     title: "Dark Wood Living Room",
     subtitle: "Premium Wood Effect",
     category: "Luxury Vinyl",
-    price: "From £50/m²",
     color: "#3B82F6",
     gradient: "from-blue-500 to-indigo-600",
     description: "Rich dark wood effect flooring combining the beauty of traditional wood with superior durability."
@@ -67,7 +62,6 @@ const luxuryFlooringImages = [
     title: "Luxury Bedroom Carpet",
     subtitle: "Premium Comfort",
     category: "Room Carpeting",
-    price: "From £40/m²",
     color: "#7C3AED",
     gradient: "from-violet-500 to-purple-600",
     description: "Transform your bedroom with our luxury carpet offering ultimate comfort and elegant style."
@@ -78,7 +72,6 @@ const luxuryFlooringImages = [
     title: "Kitchen Geometric Vinyl",
     subtitle: "Modern Pattern Flooring",
     category: "Designer Vinyl",
-    price: "From £52/m²",
     color: "#059669",
     gradient: "from-emerald-600 to-green-600",
     description: "Bold geometric vinyl patterns that create stunning, contemporary statements in kitchen spaces."
@@ -89,7 +82,6 @@ const luxuryFlooringImages = [
     title: "Herringbone Luxury",
     subtitle: "Premium Pattern Design",
     category: "Luxury Vinyl",
-    price: "From £55/m²",
     color: "#DC2626",
     gradient: "from-red-600 to-rose-600",
     description: "Elegant herringbone pattern flooring combining classic design with modern durability and style."
@@ -298,7 +290,7 @@ const MobileOptimized3DCarousel = ({ images }: { images: typeof luxuryFlooringIm
             </motion.div>
           </div>
           
-          {/* CONTENT SECTION - MOBILE RESPONSIVE */}
+          {/* CONTENT SECTION - MOBILE RESPONSIVE - REMOVED PRICE */}
           <div className="relative h-[35%] p-3 sm:p-5 bg-gradient-to-r from-black/70 to-black/50 backdrop-blur-sm">
             <AnimatePresence mode="wait">
               <motion.div
@@ -319,25 +311,23 @@ const MobileOptimized3DCarousel = ({ images }: { images: typeof luxuryFlooringIm
                   </p>
                 </div>
                 
-                {/* BOTTOM ROW - MOBILE RESPONSIVE */}
+                {/* BOTTOM ROW - MOBILE RESPONSIVE - REMOVED PRICE */}
                 <div className="flex items-end justify-between mt-2 sm:mt-3">
                   <div className="space-y-0.5 sm:space-y-1">
                     <p className="text-gray-400 text-xs">{currentImage.subtitle}</p>
-                    <span
-                      className="text-base sm:text-lg font-bold"
-                      style={{ color: currentImage.color }}
-                    >
-                      {currentImage.price}
+                    <span className="text-sm text-white/80 font-medium">
+                      Premium Quality
                     </span>
                   </div>
                   
-                  <motion.button
+                  <motion.a
+                    href="http://wa.me/+447949087460"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                     className={`px-3 sm:px-4 py-1.5 sm:py-2 text-white text-xs rounded-lg font-semibold shadow-lg transition-all bg-gradient-to-r ${currentImage.gradient}`}
                   >
                     Get Quote
-                  </motion.button>
+                  </motion.a>
                 </div>
               </motion.div>
             </AnimatePresence>

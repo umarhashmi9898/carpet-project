@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Home, Layers, Palette, ArrowRight, Star, Award, CheckCircle } from 'lucide-react';
+import { Home, Layers, Palette, ArrowRight, Star, Award, CheckCircle, Hammer } from 'lucide-react';
 
-// OPTIMIZED SERVICES - UPDATED TO MATCH ACTUAL IMAGE CONTENT - REMOVED PRICES
+// EXACT SERVICES MATCHING PROVIDED MENU NAMES
 const services = [
   {
-    icon: Home,
-    title: 'Premium Carpet',
-    description: 'Luxurious carpets that combine comfort with elegance, perfect for any room in your home.',
-    features: ['Stain Resistant', 'Luxury Textures', 'Sound Dampening', 'Easy Maintenance'],
-    image: '/6.jpg', // Luxury bedroom carpet
+    icon: Hammer,
+    title: 'Stairs',
+    description: 'Professional staircase carpeting and flooring solutions with premium materials and expert installation.',
+    features: ['Professional Installation', 'Premium Materials', 'Safety Focused', 'Custom Fitting'],
+    image: '/Combi stairs.jpg',
     gradient: 'from-purple-500 to-indigo-600',
     subtitle: 'Professional Installation',
     iconBg: 'from-purple-500/20 to-indigo-500/20',
@@ -17,25 +17,36 @@ const services = [
   },
   {
     icon: Layers,
-    title: 'Designer Vinyl',
-    description: 'Stunning designer vinyl flooring with geometric patterns and luxury finishes for modern spaces.',
-    features: ['Water Resistant', 'Pattern Designs', 'Easy Installation', 'Long Lasting'],
-    image: '/3.jpg', // Geometric pattern vinyl
+    title: 'Laminate Flooring',
+    description: 'Premium laminate flooring including Torros color collection with authentic wood effects and superior durability.',
+    features: ['Wood Effect Finish', 'Durable Surface', 'Easy Maintenance', 'Professional Install'],
+    image: '/Laminate colour torros.jpg',
     gradient: 'from-emerald-500 to-teal-600',
-    subtitle: 'Professional Installation',
+    subtitle: 'Premium Wood Effect',
     iconBg: 'from-emerald-500/20 to-teal-500/20',
     borderColor: 'border-emerald-500/30'
   },
   {
     icon: Palette,
-    title: 'Luxury Vinyl',
-    description: 'Premium luxury vinyl with herringbone and parquet patterns offering style and practicality.',
-    features: ['Luxury Patterns', 'Easy Clean', 'Comfort Underfoot', 'Design Variety'],
-    image: '/8.jpg', // Herringbone luxury vinyl
+    title: 'Vinyl Flooring',
+    description: 'Luxury vinyl flooring including herringbone patterns and premium vinyl collections for modern spaces.',
+    features: ['Pattern Designs', 'Water Resistant', 'Luxury Finish', 'Contemporary Style'],
+    image: '/Herringbone pattern vinyl.jpg',
     gradient: 'from-amber-500 to-orange-600',
-    subtitle: 'Professional Installation',
+    subtitle: 'Luxury Patterns',
     iconBg: 'from-amber-500/20 to-orange-500/20',
     borderColor: 'border-amber-500/30'
+  },
+  {
+    icon: Home,
+    title: 'Carpets',
+    description: 'Luxury carpet collection including blue, ivory, and stain-free Englewood Beige options for ultimate comfort.',
+    features: ['Luxury Textures', 'Stain Resistant', 'Ultimate Comfort', 'Premium Quality'],
+    image: '/Luxury blue carpet.jpg',
+    gradient: 'from-blue-500 to-indigo-600',
+    subtitle: 'Luxury Collection',
+    iconBg: 'from-blue-500/20 to-indigo-500/20',
+    borderColor: 'border-blue-500/30'
   }
 ];
 
@@ -88,7 +99,7 @@ const Services = () => {
             Our <span className="bg-gradient-to-r from-purple-400 to-indigo-600 bg-clip-text text-transparent">Expertise</span>
           </h2>
           <p className="text-lg sm:text-xl text-white/70 max-w-3xl mx-auto leading-relaxed">
-            Discover our comprehensive range of premium flooring solutions designed to transform your space
+            Discover our comprehensive range of premium flooring solutions: Stairs, Laminate, Vinyl, and Carpets
           </p>
         </motion.div>
 
@@ -108,7 +119,7 @@ const Services = () => {
               <motion.div 
                 className={`absolute inset-0 rounded-3xl opacity-30 transition-all duration-1000 p-[1px]`}
                 animate={{
-                  background: `linear-gradient(135deg, ${services[activeService].gradient.includes('purple') ? '#8B5CF6' : services[activeService].gradient.includes('emerald') ? '#10B981' : '#F59E0B'}40, transparent, ${services[activeService].gradient.includes('purple') ? '#8B5CF6' : services[activeService].gradient.includes('emerald') ? '#10B981' : '#F59E0B'}30)`,
+                  background: `linear-gradient(135deg, ${services[activeService].gradient.includes('purple') ? '#8B5CF6' : services[activeService].gradient.includes('emerald') ? '#10B981' : services[activeService].gradient.includes('amber') ? '#F59E0B' : '#3B82F6'}40, transparent, ${services[activeService].gradient.includes('purple') ? '#8B5CF6' : services[activeService].gradient.includes('emerald') ? '#10B981' : services[activeService].gradient.includes('amber') ? '#F59E0B' : '#3B82F6'}30)`,
                 }}
               >
                 <div className="w-full h-full bg-gradient-to-br from-black/90 via-gray-900/90 to-black/90 rounded-3xl" />
@@ -200,7 +211,7 @@ const Services = () => {
             </motion.div>
           </div>
 
-          {/* Enhanced Tab Navigation - NOW ON RIGHT - REMOVED PRICES */}
+          {/* Enhanced Tab Navigation - NOW ON RIGHT */}
           <div className="lg:w-1/3 space-y-4 order-1 lg:order-2">
             {services.map((service, index) => (
               <motion.button
@@ -286,7 +297,7 @@ const Services = () => {
                     </motion.div>
                   </div>
 
-                  {/* Quality Indicator - REPLACED PRICE */}
+                  {/* Quality Indicator */}
                   <div className="flex items-center justify-between">
                     <span className={`text-sm font-medium transition-colors duration-300 ${
                       activeService === index ? 'text-white/70' : 'text-white/50 group-hover:text-white/70'

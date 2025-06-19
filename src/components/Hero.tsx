@@ -4,7 +4,7 @@ import { ArrowRight, Star, MapPin, Clock, Phone, Sparkles, Award, Shield, Chevro
 import { gsap } from 'gsap';
 import LoadingScreen from './LoadingScreen';
 
-// CORRECT LUXURY FLOORING IMAGES BASED ON PROVIDED MENU NAMES
+// EXACT MENUS AND IMAGES AS PROVIDED
 const luxuryFlooringImages = [
   { 
     id: 1, 
@@ -38,53 +38,73 @@ const luxuryFlooringImages = [
   },
   { 
     id: 4, 
+    img: "/Herringbone pattern vinyle.jpg",
+    title: "Herringbone Pattern Vinyl (Alternative)",
+    subtitle: "Contemporary Design",
+    category: "Vinyl Flooring",
+    color: "#EF4444",
+    gradient: "from-red-500 to-pink-600",
+    description: "Alternative herringbone vinyl pattern with premium quality and modern appeal."
+  },
+  { 
+    id: 5, 
     img: "/Vinyl.jpg",
     title: "Premium Vinyl Flooring",
     subtitle: "Modern Design",
     category: "Vinyl Flooring",
-    color: "#EF4444",
-    gradient: "from-red-500 to-pink-600",
-    description: "Create the perfect flooring with our premium vinyl designed for ultimate comfort and style."
+    color: "#3B82F6",
+    gradient: "from-blue-500 to-indigo-600",
+    description: "Premium vinyl flooring designed for ultimate comfort and contemporary style."
   },
   { 
-    id: 5, 
+    id: 6, 
     img: "/Luxury vinyl.jpg",
     title: "Luxury Vinyl Collection",
     subtitle: "Premium Quality",
     category: "Vinyl Flooring",
-    color: "#3B82F6",
-    gradient: "from-blue-500 to-indigo-600",
+    color: "#7C3AED",
+    gradient: "from-violet-500 to-purple-600",
     description: "Luxury vinyl flooring combining elegant design with superior durability and modern appeal."
   },
   { 
-    id: 6, 
+    id: 7, 
     img: "/Luxury blue carpet.jpg",
     title: "Luxury Blue Carpet",
     subtitle: "Premium Comfort",
     category: "Carpets",
-    color: "#7C3AED",
-    gradient: "from-violet-500 to-purple-600",
+    color: "#059669",
+    gradient: "from-emerald-600 to-green-600",
     description: "Transform your space with our luxury blue carpet offering ultimate comfort and elegant style."
   },
   { 
-    id: 7, 
+    id: 8, 
     img: "/Luxury carpet ivory colour.jpg",
     title: "Luxury Ivory Carpet",
     subtitle: "Elegant Design",
     category: "Carpets",
-    color: "#059669",
-    gradient: "from-emerald-600 to-green-600",
+    color: "#DC2626",
+    gradient: "from-red-600 to-rose-600",
     description: "Premium ivory carpet that creates stunning, sophisticated statements in any space."
   },
   { 
-    id: 8, 
+    id: 9, 
     img: "/Stain free Englewood Beige carpet.jpg",
     title: "Stain Free Englewood Beige",
     subtitle: "Advanced Protection",
     category: "Carpets",
-    color: "#DC2626",
-    gradient: "from-red-600 to-rose-600",
+    color: "#F59E0B",
+    gradient: "from-amber-500 to-orange-600",
     description: "Advanced stain-free carpet in elegant Englewood Beige combining protection with luxury style."
+  },
+  { 
+    id: 10, 
+    img: "/Soundproof plush walk underlay.jpg",
+    title: "Soundproof Plush Walk Underlay",
+    subtitle: "Premium Foundation",
+    category: "Underlay",
+    color: "#8B5CF6",
+    gradient: "from-purple-500 to-indigo-600",
+    description: "Professional soundproof underlay providing superior comfort and noise reduction for any flooring."
   }
 ];
 
@@ -436,7 +456,7 @@ const MobileOptimized3DCarousel = ({ images }: { images: typeof luxuryFlooringIm
               </motion.button>
             </div>
             
-            {/* DOTS - MOBILE RESPONSIVE - ALL 8 IMAGES */}
+            {/* DOTS - MOBILE RESPONSIVE - ALL 10 IMAGES */}
             <div className="flex items-center space-x-1 sm:space-x-1.5">
               {images.map((_, index) => (
                 <motion.button
@@ -629,7 +649,7 @@ const Hero = () => {
                     </span>
                   </p>
                   <p className="text-base sm:text-lg text-white/80 leading-relaxed max-w-2xl mx-auto xl:mx-0 px-4 sm:px-0">
-                    Transform your home with premium carpet, laminate, and designer vinyl flooring solutions.
+                    Transform your home with premium stairs, laminate, vinyl, carpets, and underlay solutions.
                   </p>
                 </div>
               </div>

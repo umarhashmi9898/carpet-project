@@ -13,168 +13,76 @@ const WhatsAppIcon = ({ className = "w-5 h-5" }: { className?: string }) => (
   </svg>
 );
 
-// REAL IMAGES FROM FILE SYSTEM WITH PROPER MENU NAMES
+// EXACT IMAGES FROM PROVIDED MENU NAMES
 const galleryImages = [
   // STAIRS
   {
-    src: '/stair 1.jpg',
+    src: '/Combi stairs.jpg',
     title: 'Premium Staircase Installation',
     category: 'Stairs',
     description: 'Professional staircase carpeting with elegant design and superior comfort'
   },
-  {
-    src: '/stair 2.jpg',
-    title: 'Luxury Stair Runner',
-    category: 'Stairs',
-    description: 'Premium stair runner installation with decorative border trim'
-  },
-  {
-    src: '/stair 3.jpg',
-    title: 'Modern Staircase Design',
-    category: 'Stairs',
-    description: 'Contemporary staircase flooring with professional finish'
-  },
 
   // LAMINATE FLOORING
   {
-    src: '/1.jpg',
-    title: 'Premium Black Staircase',
+    src: '/Laminate colour torros.jpg',
+    title: 'Torros Laminate Flooring',
     category: 'Laminate Flooring',
-    description: 'Elegant black carpet with decorative border trim on staircase'
-  },
-  {
-    src: '/4.jpg',
-    title: 'Grey Wood Effect Laminate',
-    category: 'Laminate Flooring',
-    description: 'Premium grey wood grain laminate flooring installation'
-  },
-  {
-    src: '/5.jpg',
-    title: 'Dark Wood Living Room',
-    category: 'Laminate Flooring',
-    description: 'Rich dark wood effect laminate with traditional fireplace'
+    description: 'Premium Torros color laminate flooring with professional installation'
   },
 
   // VINYL FLOORING
   {
-    src: '/3.jpg',
-    title: 'Geometric Pattern Vinyl',
+    src: '/Herringbone pattern vinyl.jpg',
+    title: 'Herringbone Pattern Vinyl',
     category: 'Vinyl Flooring',
-    description: 'Stunning black and white geometric tile pattern vinyl'
+    description: 'Stunning herringbone vinyl patterns offering classic style and durability'
   },
   {
-    src: '/7.jpg',
-    title: 'Contemporary Kitchen Vinyl',
+    src: '/Herringbone pattern vinyle.jpg',
+    title: 'Herringbone Pattern Vinyl (Alternative)',
     category: 'Vinyl Flooring',
-    description: 'Bold geometric pattern vinyl for modern kitchen spaces'
+    description: 'Alternative herringbone vinyl pattern with premium quality'
   },
   {
-    src: '/8.jpg',
-    title: 'Herringbone Luxury Vinyl',
+    src: '/Vinyl.jpg',
+    title: 'Premium Vinyl Flooring',
     category: 'Vinyl Flooring',
-    description: 'Classic herringbone pattern luxury vinyl flooring'
+    description: 'Premium vinyl flooring designed for ultimate comfort and style'
   },
   {
-    src: '/9.jpg',
-    title: 'Parquet Style Luxury Vinyl',
+    src: '/Luxury vinyl.jpg',
+    title: 'Luxury Vinyl Collection',
     category: 'Vinyl Flooring',
-    description: 'Elegant parquet pattern vinyl with traditional appeal'
-  },
-  {
-    src: '/20.jpg',
-    title: 'Natural Wood Effect Flooring',
-    category: 'Vinyl Flooring',
-    description: 'Authentic wood grain effect luxury vinyl'
+    description: 'Luxury vinyl flooring combining elegant design with superior durability'
   },
 
   // CARPETS
   {
-    src: '/2.jpg',
-    title: 'Blue-Grey Room Carpet',
+    src: '/Luxury blue carpet.jpg',
+    title: 'Luxury Blue Carpet',
     category: 'Carpets',
-    description: 'Premium blue-grey carpet installation in residential room'
+    description: 'Transform your space with luxury blue carpet offering ultimate comfort'
   },
   {
-    src: '/6.jpg',
-    title: 'Luxury Bedroom Carpeting',
+    src: '/Luxury carpet ivory colour.jpg',
+    title: 'Luxury Ivory Carpet',
     category: 'Carpets',
-    description: 'Premium carpet installation in modern bedroom setting'
+    description: 'Premium ivory carpet creating sophisticated statements in any space'
   },
   {
-    src: '/10.jpg',
-    title: 'Professional Carpet Installation',
+    src: '/Stain free Englewood Beige carpet.jpg',
+    title: 'Stain Free Englewood Beige',
     category: 'Carpets',
-    description: 'Expert carpet fitting with precision edge work'
-  },
-  {
-    src: '/17.jpg',
-    title: 'Premium Living Room Carpet',
-    category: 'Carpets',
-    description: 'High-quality carpet installation in living space'
-  },
-  {
-    src: '/49.jpg',
-    title: 'Complete Room Transformation',
-    category: 'Carpets',
-    description: 'Full room carpet installation with professional finish'
+    description: 'Advanced stain-free carpet in elegant Englewood Beige with protection'
   },
 
-  // STORE DISPLAYS
+  // UNDERLAY
   {
-    src: '/store 1.jpg',
-    title: 'Premium Carpet Samples',
-    category: 'Store Display',
-    description: 'Wide selection of premium carpet samples and textures'
-  },
-  {
-    src: '/store 2.jpg',
-    title: 'Luxury Flooring Showroom',
-    category: 'Store Display',
-    description: 'Professional showroom displaying luxury flooring options'
-  },
-  {
-    src: '/store 3.jpg',
-    title: 'Expert Consultation Area',
-    category: 'Store Display',
-    description: 'Dedicated consultation space for flooring selection'
-  },
-
-  // SPECIALTY COLLECTIONS
-  {
-    src: '/red 1.jpg',
-    title: 'Red Luxury Collection',
-    category: 'Specialty Collections',
-    description: 'Premium red carpet collection with rich textures'
-  },
-  {
-    src: '/red 2.jpg',
-    title: 'Burgundy Premium Range',
-    category: 'Specialty Collections',
-    description: 'Elegant burgundy carpet with superior quality'
-  },
-  {
-    src: '/red 3.jpg',
-    title: 'Crimson Luxury Series',
-    category: 'Specialty Collections',
-    description: 'High-end crimson carpet with exceptional comfort'
-  },
-  {
-    src: '/purple 1.jpg',
-    title: 'Purple Elegance Collection',
-    category: 'Specialty Collections',
-    description: 'Sophisticated purple carpet with luxury finish'
-  },
-  {
-    src: '/purple 2.jpg',
-    title: 'Violet Premium Range',
-    category: 'Specialty Collections',
-    description: 'Premium violet carpet with superior craftsmanship'
-  },
-  {
-    src: '/purple 3.jpg',
-    title: 'Lavender Luxury Series',
-    category: 'Specialty Collections',
-    description: 'Elegant lavender carpet with exceptional quality'
+    src: '/Soundproof plush walk underlay.jpg',
+    title: 'Soundproof Plush Walk Underlay',
+    category: 'Underlay',
+    description: 'Professional soundproof underlay providing superior comfort and noise reduction'
   }
 ];
 
@@ -182,8 +90,8 @@ const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
   const [filter, setFilter] = useState('All');
 
-  // UPDATED CATEGORIES TO MATCH REAL IMAGES
-  const categories = ['All', 'Stairs', 'Laminate Flooring', 'Vinyl Flooring', 'Carpets', 'Store Display', 'Specialty Collections'];
+  // EXACT CATEGORIES FROM PROVIDED MENU NAMES
+  const categories = ['All', 'Stairs', 'Laminate Flooring', 'Vinyl Flooring', 'Carpets', 'Underlay'];
   
   const filteredImages = filter === 'All' 
     ? galleryImages 
@@ -199,7 +107,7 @@ const Gallery = () => {
             Project <span className="bg-gradient-to-r from-purple-400 to-indigo-600 bg-clip-text text-transparent">Gallery</span>
           </h2>
           <p className="text-xl text-white/70 max-w-3xl mx-auto mb-12">
-            Explore our comprehensive portfolio of premium flooring installations and showroom displays
+            Explore our premium flooring collection: Stairs, Laminate, Vinyl, Carpets, and Underlay solutions
           </p>
 
           {/* OPTIMIZED MOBILE FILTER BUTTONS */}
@@ -244,28 +152,9 @@ const Gallery = () => {
                 ))}
               </div>
               
-              {/* ROW 3 - CARPETS & STORE */}
+              {/* ROW 3 - CARPETS & UNDERLAY */}
               <div className="flex justify-center gap-3">
                 {categories.slice(4, 6).map((category) => (
-                  <motion.button
-                    key={category}
-                    onClick={() => setFilter(category)}
-                    className={`flex-1 max-w-[140px] px-4 py-3 rounded-xl font-semibold text-sm transition-all duration-300 border-2 ${
-                      filter === category
-                        ? 'bg-gradient-to-r from-purple-500 to-indigo-600 text-white border-[#B57EFA] shadow-lg shadow-purple-500/25'
-                        : 'bg-white/10 text-white/80 border-[#B57EFA]/30 hover:border-[#B57EFA] hover:bg-white/20 hover:text-white'
-                    }`}
-                    whileHover={{ scale: 1.02 }}
-                    whileTap={{ scale: 0.98 }}
-                  >
-                    {category}
-                  </motion.button>
-                ))}
-              </div>
-              
-              {/* ROW 4 - SPECIALTY */}
-              <div className="flex justify-center gap-3">
-                {categories.slice(6, 7).map((category) => (
                   <motion.button
                     key={category}
                     onClick={() => setFilter(category)}
@@ -306,7 +195,7 @@ const Gallery = () => {
           {/* Results Counter */}
           <div className="mt-6">
             <p className="text-white/60 text-sm">
-              Showing <span className="text-purple-400 font-semibold">{filteredImages.length}</span> of <span className="text-purple-400 font-semibold">{galleryImages.length}</span> unique projects
+              Showing <span className="text-purple-400 font-semibold">{filteredImages.length}</span> of <span className="text-purple-400 font-semibold">{galleryImages.length}</span> premium products
             </p>
           </div>
         </div>
@@ -333,7 +222,7 @@ const Gallery = () => {
                   loading="lazy"
                   onError={(e) => {
                     console.log(`Failed to load image: ${image.src}`);
-                    e.currentTarget.src = '/1.jpg'; // Fallback to a known working image
+                    e.currentTarget.src = '/Combi stairs.jpg'; // Fallback to a known working image
                   }}
                 />
                 
@@ -434,7 +323,7 @@ const Gallery = () => {
         {/* Show message if no results */}
         {filteredImages.length === 0 && (
           <div className="text-center py-12">
-            <p className="text-white/60 text-lg">No projects found for this category.</p>
+            <p className="text-white/60 text-lg">No products found for this category.</p>
           </div>
         )}
 

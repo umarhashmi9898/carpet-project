@@ -298,21 +298,19 @@ const CarpetShowcase = () => {
                   </motion.div>
                 </div>
 
-                {/* Price badge */}
+                {/* Quality badge - REMOVED PRICE BADGE */}
                 <div className="absolute bottom-4 right-4 lg:bottom-6 lg:right-6">
                   <motion.div
-                    key={`price-${currentCarpet}`}
+                    key={`quality-${currentCarpet}`}
                     initial={{ opacity: 0, scale: 0 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ delay: 0.5, duration: 0.4 }}
                     className="bg-black/60 backdrop-blur-md rounded-lg px-3 py-2 border border-white/20"
                   >
-                    <span 
-                      className="text-lg font-bold"
-                      style={{ color: currentCollection.color }}
-                    >
-                      {currentCollection.price}
-                    </span>
+                    <div className="flex items-center space-x-1">
+                      <Star className="w-3 h-3 text-yellow-400" fill="currentColor" />
+                      <span className="text-white text-xs font-bold">Premium Quality</span>
+                    </div>
                   </motion.div>
                 </div>
               </div>

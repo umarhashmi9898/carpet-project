@@ -173,7 +173,10 @@ const Services = () => {
                       }}
                       transition={{ duration: 0.3 }}
                     >
-                      <services[activeService].icon className="w-8 h-8 text-white" />
+                      {(() => {
+                        const CurrentIcon = services[activeService].icon;
+                        return <CurrentIcon className="w-8 h-8 text-white" />;
+                      })()}
                     </motion.div>
                     
                     <div>
@@ -265,50 +268,53 @@ const Services = () => {
                   
                   {/* Service Navigation Dots */}
                   <div className="flex items-center space-x-3">
-                    {services.map((service, index) => (
-                      <motion.button
-                        key={index}
-                        onClick={() => setActiveService(index)}
-                        disabled={activeService === index}
-                        whileHover={{ scale: 1.2 }}
-                        whileTap={{ scale: 0.9 }}
-                        className={`group relative flex items-center space-x-3 px-4 py-2 rounded-xl transition-all duration-300 ${
-                          activeService === index 
-                            ? `bg-gradient-to-r ${service.gradient} text-white shadow-lg` 
-                            : 'bg-white/10 text-white/70 hover:bg-white/20 hover:text-white'
-                        }`}
-                      >
-                        {/* Service Icon */}
-                        <motion.div 
-                          className={`w-8 h-8 rounded-lg flex items-center justify-center transition-all duration-300 ${
-                            activeService === index
-                              ? 'bg-white/20'
-                              : `bg-gradient-to-r ${service.iconBg} backdrop-blur-sm border border-white/20`
+                    {services.map((service, index) => {
+                      const ServiceIcon = service.icon;
+                      return (
+                        <motion.button
+                          key={index}
+                          onClick={() => setActiveService(index)}
+                          disabled={activeService === index}
+                          whileHover={{ scale: 1.2 }}
+                          whileTap={{ scale: 0.9 }}
+                          className={`group relative flex items-center space-x-3 px-4 py-2 rounded-xl transition-all duration-300 ${
+                            activeService === index 
+                              ? `bg-gradient-to-r ${service.gradient} text-white shadow-lg` 
+                              : 'bg-white/10 text-white/70 hover:bg-white/20 hover:text-white'
                           }`}
-                          whileHover={{ scale: 1.1, rotate: 5 }}
                         >
-                          <service.icon className="w-4 h-4" />
-                        </motion.div>
-                        
-                        {/* Service Name - Desktop Only */}
-                        <span className="hidden lg:block font-semibold text-sm">
-                          {service.title}
-                        </span>
-
-                        {/* Active indicator */}
-                        {activeService === index && (
+                          {/* Service Icon */}
                           <motion.div 
-                            className="absolute inset-0 rounded-xl"
-                            style={{ 
-                              backgroundColor: services[activeService].gradient.includes('purple') ? '#8B5CF6' : 
-                                              services[activeService].gradient.includes('emerald') ? '#10B981' : '#F59E0B'
-                            }}
-                            animate={{ scale: [1, 1.05, 1], opacity: [0.3, 0.1, 0.3] }}
-                            transition={{ duration: 2, repeat: Infinity }}
-                          />
-                        )}
-                      </motion.button>
-                    ))}
+                            className={`w-8 h-8 rounded-lg flex items-center justify-center transition-all duration-300 ${
+                              activeService === index
+                                ? 'bg-white/20'
+                                : `bg-gradient-to-r ${service.iconBg} backdrop-blur-sm border border-white/20`
+                            }`}
+                            whileHover={{ scale: 1.1, rotate: 5 }}
+                          >
+                            <ServiceIcon className="w-4 h-4" />
+                          </motion.div>
+                          
+                          {/* Service Name - Desktop Only */}
+                          <span className="hidden lg:block font-semibold text-sm">
+                            {service.title}
+                          </span>
+
+                          {/* Active indicator */}
+                          {activeService === index && (
+                            <motion.div 
+                              className="absolute inset-0 rounded-xl"
+                              style={{ 
+                                backgroundColor: services[activeService].gradient.includes('purple') ? '#8B5CF6' : 
+                                                services[activeService].gradient.includes('emerald') ? '#10B981' : '#F59E0B'
+                              }}
+                              animate={{ scale: [1, 1.05, 1], opacity: [0.3, 0.1, 0.3] }}
+                              transition={{ duration: 2, repeat: Infinity }}
+                            />
+                          )}
+                        </motion.button>
+                      );
+                    })}
                   </div>
                 </div>
               </div>

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Home, Layers, Palette, ArrowRight, Star, Award, CheckCircle } from 'lucide-react';
 
-// OPTIMIZED SERVICES - UPDATED TO MATCH ACTUAL IMAGE CONTENT
+// OPTIMIZED SERVICES - UPDATED TO MATCH ACTUAL IMAGE CONTENT - REMOVED PRICES
 const services = [
   {
     icon: Home,
@@ -11,7 +11,6 @@ const services = [
     features: ['Stain Resistant', 'Luxury Textures', 'Sound Dampening', 'Easy Maintenance'],
     image: '/6.jpg', // Luxury bedroom carpet
     gradient: 'from-purple-500 to-indigo-600',
-    price: 'From £40/m²',
     subtitle: 'Professional Installation',
     iconBg: 'from-purple-500/20 to-indigo-500/20',
     borderColor: 'border-purple-500/30'
@@ -23,7 +22,6 @@ const services = [
     features: ['Water Resistant', 'Pattern Designs', 'Easy Installation', 'Long Lasting'],
     image: '/3.jpg', // Geometric pattern vinyl
     gradient: 'from-emerald-500 to-teal-600',
-    price: 'From £48/m²',
     subtitle: 'Professional Installation',
     iconBg: 'from-emerald-500/20 to-teal-500/20',
     borderColor: 'border-emerald-500/30'
@@ -35,7 +33,6 @@ const services = [
     features: ['Luxury Patterns', 'Easy Clean', 'Comfort Underfoot', 'Design Variety'],
     image: '/8.jpg', // Herringbone luxury vinyl
     gradient: 'from-amber-500 to-orange-600',
-    price: 'From £55/m²',
     subtitle: 'Professional Installation',
     iconBg: 'from-amber-500/20 to-orange-500/20',
     borderColor: 'border-amber-500/30'
@@ -129,18 +126,6 @@ const Services = () => {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                   
-                  {/* Enhanced Price Badge */}
-                  <motion.div 
-                    className="absolute top-6 right-6"
-                    initial={{ scale: 0, rotate: -180 }}
-                    animate={{ scale: 1, rotate: 0 }}
-                    transition={{ delay: 0.3, duration: 0.5 }}
-                  >
-                    <div className={`px-4 py-2 rounded-xl text-sm font-bold text-white backdrop-blur-md border border-white/30 bg-gradient-to-r ${services[activeService].gradient} shadow-xl`}>
-                      {services[activeService].price}
-                    </div>
-                  </motion.div>
-
                   {/* Quality Badge */}
                   <motion.div 
                     className="absolute top-6 left-6"
@@ -215,7 +200,7 @@ const Services = () => {
             </motion.div>
           </div>
 
-          {/* Enhanced Tab Navigation - NOW ON RIGHT */}
+          {/* Enhanced Tab Navigation - NOW ON RIGHT - REMOVED PRICES */}
           <div className="lg:w-1/3 space-y-4 order-1 lg:order-2">
             {services.map((service, index) => (
               <motion.button
@@ -301,18 +286,21 @@ const Services = () => {
                     </motion.div>
                   </div>
 
-                  {/* Price Display */}
+                  {/* Quality Indicator - REPLACED PRICE */}
                   <div className="flex items-center justify-between">
                     <span className={`text-sm font-medium transition-colors duration-300 ${
                       activeService === index ? 'text-white/70' : 'text-white/50 group-hover:text-white/70'
                     }`}>
-                      Starting Price
+                      Premium Quality
                     </span>
-                    <span className={`font-bold transition-colors duration-300 ${
-                      activeService === index ? 'text-white' : 'text-white/80 group-hover:text-white'
-                    }`}>
-                      {service.price}
-                    </span>
+                    <div className="flex items-center space-x-1">
+                      <Star className="w-3 h-3 text-yellow-400" fill="currentColor" />
+                      <span className={`text-xs font-bold transition-colors duration-300 ${
+                        activeService === index ? 'text-white' : 'text-white/80 group-hover:text-white'
+                      }`}>
+                        Certified
+                      </span>
+                    </div>
                   </div>
 
                   {/* Active Service Features Preview */}

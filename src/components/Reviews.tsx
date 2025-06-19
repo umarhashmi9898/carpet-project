@@ -18,17 +18,17 @@ interface Review {
   projectValue: string;
 }
 
-// OPTIMIZED REVIEWS - REMOVED DUPLICATES, ORGANIZED BY ACTUAL PROJECTS
+// EXACT REVIEWS MATCHING PROVIDED MENU NAMES - NO DUPLICATES
 const reviews: Review[] = [
   {
     id: 1,
     name: 'Sarah Johnson',
     location: 'Birmingham, England',
     rating: 5,
-    text: 'Absolutely brilliant service! The team transformed our staircase with gorgeous black carpet featuring elegant border trim. Professional, punctual, and the quality is outstanding.',
-    service: 'Premium Staircase Carpeting',
-    image: '/1.jpg',
-    projectImage: '/1.jpg',
+    text: 'Absolutely brilliant service! The team transformed our staircase with gorgeous carpeting. Professional, punctual, and the quality is outstanding.',
+    service: 'Stairs',
+    image: '/Combi stairs.jpg',
+    projectImage: '/Combi stairs.jpg',
     color: '#8B5CF6',
     gradient: 'from-purple-500 to-indigo-600',
     verified: true,
@@ -40,10 +40,10 @@ const reviews: Review[] = [
     name: 'Michael Thompson',
     location: 'Birmingham, England',
     rating: 5,
-    text: 'Exceptional blue-grey carpet installation in our bedroom. The comfort underfoot is incredible and the professional finish is absolutely perfect. Highly recommended!',
-    service: 'Premium Room Carpeting',
-    image: '/2.jpg',
-    projectImage: '/2.jpg',
+    text: 'Exceptional Torros laminate flooring installation. The wood effect looks incredibly authentic and the professional finish is absolutely perfect. Highly recommended!',
+    service: 'Laminate Flooring',
+    image: '/Laminate colour torros.jpg',
+    projectImage: '/Laminate colour torros.jpg',
     color: '#10B981',
     gradient: 'from-emerald-500 to-teal-600',
     verified: true,
@@ -55,10 +55,10 @@ const reviews: Review[] = [
     name: 'Emma Wilson',
     location: 'Birmingham, England',
     rating: 5,
-    text: 'Stunning geometric vinyl flooring in our kitchen! The bold black and white pattern creates such a striking focal point. Expert installation and beautiful finish throughout.',
-    service: 'Geometric Pattern Vinyl',
-    image: '/3.jpg',
-    projectImage: '/3.jpg',
+    text: 'Stunning herringbone vinyl flooring! The pattern creates such a striking focal point. Expert installation and beautiful finish throughout.',
+    service: 'Vinyl Flooring',
+    image: '/Herringbone pattern vinyl.jpg',
+    projectImage: '/Herringbone pattern vinyl.jpg',
     color: '#F59E0B',
     gradient: 'from-amber-500 to-orange-600',
     verified: true,
@@ -70,12 +70,12 @@ const reviews: Review[] = [
     name: 'David Roberts',
     location: 'Birmingham, England',
     rating: 5,
-    text: 'Beautiful grey wood effect laminate flooring looks incredibly authentic! The grain patterns are so realistic and the durability is excellent. Professional installation throughout.',
-    service: 'Grey Wood Effect Laminate',
-    image: '/4.jpg',
-    projectImage: '/4.jpg',
-    color: '#EF4444',
-    gradient: 'from-red-500 to-pink-600',
+    text: 'Beautiful luxury blue carpet looks incredible! The comfort underfoot is amazing and the durability is excellent. Professional installation throughout.',
+    service: 'Carpets',
+    image: '/Luxury blue carpet.jpg',
+    projectImage: '/Luxury blue carpet.jpg',
+    color: '#3B82F6',
+    gradient: 'from-blue-500 to-indigo-600',
     verified: true,
     completionDate: 'August 2024',
     projectValue: '£2,600'
@@ -85,60 +85,15 @@ const reviews: Review[] = [
     name: 'Lisa Anderson',
     location: 'Birmingham, England',
     rating: 5,
-    text: 'Rich dark wood laminate in our living room is absolutely perfect! The traditional look complements our fireplace beautifully. Exceeded all expectations with superb workmanship.',
-    service: 'Dark Wood Living Room',
-    image: '/5.jpg',
-    projectImage: '/5.jpg',
-    color: '#3B82F6',
-    gradient: 'from-blue-500 to-indigo-600',
-    verified: true,
-    completionDate: 'July 2024',
-    projectValue: '£3,100'
-  },
-  {
-    id: 6,
-    name: 'James Mitchell',
-    location: 'Birmingham, England',
-    rating: 5,
-    text: 'Amazing luxury bedroom carpeting! The quality is exceptional and the comfort underfoot is incredible. Professional service from start to finish. Highly recommend SYN Carpets.',
-    service: 'Luxury Bedroom Carpeting',
-    image: '/6.jpg',
-    projectImage: '/6.jpg',
+    text: 'Amazing soundproof underlay! The noise reduction is incredible and the comfort is outstanding. Exceeded all expectations with superb workmanship.',
+    service: 'Underlay',
+    image: '/Soundproof plush walk underlay.jpg',
+    projectImage: '/Soundproof plush walk underlay.jpg',
     color: '#7C3AED',
     gradient: 'from-violet-500 to-purple-600',
     verified: true,
-    completionDate: 'June 2024',
-    projectValue: '£2,800'
-  },
-  {
-    id: 7,
-    name: 'Rachel Green',
-    location: 'Birmingham, England',
-    rating: 5,
-    text: 'Contemporary geometric vinyl flooring exceeded our expectations. The bold pattern perfectly complements our modern kitchen. Excellent craftsmanship and attention to detail.',
-    service: 'Contemporary Geometric Vinyl',
-    image: '/7.jpg',
-    projectImage: '/7.jpg',
-    color: '#059669',
-    gradient: 'from-emerald-600 to-green-600',
-    verified: true,
-    completionDate: 'May 2024',
-    projectValue: '£2,500'
-  },
-  {
-    id: 8,
-    name: 'Mark Davies',
-    location: 'Birmingham, England',
-    rating: 5,
-    text: 'Beautiful herringbone luxury vinyl transformed our space completely. The classic pattern is stunning and the quality is exceptional. Couldn\'t be happier with the results.',
-    service: 'Herringbone Luxury Vinyl',
-    image: '/8.jpg',
-    projectImage: '/8.jpg',
-    color: '#DC2626',
-    gradient: 'from-red-600 to-rose-600',
-    verified: true,
-    completionDate: 'April 2024',
-    projectValue: '£1,900'
+    completionDate: 'July 2024',
+    projectValue: '£3,100'
   }
 ];
 
@@ -254,7 +209,7 @@ const Reviews = () => {
             Customer <span className="bg-gradient-to-r from-purple-400 to-indigo-600 bg-clip-text text-transparent">Reviews</span>
           </h2>
           <p className="text-lg sm:text-xl text-white/70 max-w-3xl mx-auto leading-relaxed">
-            See what our 8 satisfied customers have to say about our premium flooring services across Birmingham
+            See what our 5 satisfied customers have to say about our premium flooring services across Birmingham
           </p>
         </motion.div>
 
@@ -311,7 +266,7 @@ const Reviews = () => {
                       loading="lazy"
                       onError={(e) => {
                         console.log(`Failed to load image: ${currentReviewData.projectImage}`);
-                        e.currentTarget.src = '/1.jpg'; // Fallback to a known working image
+                        e.currentTarget.src = '/Luxury blue carpet.jpg'; // Fallback to a known working image
                       }}
                     />
                   </motion.div>
@@ -487,7 +442,6 @@ const Reviews = () => {
           </motion.div>
 
           {/* DESKTOP DOTS NAVIGATION ONLY */}
-          
           <div className="hidden lg:block mt-8">
             <div className="flex items-center justify-center">
               <div className="bg-black/80 backdrop-blur-2xl rounded-2xl px-6 py-4 border border-white/20 shadow-2xl">
@@ -514,7 +468,7 @@ const Reviews = () => {
                   {/* Separator */}
                   <div className="w-px h-6 bg-white/30" />
                   
-                  {/* Dots navigation - All 8 reviews */}
+                  {/* Dots navigation - All 5 reviews */}
                   <div className="flex items-center space-x-2">
                     {reviews.map((_, index) => (
                       <motion.button

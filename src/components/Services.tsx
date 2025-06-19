@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Home, Layers, Palette, ArrowRight, Star, Award, CheckCircle, Hammer } from 'lucide-react';
+import { Home, Layers, Palette, ArrowRight, Star, Award, CheckCircle, Hammer, Volume2 } from 'lucide-react';
 
-// EXACT SERVICES MATCHING PROVIDED MENU NAMES
+// EXACT SERVICES MATCHING PROVIDED MENU NAMES - NO DUPLICATES
 const services = [
   {
     icon: Hammer,
@@ -47,6 +47,17 @@ const services = [
     subtitle: 'Luxury Collection',
     iconBg: 'from-blue-500/20 to-indigo-500/20',
     borderColor: 'border-blue-500/30'
+  },
+  {
+    icon: Volume2,
+    title: 'Underlay',
+    description: 'Professional soundproof plush walk underlay providing superior comfort and noise reduction for any flooring.',
+    features: ['Soundproof Technology', 'Plush Comfort', 'Noise Reduction', 'Professional Grade'],
+    image: '/Soundproof plush walk underlay.jpg',
+    gradient: 'from-violet-500 to-purple-600',
+    subtitle: 'Soundproof Technology',
+    iconBg: 'from-violet-500/20 to-purple-500/20',
+    borderColor: 'border-violet-500/30'
   }
 ];
 
@@ -99,7 +110,7 @@ const Services = () => {
             Our <span className="bg-gradient-to-r from-purple-400 to-indigo-600 bg-clip-text text-transparent">Expertise</span>
           </h2>
           <p className="text-lg sm:text-xl text-white/70 max-w-3xl mx-auto leading-relaxed">
-            Discover our comprehensive range of premium flooring solutions: Stairs, Laminate, Vinyl, and Carpets
+            Discover our comprehensive range of premium flooring solutions: Stairs, Laminate, Vinyl, Carpets, and Underlay
           </p>
         </motion.div>
 
@@ -119,7 +130,7 @@ const Services = () => {
               <motion.div 
                 className={`absolute inset-0 rounded-3xl opacity-30 transition-all duration-1000 p-[1px]`}
                 animate={{
-                  background: `linear-gradient(135deg, ${services[activeService].gradient.includes('purple') ? '#8B5CF6' : services[activeService].gradient.includes('emerald') ? '#10B981' : services[activeService].gradient.includes('amber') ? '#F59E0B' : '#3B82F6'}40, transparent, ${services[activeService].gradient.includes('purple') ? '#8B5CF6' : services[activeService].gradient.includes('emerald') ? '#10B981' : services[activeService].gradient.includes('amber') ? '#F59E0B' : '#3B82F6'}30)`,
+                  background: `linear-gradient(135deg, ${services[activeService].gradient.includes('purple') ? '#8B5CF6' : services[activeService].gradient.includes('emerald') ? '#10B981' : services[activeService].gradient.includes('amber') ? '#F59E0B' : services[activeService].gradient.includes('blue') ? '#3B82F6' : '#7C3AED'}40, transparent, ${services[activeService].gradient.includes('purple') ? '#8B5CF6' : services[activeService].gradient.includes('emerald') ? '#10B981' : services[activeService].gradient.includes('amber') ? '#F59E0B' : services[activeService].gradient.includes('blue') ? '#3B82F6' : '#7C3AED'}30)`,
                 }}
               >
                 <div className="w-full h-full bg-gradient-to-br from-black/90 via-gray-900/90 to-black/90 rounded-3xl" />
@@ -134,6 +145,10 @@ const Services = () => {
                     initial={{ scale: 1.1 }}
                     animate={{ scale: 1 }}
                     transition={{ duration: 0.8 }}
+                    onError={(e) => {
+                      console.log(`Failed to load image: ${services[activeService].image}`);
+                      e.currentTarget.src = '/Luxury blue carpet.jpg'; // Fallback to a known working image
+                    }}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                   

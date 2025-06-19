@@ -4,7 +4,7 @@ import { ArrowRight, Star, MapPin, Clock, Phone, Sparkles, Award, Shield, Chevro
 import { gsap } from 'gsap';
 import LoadingScreen from './LoadingScreen';
 
-// EXACT MENUS AND IMAGES AS PROVIDED
+// EXACT MENUS AND IMAGES AS PROVIDED - NO DUPLICATES
 const luxuryFlooringImages = [
   { 
     id: 1, 
@@ -39,7 +39,7 @@ const luxuryFlooringImages = [
   { 
     id: 4, 
     img: "/Herringbone pattern vinyle.jpg",
-    title: "Herringbone Pattern Vinyl (Alternative)",
+    title: "Herringbone Pattern Vinyl Alternative",
     subtitle: "Contemporary Design",
     category: "Vinyl Flooring",
     color: "#EF4444",

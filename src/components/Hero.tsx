@@ -4,17 +4,17 @@ import { ArrowRight, Star, MapPin, Clock, Phone, Sparkles, Award, Shield, Chevro
 import { gsap } from 'gsap';
 import LoadingScreen from './LoadingScreen';
 
-// OPTIMIZED LUXURY FLOORING IMAGES - REMOVED DUPLICATES, ORGANIZED BY TYPE
+// REAL LUXURY FLOORING IMAGES FROM FILE SYSTEM - UPDATED TO MATCH ACTUAL AVAILABLE IMAGES
 const luxuryFlooringImages = [
   { 
     id: 1, 
-    img: "/1.jpg",
-    title: "Premium Staircase",
-    subtitle: "Luxury Carpet Installation",
+    img: "/stair 1.jpg",
+    title: "Premium Staircase Installation",
+    subtitle: "Professional Stair Carpeting",
     category: "Staircase Carpeting",
     color: "#8B5CF6",
     gradient: "from-purple-500 to-indigo-600",
-    description: "Transform your staircase with our premium black carpet featuring elegant border trim and superior comfort."
+    description: "Transform your staircase with our premium carpeting featuring professional installation and superior comfort."
   },
   { 
     id: 2, 
@@ -28,23 +28,23 @@ const luxuryFlooringImages = [
   },
   { 
     id: 3, 
-    img: "/3.jpg",
-    title: "Geometric Vinyl Pattern",
+    img: "/Herringbone pattern vinyl.jpg",
+    title: "Herringbone Pattern Vinyl",
     subtitle: "Contemporary Design",
     category: "Designer Vinyl",
     color: "#F59E0B",
     gradient: "from-amber-500 to-orange-600",
-    description: "Discover our stunning geometric vinyl patterns offering bold style and unmatched durability."
+    description: "Discover our stunning herringbone vinyl patterns offering classic style and unmatched durability."
   },
   { 
     id: 4, 
-    img: "/4.jpg",
-    title: "Grey Wood Laminate",
-    subtitle: "Traditional Excellence",
+    img: "/Laminate colour torros.jpg",
+    title: "Torros Laminate Flooring",
+    subtitle: "Premium Wood Effect",
     category: "Luxury Vinyl",
     color: "#EF4444",
     gradient: "from-red-500 to-pink-600",
-    description: "Create the perfect flooring with our grey wood effect laminate designed for ultimate comfort and style."
+    description: "Create the perfect flooring with our Torros laminate designed for ultimate comfort and style."
   },
   { 
     id: 5, 
@@ -58,33 +58,33 @@ const luxuryFlooringImages = [
   },
   { 
     id: 6, 
-    img: "/6.jpg",
-    title: "Luxury Bedroom Carpet",
+    img: "/Luxury carpet ivory colour.jpg",
+    title: "Luxury Ivory Carpet",
     subtitle: "Premium Comfort",
     category: "Room Carpeting",
     color: "#7C3AED",
     gradient: "from-violet-500 to-purple-600",
-    description: "Transform your bedroom with our luxury carpet offering ultimate comfort and elegant style."
+    description: "Transform your space with our luxury ivory carpet offering ultimate comfort and elegant style."
   },
   { 
     id: 7, 
-    img: "/7.jpg",
-    title: "Kitchen Geometric Vinyl",
+    img: "/Vinyl.jpg",
+    title: "Premium Vinyl Flooring",
     subtitle: "Modern Pattern Flooring",
     category: "Designer Vinyl",
     color: "#059669",
     gradient: "from-emerald-600 to-green-600",
-    description: "Bold geometric vinyl patterns that create stunning, contemporary statements in kitchen spaces."
+    description: "Premium vinyl flooring that creates stunning, contemporary statements in any space."
   },
   { 
     id: 8, 
-    img: "/8.jpg",
-    title: "Herringbone Luxury",
+    img: "/Luxury vinyl.jpg",
+    title: "Luxury Vinyl Collection",
     subtitle: "Premium Pattern Design",
     category: "Luxury Vinyl",
     color: "#DC2626",
     gradient: "from-red-600 to-rose-600",
-    description: "Elegant herringbone pattern flooring combining classic design with modern durability and style."
+    description: "Elegant luxury vinyl flooring combining classic design with modern durability and style."
   }
 ];
 
@@ -222,7 +222,7 @@ const MobileOptimized3DCarousel = ({ images }: { images: typeof luxuryFlooringIm
                   loading="lazy"
                   onError={(e) => {
                     console.log(`Failed to load image: ${currentImage.img}`);
-                    e.currentTarget.src = '/1.jpg'; // Fallback to a known working image
+                    e.currentTarget.src = '/stair 1.jpg'; // Fallback to a known working image
                   }}
                 />
               </motion.div>

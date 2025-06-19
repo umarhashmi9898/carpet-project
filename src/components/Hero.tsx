@@ -402,10 +402,10 @@ const MobileOptimized3DCarousel = ({ images }: { images: typeof luxuryFlooringIm
         </div>
       </div>
 
-      {/* CONTROL PANEL - MOBILE RESPONSIVE */}
+      {/* CONTROL PANEL - MOBILE RESPONSIVE - FIXED WIDTH TO MATCH CARD */}
       <div className="mt-4 sm:mt-6 flex justify-center">
-        <div className="bg-black/80 backdrop-blur-2xl rounded-xl sm:rounded-2xl px-4 sm:px-6 py-2 sm:py-3 border border-white/20 shadow-2xl">
-          <div className="flex items-center space-x-3 sm:space-x-4">
+        <div className="w-72 sm:w-80 bg-black/80 backdrop-blur-2xl rounded-xl sm:rounded-2xl px-4 sm:px-6 py-2 sm:py-3 border border-white/20 shadow-2xl">
+          <div className="flex items-center justify-between">
             {/* COUNTER - MOBILE RESPONSIVE */}
             <div className="flex items-center space-x-1.5 sm:space-x-2">
               <motion.span 
@@ -424,9 +424,6 @@ const MobileOptimized3DCarousel = ({ images }: { images: typeof luxuryFlooringIm
                 {String(images.length).padStart(2, '0')}
               </span>
             </div>
-            
-            {/* SEPARATOR */}
-            <div className="w-px h-4 sm:h-5 bg-white/30" />
             
             {/* CONTROL BUTTONS - MOBILE RESPONSIVE */}
             <div className="flex items-center space-x-1.5 sm:space-x-2">
@@ -448,9 +445,6 @@ const MobileOptimized3DCarousel = ({ images }: { images: typeof luxuryFlooringIm
                 <RotateCcw className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
               </motion.button>
             </div>
-            
-            {/* SEPARATOR */}
-            <div className="w-px h-4 sm:h-5 bg-white/30" />
             
             {/* DOTS - MOBILE RESPONSIVE - ALL 8 IMAGES */}
             <div className="flex items-center space-x-1 sm:space-x-1.5">

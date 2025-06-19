@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Home, Layers, Palette, ArrowRight, Star, Award, CheckCircle, Hammer } from 'lucide-react';
+import { Layers, Palette, ArrowRight, Star, Award, CheckCircle, Hammer } from 'lucide-react';
 
-// EXACT SERVICES MATCHING PROVIDED MENU NAMES - REMOVED UNDERLAY
+// EXACT SERVICES MATCHING PROVIDED MENU NAMES - REMOVED CARPETS
 const services = [
   {
     icon: Hammer,
@@ -36,17 +36,6 @@ const services = [
     subtitle: 'Luxury Patterns',
     iconBg: 'from-amber-500/20 to-orange-500/20',
     borderColor: 'border-amber-500/30'
-  },
-  {
-    icon: Home,
-    title: 'Carpets',
-    description: 'Luxury carpet collection including blue, ivory, and stain-free Englewood Beige options for ultimate comfort.',
-    features: ['Luxury Textures', 'Stain Resistant', 'Ultimate Comfort', 'Premium Quality'],
-    image: '/Luxury blue carpet.jpg',
-    gradient: 'from-blue-500 to-indigo-600',
-    subtitle: 'Luxury Collection',
-    iconBg: 'from-blue-500/20 to-indigo-500/20',
-    borderColor: 'border-blue-500/30'
   }
 ];
 
@@ -99,7 +88,7 @@ const Services = () => {
             Our <span className="bg-gradient-to-r from-purple-400 to-indigo-600 bg-clip-text text-transparent">Expertise</span>
           </h2>
           <p className="text-lg sm:text-xl text-white/70 max-w-3xl mx-auto leading-relaxed">
-            Discover our comprehensive range of premium flooring solutions: Stairs, Laminate, Vinyl, and Carpets
+            Discover our comprehensive range of premium flooring solutions: Stairs, Laminate, and Vinyl
           </p>
         </motion.div>
 
@@ -119,7 +108,7 @@ const Services = () => {
               <motion.div 
                 className={`absolute inset-0 rounded-3xl opacity-30 transition-all duration-1000 p-[1px]`}
                 animate={{
-                  background: `linear-gradient(135deg, ${services[activeService].gradient.includes('purple') ? '#8B5CF6' : services[activeService].gradient.includes('emerald') ? '#10B981' : services[activeService].gradient.includes('amber') ? '#F59E0B' : '#3B82F6'}40, transparent, ${services[activeService].gradient.includes('purple') ? '#8B5CF6' : services[activeService].gradient.includes('emerald') ? '#10B981' : services[activeService].gradient.includes('amber') ? '#F59E0B' : '#3B82F6'}30)`,
+                  background: `linear-gradient(135deg, ${services[activeService].gradient.includes('purple') ? '#8B5CF6' : services[activeService].gradient.includes('emerald') ? '#10B981' : '#F59E0B'}40, transparent, ${services[activeService].gradient.includes('purple') ? '#8B5CF6' : services[activeService].gradient.includes('emerald') ? '#10B981' : '#F59E0B'}30)`,
                 }}
               >
                 <div className="w-full h-full bg-gradient-to-br from-black/90 via-gray-900/90 to-black/90 rounded-3xl" />

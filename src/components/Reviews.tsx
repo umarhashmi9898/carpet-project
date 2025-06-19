@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence, useInView } from 'framer-motion';
-import { Star, ChevronLeft, ChevronRight, Quote, MapPin } from 'lucide-react';
+import { Star, Quote, MapPin } from 'lucide-react';
 
 interface Review {
   id: number;
@@ -128,22 +128,6 @@ const Reviews = () => {
     };
   }, [isPlaying, isTransitioning, isInViewport]);
 
-  const nextReview = () => {
-    if (isTransitioning) return;
-    setIsTransitioning(true);
-    setDirection(1);
-    setCurrentReview((prev) => (prev + 1) % reviews.length);
-    setTimeout(() => setIsTransitioning(false), 800);
-  };
-
-  const prevReview = () => {
-    if (isTransitioning) return;
-    setIsTransitioning(true);
-    setDirection(-1);
-    setCurrentReview((prev) => (prev - 1 + reviews.length) % reviews.length);
-    setTimeout(() => setIsTransitioning(false), 800);
-  };
-
   const currentReviewData = reviews[currentReview];
 
   return (
@@ -215,7 +199,7 @@ const Reviews = () => {
 
         {/* MAIN TESTIMONIAL SHOWCASE - MOBILE OPTIMIZED */}
         <div className="relative max-w-6xl mx-auto">
-          {/* PREMIUM TESTIMONIAL CARD - FIXED NAVIGATION POSITIONING */}
+          {/* PREMIUM TESTIMONIAL CARD - NAVIGATION ARROWS REMOVED */}
           <motion.div
             className="relative bg-gradient-to-br from-white/10 via-white/5 to-white/10 backdrop-blur-2xl border border-white/20 rounded-3xl sm:rounded-[2rem] overflow-hidden shadow-2xl"
             whileHover={{ scale: 1.01 }}
@@ -321,24 +305,13 @@ const Reviews = () => {
                       />
                     </motion.div>
 
-                    {/* PERFECTLY ALIGNED STAR RATING WITH NAVIGATION - FIXED POSITIONING */}
+                    {/* STAR RATING CONTAINER - NAVIGATION ARROWS COMPLETELY REMOVED */}
                     <motion.div 
-                      className="flex items-center justify-center sm:justify-start relative"
+                      className="flex items-center justify-center sm:justify-start"
                       initial={{ opacity: 0, x: -20 }}
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ delay: 0.3, duration: 0.5 }}
                     >
-                      {/* LEFT NAVIGATION ARROW - PROPERLY ALIGNED */}
-                      <motion.button
-                        onClick={prevReview}
-                        disabled={isTransitioning}
-                        whileHover={{ scale: 1.1, x: -2 }}
-                        whileTap={{ scale: 0.95 }}
-                        className="absolute -left-12 sm:-left-14 lg:-left-16 top-1/2 -translate-y-1/2 w-8 h-8 sm:w-9 sm:h-9 lg:w-10 lg:h-10 bg-black/80 backdrop-blur-xl border border-white/30 rounded-lg flex items-center justify-center text-white transition-all disabled:opacity-50 shadow-xl hover:bg-black/90 z-10"
-                      >
-                        <ChevronLeft className="w-4 h-4 sm:w-5 sm:h-5" />
-                      </motion.button>
-
                       {/* STAR RATING CONTAINER - PERFECT SIZE */}
                       <div className="bg-gradient-to-r from-slate-900/95 via-gray-900/95 to-slate-900/95 backdrop-blur-xl rounded-xl px-4 py-2.5 border border-slate-600/50 shadow-xl">
                         <div className="flex items-center space-x-3">
@@ -390,17 +363,6 @@ const Reviews = () => {
                           </div>
                         </div>
                       </div>
-
-                      {/* RIGHT NAVIGATION ARROW - PROPERLY ALIGNED */}
-                      <motion.button
-                        onClick={nextReview}
-                        disabled={isTransitioning}
-                        whileHover={{ scale: 1.1, x: 2 }}
-                        whileTap={{ scale: 0.95 }}
-                        className="absolute -right-12 sm:-right-14 lg:-right-16 top-1/2 -translate-y-1/2 w-8 h-8 sm:w-9 sm:h-9 lg:w-10 lg:h-10 bg-black/80 backdrop-blur-xl border border-white/30 rounded-lg flex items-center justify-center text-white transition-all disabled:opacity-50 shadow-xl hover:bg-black/90 z-10"
-                      >
-                        <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5" />
-                      </motion.button>
                     </motion.div>
 
                     {/* Review text - MOBILE OPTIMIZED WITH PROPER SPACING */}

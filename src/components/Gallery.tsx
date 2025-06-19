@@ -4,21 +4,74 @@ import { X, Eye, Award, Star } from 'lucide-react';
 
 // ANALYZED AND OPTIMIZED - REMOVED DUPLICATES, ORGANIZED BY ACTUAL CONTENT
 const galleryImages = [
-  // STAIRCASE INSTALLATIONS (5 unique images)
+  // STAIRCASE INSTALLATIONS - UPDATED WITH NEW IMAGE
   {
-    src: '/1.jpg',
-    title: 'Premium Black Staircase Carpeting',
+    src: '/Combi stairs.jpg',
+    title: 'Combi Stairs Installation',
     category: 'Stairs',
     price: 'From £55/m²',
-    description: 'Elegant black carpet with decorative border trim on white staircase'
+    description: 'Professional combination staircase installation with carpet treads and laminate risers'
   },
   {
-    src: '/2.jpg',
-    title: 'Blue-Grey Room Carpeting',
+    src: '/16.jpg',
+    title: 'Luxury Staircase Runner',
+    category: 'Stairs',
+    price: 'From £60/m²',
+    description: 'Premium staircase runner with decorative border'
+  },
+
+  // ROOM CARPETING - UPDATED WITH NEW IMAGES
+  {
+    src: '/Stain free englewood Beige carpet.jpg',
+    title: 'Stain Free Englewood Beige Carpet',
     category: 'Carpets', 
     price: 'From £42/m²',
-    description: 'Premium blue-grey carpet installation in residential room'
+    description: 'Premium stain-resistant beige carpet with superior comfort and durability'
   },
+  {
+    src: '/Luxury carpet ivory colour.jpg',
+    title: 'Luxury Carpet Ivory Colour',
+    category: 'Carpets',
+    price: 'From £45/m²',
+    description: 'Elegant ivory luxury carpet offering exceptional comfort and style'
+  },
+  {
+    src: '/Luxury blue carpet.jpg',
+    title: 'Luxury Blue Carpet',
+    category: 'Carpets',
+    price: 'From £48/m²',
+    description: 'Premium blue carpet installation with superior quality and finish'
+  },
+  {
+    src: '/6.jpg',
+    title: 'Luxury Bedroom Carpeting',
+    category: 'Carpets',
+    price: 'From £40/m²',
+    description: 'Premium carpet installation in modern bedroom setting'
+  },
+  {
+    src: '/10.jpg',
+    title: 'Professional Carpet Installation',
+    category: 'Carpets',
+    price: 'From £44/m²',
+    description: 'Expert carpet fitting with precision edge work'
+  },
+  {
+    src: '/17.jpg',
+    title: 'Premium Living Room Carpet',
+    category: 'Carpets',
+    price: 'From £46/m²',
+    description: 'High-quality carpet installation in living space'
+  },
+  {
+    src: '/49.jpg',
+    title: 'Complete Room Transformation',
+    category: 'Carpets',
+    price: 'From £46/m²',
+    description: 'Full room carpet installation with professional finish'
+  },
+
+  // VINYL FLOORING
   {
     src: '/3.jpg',
     title: 'Geometric Pattern Vinyl Flooring',
@@ -26,6 +79,22 @@ const galleryImages = [
     price: 'From £48/m²',
     description: 'Stunning black and white geometric tile pattern vinyl'
   },
+  {
+    src: '/7.jpg',
+    title: 'Contemporary Geometric Vinyl',
+    category: 'Vinyl Flooring',
+    price: 'From £52/m²',
+    description: 'Bold geometric pattern vinyl for modern kitchen spaces'
+  },
+  {
+    src: '/18.jpg',
+    title: 'Decorative Tile Effect Vinyl',
+    category: 'Vinyl Flooring',
+    price: 'From £50/m²',
+    description: 'Intricate decorative tile pattern vinyl flooring'
+  },
+
+  // LAMINATE FLOORING
   {
     src: '/4.jpg',
     title: 'Grey Wood Effect Laminate',
@@ -40,22 +109,6 @@ const galleryImages = [
     price: 'From £50/m²',
     description: 'Rich dark wood effect laminate with traditional fireplace'
   },
-
-  // ROOM CARPETING (3 unique images)
-  {
-    src: '/6.jpg',
-    title: 'Luxury Bedroom Carpeting',
-    category: 'Carpets',
-    price: 'From £40/m²',
-    description: 'Premium carpet installation in modern bedroom setting'
-  },
-  {
-    src: '/7.jpg',
-    title: 'Contemporary Geometric Vinyl',
-    category: 'Vinyl Flooring',
-    price: 'From £52/m²',
-    description: 'Bold geometric pattern vinyl for modern kitchen spaces'
-  },
   {
     src: '/8.jpg',
     title: 'Herringbone Luxury Vinyl',
@@ -63,8 +116,6 @@ const galleryImages = [
     price: 'From £55/m²',
     description: 'Classic herringbone pattern luxury vinyl flooring'
   },
-
-  // PREMIUM INSTALLATIONS (4 unique images)
   {
     src: '/9.jpg',
     title: 'Parquet Style Luxury Vinyl',
@@ -73,48 +124,11 @@ const galleryImages = [
     description: 'Elegant parquet pattern vinyl with traditional appeal'
   },
   {
-    src: '/10.jpg',
-    title: 'Professional Carpet Installation',
-    category: 'Carpets',
-    price: 'From £44/m²',
-    description: 'Expert carpet fitting with precision edge work'
-  },
-  {
-    src: '/16.jpg',
-    title: 'Luxury Staircase Runner',
-    category: 'Stairs',
-    price: 'From £60/m²',
-    description: 'Premium staircase runner with decorative border'
-  },
-  {
-    src: '/17.jpg',
-    title: 'Premium Living Room Carpet',
-    category: 'Carpets',
-    price: 'From £46/m²',
-    description: 'High-quality carpet installation in living space'
-  },
-
-  // SPECIALTY INSTALLATIONS (3 unique images)
-  {
-    src: '/18.jpg',
-    title: 'Decorative Tile Effect Vinyl',
-    category: 'Vinyl Flooring',
-    price: 'From £50/m²',
-    description: 'Intricate decorative tile pattern vinyl flooring'
-  },
-  {
     src: '/20.jpg',
     title: 'Natural Wood Effect Flooring',
     category: 'Laminate Flooring',
     price: 'From £48/m²',
     description: 'Authentic wood grain effect luxury vinyl'
-  },
-  {
-    src: '/49.jpg',
-    title: 'Complete Room Transformation',
-    category: 'Carpets',
-    price: 'From £46/m²',
-    description: 'Full room carpet installation with professional finish'
   }
 ];
 
@@ -139,7 +153,7 @@ const Gallery = () => {
             Project <span className="bg-gradient-to-r from-purple-400 to-indigo-600 bg-clip-text text-transparent">Gallery</span>
           </h2>
           <p className="text-xl text-white/70 max-w-3xl mx-auto mb-12">
-            Explore our curated portfolio of 15 premium flooring installations across Birmingham and West Midlands
+            Explore our curated portfolio of premium flooring installations across Birmingham and West Midlands
           </p>
 
           {/* OPTIMIZED MOBILE FILTER BUTTONS */}
@@ -232,7 +246,7 @@ const Gallery = () => {
           </div>
         </div>
 
-        {/* OPTIMIZED GRID LAYOUT - PERFECT FOR 15 IMAGES */}
+        {/* OPTIMIZED GRID LAYOUT */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-6 lg:gap-8">
           {filteredImages.map((image, index) => (
             <motion.div 

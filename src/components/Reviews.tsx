@@ -215,7 +215,7 @@ const Reviews = () => {
 
         {/* MAIN TESTIMONIAL SHOWCASE - MOBILE OPTIMIZED */}
         <div className="relative max-w-6xl mx-auto">
-          {/* PREMIUM TESTIMONIAL CARD - NO NAVIGATION OVERLAP */}
+          {/* PREMIUM TESTIMONIAL CARD - FIXED NAVIGATION POSITIONING */}
           <motion.div
             className="relative bg-gradient-to-br from-white/10 via-white/5 to-white/10 backdrop-blur-2xl border border-white/20 rounded-3xl sm:rounded-[2rem] overflow-hidden shadow-2xl"
             whileHover={{ scale: 1.01 }}
@@ -233,8 +233,8 @@ const Reviews = () => {
             </motion.div>
 
             <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-0">
-              {/* LEFT SIDE - PROJECT IMAGE - EXACT SAME SIZE AS CARD */}
-              <div className="relative h-64 sm:h-80 lg:h-96 overflow-hidden rounded-t-3xl lg:rounded-l-3xl lg:rounded-tr-none">
+              {/* LEFT SIDE - PROJECT IMAGE - CONSISTENT HEIGHT WITH EQUAL TOP/BOTTOM SPACING */}
+              <div className="relative h-80 sm:h-96 lg:h-[28rem] overflow-hidden rounded-t-3xl lg:rounded-l-3xl lg:rounded-tr-none">
                 <AnimatePresence mode="wait">
                   <motion.div
                     key={`image-${currentReview}`}
@@ -272,12 +272,11 @@ const Reviews = () => {
                   </motion.div>
                 </AnimatePresence>
                 
-                {/* Image overlays - MODIFIED TO MATCH CARD EXACTLY */}
+                {/* Image overlays - CONSISTENT SPACING */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
-                {/* REMOVED THE SIDE GRADIENT TO MAKE IMAGE MATCH CARD SIZE EXACTLY */}
                 
-                {/* Project details overlay */}
-                <div className="absolute bottom-4 left-4 right-4 lg:bottom-6 lg:left-6">
+                {/* Project details overlay - REMOVED PRICE */}
+                <div className="absolute bottom-6 left-6 right-6">
                   <motion.div
                     key={`overlay-${currentReview}`}
                     initial={{ opacity: 0, y: 20 }}
@@ -290,14 +289,17 @@ const Reviews = () => {
                     </div>
                     <div className="flex items-center space-x-4 text-white/90">
                       <span className="text-sm font-medium">{currentReviewData.completionDate}</span>
-                      <span className="text-sm font-bold">{currentReviewData.projectValue}</span>
+                      <div className="flex items-center space-x-1">
+                        <Star className="w-3 h-3 text-yellow-400" fill="currentColor" />
+                        <span className="text-sm font-medium">Premium Quality</span>
+                      </div>
                     </div>
                   </motion.div>
                 </div>
               </div>
 
-              {/* RIGHT SIDE - TESTIMONIAL CONTENT - MOBILE PERFECT */}
-              <div className="p-6 sm:p-8 lg:p-10 flex flex-col justify-center">
+              {/* RIGHT SIDE - TESTIMONIAL CONTENT - MATCHING HEIGHT */}
+              <div className="h-80 sm:h-96 lg:h-[28rem] p-6 sm:p-8 lg:p-10 flex flex-col justify-center">
                 <AnimatePresence mode="wait">
                   <motion.div
                     key={`content-${currentReview}`}
@@ -319,20 +321,20 @@ const Reviews = () => {
                       />
                     </motion.div>
 
-                    {/* SUPER CLEAN IRON GLOW STAR RATING WITH SIDE NAVIGATION - PERFECT CLOSE POSITIONING */}
+                    {/* PERFECTLY ALIGNED STAR RATING WITH NAVIGATION - FIXED POSITIONING */}
                     <motion.div 
                       className="flex items-center justify-center sm:justify-start relative"
                       initial={{ opacity: 0, x: -20 }}
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ delay: 0.3, duration: 0.5 }}
                     >
-                      {/* LEFT NAVIGATION ARROW - MUCH CLOSER TO STARS */}
+                      {/* LEFT NAVIGATION ARROW - PROPERLY ALIGNED */}
                       <motion.button
                         onClick={prevReview}
                         disabled={isTransitioning}
                         whileHover={{ scale: 1.1, x: -2 }}
                         whileTap={{ scale: 0.95 }}
-                        className="absolute -left-6 sm:-left-7 lg:-left-8 w-8 h-8 sm:w-9 sm:h-9 lg:w-10 lg:h-10 bg-black/80 backdrop-blur-xl border border-white/30 rounded-lg flex items-center justify-center text-white transition-all disabled:opacity-50 shadow-xl hover:bg-black/90 z-10"
+                        className="absolute -left-12 sm:-left-14 lg:-left-16 top-1/2 -translate-y-1/2 w-8 h-8 sm:w-9 sm:h-9 lg:w-10 lg:h-10 bg-black/80 backdrop-blur-xl border border-white/30 rounded-lg flex items-center justify-center text-white transition-all disabled:opacity-50 shadow-xl hover:bg-black/90 z-10"
                       >
                         <ChevronLeft className="w-4 h-4 sm:w-5 sm:h-5" />
                       </motion.button>
@@ -389,13 +391,13 @@ const Reviews = () => {
                         </div>
                       </div>
 
-                      {/* RIGHT NAVIGATION ARROW - MUCH CLOSER TO STARS */}
+                      {/* RIGHT NAVIGATION ARROW - PROPERLY ALIGNED */}
                       <motion.button
                         onClick={nextReview}
                         disabled={isTransitioning}
                         whileHover={{ scale: 1.1, x: 2 }}
                         whileTap={{ scale: 0.95 }}
-                        className="absolute -right-6 sm:-right-7 lg:-right-8 w-8 h-8 sm:w-9 sm:h-9 lg:w-10 lg:h-10 bg-black/80 backdrop-blur-xl border border-white/30 rounded-lg flex items-center justify-center text-white transition-all disabled:opacity-50 shadow-xl hover:bg-black/90 z-10"
+                        className="absolute -right-12 sm:-right-14 lg:-right-16 top-1/2 -translate-y-1/2 w-8 h-8 sm:w-9 sm:h-9 lg:w-10 lg:h-10 bg-black/80 backdrop-blur-xl border border-white/30 rounded-lg flex items-center justify-center text-white transition-all disabled:opacity-50 shadow-xl hover:bg-black/90 z-10"
                       >
                         <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5" />
                       </motion.button>

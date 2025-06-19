@@ -131,7 +131,14 @@ const galleryImages = [
     description: 'Intricate decorative tile pattern vinyl flooring'
   },
 
-  // LAMINATE FLOORING
+  // LAMINATE FLOORING - ADDED NEW IMAGE
+  {
+    src: '/Laminate colour torros.jpg',
+    title: 'Laminate Colour Torros',
+    category: 'Laminate Flooring',
+    price: 'From £47/m²',
+    description: 'Premium Torros colour laminate flooring with authentic wood grain finish'
+  },
   {
     src: '/4.jpg',
     title: 'Grey Wood Effect Laminate',

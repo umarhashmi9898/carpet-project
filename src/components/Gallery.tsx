@@ -8,35 +8,35 @@ const galleryImages = [
   {
     src: '/1.jpg',
     title: 'Premium Black Staircase Carpeting',
-    category: 'Staircase Flooring',
+    category: 'Stairs',
     price: 'From £55/m²',
     description: 'Elegant black carpet with decorative border trim on white staircase'
   },
   {
     src: '/2.jpg',
     title: 'Blue-Grey Room Carpeting',
-    category: 'Room Carpeting', 
+    category: 'Carpets', 
     price: 'From £42/m²',
     description: 'Premium blue-grey carpet installation in residential room'
   },
   {
     src: '/3.jpg',
     title: 'Geometric Pattern Vinyl Flooring',
-    category: 'Designer Vinyl',
+    category: 'Vinyl Flooring',
     price: 'From £48/m²',
     description: 'Stunning black and white geometric tile pattern vinyl'
   },
   {
     src: '/4.jpg',
     title: 'Grey Wood Effect Laminate',
-    category: 'Luxury Vinyl',
+    category: 'Laminate Flooring',
     price: 'From £45/m²',
     description: 'Premium grey wood grain laminate flooring installation'
   },
   {
     src: '/5.jpg',
     title: 'Dark Wood Laminate Living Room',
-    category: 'Luxury Vinyl',
+    category: 'Laminate Flooring',
     price: 'From £50/m²',
     description: 'Rich dark wood effect laminate with traditional fireplace'
   },
@@ -45,21 +45,21 @@ const galleryImages = [
   {
     src: '/6.jpg',
     title: 'Luxury Bedroom Carpeting',
-    category: 'Room Carpeting',
+    category: 'Carpets',
     price: 'From £40/m²',
     description: 'Premium carpet installation in modern bedroom setting'
   },
   {
     src: '/7.jpg',
     title: 'Contemporary Geometric Vinyl',
-    category: 'Designer Vinyl',
+    category: 'Vinyl Flooring',
     price: 'From £52/m²',
     description: 'Bold geometric pattern vinyl for modern kitchen spaces'
   },
   {
     src: '/8.jpg',
     title: 'Herringbone Luxury Vinyl',
-    category: 'Luxury Vinyl',
+    category: 'Laminate Flooring',
     price: 'From £55/m²',
     description: 'Classic herringbone pattern luxury vinyl flooring'
   },
@@ -68,28 +68,28 @@ const galleryImages = [
   {
     src: '/9.jpg',
     title: 'Parquet Style Luxury Vinyl',
-    category: 'Luxury Vinyl',
+    category: 'Laminate Flooring',
     price: 'From £58/m²',
     description: 'Elegant parquet pattern vinyl with traditional appeal'
   },
   {
     src: '/10.jpg',
     title: 'Professional Carpet Installation',
-    category: 'Room Carpeting',
+    category: 'Carpets',
     price: 'From £44/m²',
     description: 'Expert carpet fitting with precision edge work'
   },
   {
     src: '/16.jpg',
     title: 'Luxury Staircase Runner',
-    category: 'Staircase Flooring',
+    category: 'Stairs',
     price: 'From £60/m²',
     description: 'Premium staircase runner with decorative border'
   },
   {
     src: '/17.jpg',
     title: 'Premium Living Room Carpet',
-    category: 'Room Carpeting',
+    category: 'Carpets',
     price: 'From £46/m²',
     description: 'High-quality carpet installation in living space'
   },
@@ -98,21 +98,21 @@ const galleryImages = [
   {
     src: '/18.jpg',
     title: 'Decorative Tile Effect Vinyl',
-    category: 'Designer Vinyl',
+    category: 'Vinyl Flooring',
     price: 'From £50/m²',
     description: 'Intricate decorative tile pattern vinyl flooring'
   },
   {
     src: '/20.jpg',
     title: 'Natural Wood Effect Flooring',
-    category: 'Luxury Vinyl',
+    category: 'Laminate Flooring',
     price: 'From £48/m²',
     description: 'Authentic wood grain effect luxury vinyl'
   },
   {
     src: '/49.jpg',
     title: 'Complete Room Transformation',
-    category: 'Room Carpeting',
+    category: 'Carpets',
     price: 'From £46/m²',
     description: 'Full room carpet installation with professional finish'
   }
@@ -122,8 +122,8 @@ const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
   const [filter, setFilter] = useState('All');
 
-  // OPTIMIZED CATEGORIES BASED ON ACTUAL IMAGE CONTENT
-  const categories = ['All', 'Staircase Flooring', 'Room Carpeting', 'Designer Vinyl', 'Luxury Vinyl'];
+  // UPDATED CATEGORIES BASED ON YOUR REQUIREMENTS
+  const categories = ['All', 'Stairs', 'Carpets', 'Underlay', 'Vinyl Flooring', 'Laminate Flooring'];
   
   const filteredImages = filter === 'All' 
     ? galleryImages 
@@ -146,7 +146,7 @@ const Gallery = () => {
           <div className="w-full">
             {/* MOBILE LAYOUT - STACKED ROWS */}
             <div className="block sm:hidden space-y-3">
-              {/* ROW 1 - ALL & STAIRCASE */}
+              {/* ROW 1 - ALL & STAIRS */}
               <div className="flex justify-center gap-3">
                 {categories.slice(0, 2).map((category) => (
                   <motion.button
@@ -165,7 +165,7 @@ const Gallery = () => {
                 ))}
               </div>
               
-              {/* ROW 2 - ROOM & DESIGNER */}
+              {/* ROW 2 - CARPETS & UNDERLAY */}
               <div className="flex justify-center gap-3">
                 {categories.slice(2, 4).map((category) => (
                   <motion.button
@@ -184,9 +184,9 @@ const Gallery = () => {
                 ))}
               </div>
               
-              {/* ROW 3 - LUXURY */}
+              {/* ROW 3 - VINYL & LAMINATE */}
               <div className="flex justify-center gap-3">
-                {categories.slice(4, 5).map((category) => (
+                {categories.slice(4, 6).map((category) => (
                   <motion.button
                     key={category}
                     onClick={() => setFilter(category)}

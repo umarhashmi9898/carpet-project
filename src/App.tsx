@@ -7,6 +7,7 @@ import Gallery from './components/Gallery';
 import Reviews from './components/Reviews';
 import TrustBadges from './components/TrustBadges';
 import CarpetShowcase from './components/CarpetShowcase';
+import Team from './components/Team';
 import Footer from './components/Footer';
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
       <Reviews />
       <TrustBadges />
       <CarpetShowcase />
+      <Team />
       <Footer />
     </div>
   );

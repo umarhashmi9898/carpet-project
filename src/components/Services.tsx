@@ -190,7 +190,7 @@ const Services = () => {
                   </div>
                   
                   <motion.a 
-                    href="https://wa.me/447949087460?text=I'm interested in your flooring services"
+                    href="http://wa.me/+447949087460?text=I'm interested in your flooring services"
                     className={`inline-flex items-center space-x-3 bg-gradient-to-r ${services[activeService].gradient} text-white px-8 py-4 rounded-2xl font-bold text-lg hover:scale-105 transition-all shadow-2xl relative overflow-hidden group`}
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.98 }}

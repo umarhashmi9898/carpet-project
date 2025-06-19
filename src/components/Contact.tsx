@@ -20,7 +20,7 @@ Phone: ${formData.phone}
 Service Interest: ${formData.service}
 Message: ${formData.message}`;
     
-    window.open(`https://wa.me/447949087460?text=${encodeURIComponent(whatsappMessage)}`);
+    window.open(`http://wa.me/+447949087460?text=${encodeURIComponent(whatsappMessage)}`);
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
@@ -55,7 +55,7 @@ Message: ${formData.message}`;
                   </div>
                   <div>
                     <h4 className="text-white font-semibold text-lg">WhatsApp</h4>
-                    <a href="https://wa.me/447949087460" className="text-purple-400 hover:text-purple-300 transition-colors text-lg">
+                    <a href="http://wa.me/+447949087460" className="text-purple-400 hover:text-purple-300 transition-colors text-lg">
                       07949 087460
                     </a>
                   </div>
@@ -84,7 +84,7 @@ Message: ${formData.message}`;
 
               <div className="mt-8 pt-8 border-t border-white/10">
                 <a 
-                  href="https://wa.me/447949087460?text=Hi, I'd like a free quote for flooring"
+                  href="http://wa.me/+447949087460?text=Hi, I'd like a free quote for flooring"
                   className="w-full bg-gradient-to-r from-green-500 to-green-600 text-white px-6 py-4 rounded-xl font-semibold text-center hover:from-green-600 hover:to-green-700 transition-all transform hover:scale-105 flex items-center justify-center space-x-2 text-lg shadow-lg"
                 >
                   <Phone className="w-5 h-5" />

@@ -185,7 +185,7 @@ const Process = () => {
           viewport={{ once: true }}
         >
           <motion.a 
-            href="https://wa.me/447949087460?text=I'd like to start the consultation process"
+            href="http://wa.me/+447949087460?text=I'd like to start the consultation process"
             className="group inline-flex items-center space-x-3 bg-gradient-to-r from-purple-500 to-indigo-600 text-white px-8 sm:px-10 py-4 sm:py-5 rounded-2xl font-bold text-lg sm:text-xl shadow-2xl hover:shadow-purple-500/25 transition-all relative overflow-hidden"
             whileHover={{ 
               scale: 1.05,

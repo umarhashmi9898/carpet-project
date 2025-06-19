@@ -667,7 +667,7 @@ const Hero = () => {
               {/* CTA Buttons - MOBILE RESPONSIVE */}
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center xl:justify-start px-4 sm:px-0">
                 <motion.a
-                  href="https://wa.me/447949087460?text=Hi, I'd like a free quote for flooring"
+                  href="http://wa.me/+447949087460?text=Hi, I'd like a free quote for flooring"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                   transition={{ duration: 0.2 }}

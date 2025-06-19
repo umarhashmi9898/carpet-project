@@ -360,7 +360,7 @@ const CarpetShowcase = () => {
                     {/* CTA Buttons */}
                     <div className="flex flex-col sm:flex-row gap-3 pt-4">
                       <motion.a
-                        href={`https://wa.me/447949087460?text=I'm interested in the ${currentCollection.name}`}
+                        href={`http://wa.me/+447949087460?text=I'm interested in the ${currentCollection.name}`}
                         className={`flex-1 bg-gradient-to-r ${currentCollection.gradient} text-white px-6 py-3 rounded-xl font-semibold text-center hover:scale-105 transition-all shadow-lg flex items-center justify-center space-x-2`}
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.98 }}
@@ -442,7 +442,7 @@ const CarpetShowcase = () => {
           viewport={{ once: true }}
         >
           <motion.a
-            href="https://wa.me/447949087460?text=I'd like to explore your complete flooring collection of 8 premium options"
+            href="http://wa.me/+447949087460?text=I'd like to explore your complete flooring collection of 8 premium options"
             className="group inline-flex items-center space-x-3 bg-gradient-to-r from-purple-500 to-indigo-600 text-white px-8 sm:px-10 py-4 sm:py-5 rounded-2xl font-bold text-lg sm:text-xl shadow-2xl hover:shadow-purple-500/25 transition-all relative overflow-hidden"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.98 }}

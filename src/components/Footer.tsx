@@ -41,7 +41,7 @@ const Footer = () => {
               </div>
               
               <a 
-                href="https://wa.me/447949087460"
+                href="http://wa.me/+447949087460"
                 className="w-full bg-gradient-to-r from-green-500 to-green-600 text-white px-6 py-3 rounded-xl font-semibold text-center hover:from-green-600 hover:to-green-700 transition-all transform hover:scale-105 flex items-center justify-center space-x-2 shadow-lg"
               >
                 <Phone className="w-5 h-5" />
@@ -109,7 +109,7 @@ const Footer = () => {
                   </div>
                   <div>
                     <p className="text-white font-semibold">WhatsApp</p>
-                    <a href="https://wa.me/447949087460" className="text-purple-400 hover:text-purple-300 transition-colors font-medium">
+                    <a href="http://wa.me/+447949087460" className="text-purple-400 hover:text-purple-300 transition-colors font-medium">
                       07949 087460
                     </a>
                   </div>
@@ -263,7 +263,7 @@ const Footer = () => {
 
       {/* Floating WhatsApp Button */}
       <a 
-        href="https://wa.me/447949087460"
+        href="http://wa.me/+447949087460"
         className="fixed bottom-6 right-6 w-16 h-16 bg-gradient-to-r from-green-500 to-green-600 text-white rounded-full flex items-center justify-center shadow-2xl hover:from-green-600 hover:to-green-700 transition-all transform hover:scale-110 z-50 border-2 border-white/20"
         aria-label="Contact us on WhatsApp"
       >

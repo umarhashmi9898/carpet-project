@@ -4,87 +4,87 @@ import { ArrowRight, Star, MapPin, Clock, Phone, Sparkles, Award, Shield, Chevro
 import { gsap } from 'gsap';
 import LoadingScreen from './LoadingScreen';
 
-// REAL LUXURY FLOORING IMAGES FROM FILE SYSTEM - UPDATED TO MATCH ACTUAL AVAILABLE IMAGES
+// CORRECT LUXURY FLOORING IMAGES BASED ON PROVIDED MENU NAMES
 const luxuryFlooringImages = [
   { 
     id: 1, 
-    img: "/stair 1.jpg",
+    img: "/Combi stairs.jpg",
     title: "Premium Staircase Installation",
     subtitle: "Professional Stair Carpeting",
-    category: "Staircase Carpeting",
+    category: "Stairs",
     color: "#8B5CF6",
     gradient: "from-purple-500 to-indigo-600",
     description: "Transform your staircase with our premium carpeting featuring professional installation and superior comfort."
   },
   { 
     id: 2, 
-    img: "/2.jpg",
-    title: "Blue-Grey Room Carpet",
-    subtitle: "Professional Installation",
-    category: "Room Carpeting",
+    img: "/Laminate colour torros.jpg",
+    title: "Torros Laminate Flooring",
+    subtitle: "Premium Wood Effect",
+    category: "Laminate Flooring",
     color: "#10B981",
     gradient: "from-emerald-500 to-teal-600",
-    description: "Experience professional room carpeting with premium blue-grey materials and precision installation."
+    description: "Experience professional laminate flooring with premium Torros color and precision installation."
   },
   { 
     id: 3, 
     img: "/Herringbone pattern vinyl.jpg",
     title: "Herringbone Pattern Vinyl",
     subtitle: "Contemporary Design",
-    category: "Designer Vinyl",
+    category: "Vinyl Flooring",
     color: "#F59E0B",
     gradient: "from-amber-500 to-orange-600",
     description: "Discover our stunning herringbone vinyl patterns offering classic style and unmatched durability."
   },
   { 
     id: 4, 
-    img: "/Laminate colour torros.jpg",
-    title: "Torros Laminate Flooring",
-    subtitle: "Premium Wood Effect",
-    category: "Luxury Vinyl",
+    img: "/Vinyl.jpg",
+    title: "Premium Vinyl Flooring",
+    subtitle: "Modern Design",
+    category: "Vinyl Flooring",
     color: "#EF4444",
     gradient: "from-red-500 to-pink-600",
-    description: "Create the perfect flooring with our Torros laminate designed for ultimate comfort and style."
+    description: "Create the perfect flooring with our premium vinyl designed for ultimate comfort and style."
   },
   { 
     id: 5, 
-    img: "/5.jpg",
-    title: "Dark Wood Living Room",
-    subtitle: "Premium Wood Effect",
-    category: "Luxury Vinyl",
+    img: "/Luxury vinyl.jpg",
+    title: "Luxury Vinyl Collection",
+    subtitle: "Premium Quality",
+    category: "Vinyl Flooring",
     color: "#3B82F6",
     gradient: "from-blue-500 to-indigo-600",
-    description: "Rich dark wood effect flooring combining the beauty of traditional wood with superior durability."
+    description: "Luxury vinyl flooring combining elegant design with superior durability and modern appeal."
   },
   { 
     id: 6, 
-    img: "/Luxury carpet ivory colour.jpg",
-    title: "Luxury Ivory Carpet",
+    img: "/Luxury blue carpet.jpg",
+    title: "Luxury Blue Carpet",
     subtitle: "Premium Comfort",
-    category: "Room Carpeting",
+    category: "Carpets",
     color: "#7C3AED",
     gradient: "from-violet-500 to-purple-600",
-    description: "Transform your space with our luxury ivory carpet offering ultimate comfort and elegant style."
+    description: "Transform your space with our luxury blue carpet offering ultimate comfort and elegant style."
   },
   { 
     id: 7, 
-    img: "/Vinyl.jpg",
-    title: "Premium Vinyl Flooring",
-    subtitle: "Modern Pattern Flooring",
-    category: "Designer Vinyl",
+    img: "/Luxury carpet ivory colour.jpg",
+    title: "Luxury Ivory Carpet",
+    subtitle: "Elegant Design",
+    category: "Carpets",
     color: "#059669",
     gradient: "from-emerald-600 to-green-600",
-    description: "Premium vinyl flooring that creates stunning, contemporary statements in any space."
+    description: "Premium ivory carpet that creates stunning, sophisticated statements in any space."
   },
   { 
     id: 8, 
-    img: "/Luxury vinyl.jpg",
-    title: "Luxury Vinyl Collection",
-    subtitle: "Premium Pattern Design",
-    category: "Luxury Vinyl",
+    img: "/Stain free Englewood Beige carpet.jpg",
+    title: "Stain Free Englewood Beige",
+    subtitle: "Advanced Protection",
+    category: "Carpets",
     color: "#DC2626",
     gradient: "from-red-600 to-rose-600",
-    description: "Elegant luxury vinyl flooring combining classic design with modern durability and style."
+    description: "Advanced stain-free carpet in elegant Englewood Beige combining protection with luxury style."
   }
 ];
 
@@ -222,7 +222,7 @@ const MobileOptimized3DCarousel = ({ images }: { images: typeof luxuryFlooringIm
                   loading="lazy"
                   onError={(e) => {
                     console.log(`Failed to load image: ${currentImage.img}`);
-                    e.currentTarget.src = '/stair 1.jpg'; // Fallback to a known working image
+                    e.currentTarget.src = '/Combi stairs.jpg'; // Fallback to a known working image
                   }}
                 />
               </motion.div>

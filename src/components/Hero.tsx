@@ -166,14 +166,6 @@ const MobileOptimized3DCarousel = ({ images }: { images: typeof luxuryFlooringIm
     setIsPlaying(!isPlaying);
   };
 
-  const resetCarousel = () => {
-    if (isTransitioning) return;
-    setIsTransitioning(true);
-    setDirection(1);
-    setCurrentIndex(0);
-    setTimeout(() => setIsTransitioning(false), 600);
-  };
-
   const currentImage = images[currentIndex];
 
   return (
@@ -444,14 +436,6 @@ const MobileOptimized3DCarousel = ({ images }: { images: typeof luxuryFlooringIm
                 className="w-6 h-6 sm:w-7 sm:h-7 bg-white/10 backdrop-blur-md rounded-md sm:rounded-lg border border-white/20 flex items-center justify-center text-white hover:bg-white/20 transition-all"
               >
                 {isPlaying ? <Pause className="w-3 h-3 sm:w-3.5 sm:h-3.5" /> : <Play className="w-3 h-3 sm:w-3.5 sm:h-3.5" />}
-              </motion.button>
-              
-              <motion.button
-                onClick={resetCarousel}
-                whileHover={{ scale: 1.1, rotate: 180 }}
-                whileTap={{ scale: 0.9 }}
-                className="w-6 h-6 sm:w-7 sm:h-7 bg-white/10 backdrop-blur-md rounded-md sm:rounded-lg border border-white/20 flex items-center justify-center text-white hover:bg-white/20 transition-all"
-              >
               </motion.button>
             </div>
             

@@ -222,7 +222,7 @@ const Gallery = () => {
                   loading="lazy"
                   onError={(e) => {
                     console.log(`Failed to load image: ${image.src}`);
-                    e.currentTarget.src = '/Combi stairs.jpg'; // Fallback to a known working image
+                    e.currentTarget.src = '/Luxury blue carpet.jpg'; // Fallback to a known working image
                   }}
                 />
                 

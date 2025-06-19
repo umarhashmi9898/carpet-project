@@ -242,7 +242,7 @@ const MobileOptimized3DCarousel = ({ images }: { images: typeof luxuryFlooringIm
                   loading="lazy"
                   onError={(e) => {
                     console.log(`Failed to load image: ${currentImage.img}`);
-                    e.currentTarget.src = '/Combi stairs.jpg'; // Fallback to a known working image
+                    e.currentTarget.src = '/Luxury blue carpet.jpg'; // Fallback to a known working image
                   }}
                 />
               </motion.div>

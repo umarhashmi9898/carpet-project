@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion';
-import { ArrowRight, Star, MapPin, Clock, Phone, Sparkles, Award, Shield, ChevronLeft, ChevronRight, Play, Pause, RotateCcw } from 'lucide-react';
+import { ArrowRight, Star, MapPin, Clock, Phone, Sparkles, Award, Shield, ChevronLeft, ChevronRight, Play, Pause } from 'lucide-react';
 import { gsap } from 'gsap';
 import LoadingScreen from './LoadingScreen';
 
@@ -452,7 +452,6 @@ const MobileOptimized3DCarousel = ({ images }: { images: typeof luxuryFlooringIm
                 whileTap={{ scale: 0.9 }}
                 className="w-6 h-6 sm:w-7 sm:h-7 bg-white/10 backdrop-blur-md rounded-md sm:rounded-lg border border-white/20 flex items-center justify-center text-white hover:bg-white/20 transition-all"
               >
-                <RotateCcw className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
               </motion.button>
             </div>
             

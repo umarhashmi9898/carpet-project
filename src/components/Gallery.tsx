@@ -71,7 +71,44 @@ const galleryImages = [
     description: 'Full room carpet installation with professional finish'
   },
 
-  // VINYL FLOORING
+  // UNDERLAY - NEW CATEGORY WITH NEW IMAGE
+  {
+    src: '/Soundproof plush walk underlay.jpg',
+    title: 'Soundproof Plush Walk Underlay',
+    category: 'Underlay',
+    price: 'From £8/m²',
+    description: 'Premium soundproof underlay installation for enhanced comfort and noise reduction'
+  },
+
+  // VINYL FLOORING - UPDATED WITH NEW IMAGES
+  {
+    src: '/Herringbone pattern vinyl.jpg',
+    title: 'Herringbone Pattern Vinyl',
+    category: 'Vinyl Flooring',
+    price: 'From £52/m²',
+    description: 'Elegant herringbone pattern vinyl flooring with classic appeal'
+  },
+  {
+    src: '/Herringbone pattern vinyle.jpg',
+    title: 'Herringbone Pattern Vinyl Installation',
+    category: 'Vinyl Flooring',
+    price: 'From £54/m²',
+    description: 'Professional herringbone vinyl installation with precision fitting'
+  },
+  {
+    src: '/Vinyl.jpg',
+    title: 'Premium Vinyl Flooring',
+    category: 'Vinyl Flooring',
+    price: 'From £45/m²',
+    description: 'High-quality vinyl flooring with modern geometric patterns'
+  },
+  {
+    src: '/Luxury vinyl.jpg',
+    title: 'Luxury Vinyl Installation',
+    category: 'Vinyl Flooring',
+    price: 'From £58/m²',
+    description: 'Premium luxury vinyl flooring with sophisticated herringbone design'
+  },
   {
     src: '/3.jpg',
     title: 'Geometric Pattern Vinyl Flooring',

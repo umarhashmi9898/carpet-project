@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, Eye, Award, Star } from 'lucide-react';
+import { X, Eye, Award, Star, MessageCircle } from 'lucide-react';
 
 // EXACT MAPPING AS REQUESTED - NO OTHER CHANGES
 const galleryImages = [
@@ -9,7 +9,6 @@ const galleryImages = [
     src: '/Combi stairs.jpg',
     title: 'Combi Stairs',
     category: 'Stairs',
-    price: 'From £55/m²',
     description: 'Professional combination staircase installation with carpet treads and laminate risers'
   },
 
@@ -18,7 +17,6 @@ const galleryImages = [
     src: '/Laminate colour torros.jpg',
     title: 'Laminate Colour Torros',
     category: 'Laminate Flooring',
-    price: 'From £47/m²',
     description: 'Premium Torros colour laminate flooring with authentic wood grain finish'
   },
 
@@ -27,28 +25,24 @@ const galleryImages = [
     src: '/Herringbone pattern vinyl.jpg',
     title: 'Herringbone Pattern Vinyl',
     category: 'Vinyl Flooring',
-    price: 'From £52/m²',
     description: 'Elegant herringbone pattern vinyl flooring with classic appeal'
   },
   {
     src: '/Herringbone pattern vinyle.jpg',
     title: 'Herringbone Pattern Vinyle',
     category: 'Vinyl Flooring',
-    price: 'From £54/m²',
     description: 'Professional herringbone vinyl installation with precision fitting'
   },
   {
     src: '/Vinyl.jpg',
     title: 'Vinyl',
     category: 'Vinyl Flooring',
-    price: 'From £45/m²',
     description: 'High-quality vinyl flooring with modern geometric patterns'
   },
   {
     src: '/Luxury vinyl.jpg',
     title: 'Luxury Vinyl',
     category: 'Vinyl Flooring',
-    price: 'From £58/m²',
     description: 'Premium luxury vinyl flooring with sophisticated herringbone design'
   },
 
@@ -57,21 +51,18 @@ const galleryImages = [
     src: '/Luxury blue carpet.jpg',
     title: 'Luxury Blue Carpet',
     category: 'Carpets',
-    price: 'From £48/m²',
     description: 'Premium blue carpet installation with superior quality and finish'
   },
   {
     src: '/Luxury carpet ivory colour.jpg',
     title: 'Luxury Carpet Ivory Colour',
     category: 'Carpets',
-    price: 'From £45/m²',
     description: 'Elegant ivory luxury carpet offering exceptional comfort and style'
   },
   {
     src: '/Stain free englewood Beige carpet.jpg',
     title: 'Stain Free Englewood Beige Carpet',
     category: 'Carpets', 
-    price: 'From £42/m²',
     description: 'Premium stain-resistant beige carpet with superior comfort and durability'
   },
 
@@ -80,7 +71,6 @@ const galleryImages = [
     src: '/Soundproof plush walk underlay.jpg',
     title: 'Soundproof Plush Walk Underlay',
     category: 'Underlay',
-    price: 'From £8/m²',
     description: 'Premium soundproof underlay installation for enhanced comfort and noise reduction'
   }
 ];
@@ -240,16 +230,31 @@ const Gallery = () => {
                 </div>
               </div>
               
-              {/* Content */}
+              {/* Content - REMOVED PRICE, ADDED WHATSAPP BUTTON */}
               <div className="p-4 lg:p-6 border-t border-[#B57EFA]/20">
-                <h3 className="text-base lg:text-lg font-semibold text-white mb-2 group-hover:text-purple-400 transition-colors line-clamp-2">
+                <h3 className="text-base lg:text-lg font-semibold text-white mb-3 group-hover:text-purple-400 transition-colors line-clamp-2">
                   {image.title}
                 </h3>
-                <div className="flex items-center justify-between">
-                  <span className="text-[#B57EFA] font-medium text-sm lg:text-base">{image.price}</span>
+                
+                {/* WhatsApp Button - Responsive */}
+                <motion.a
+                  href="http://wa.me/+447949087460"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white px-4 py-2.5 rounded-lg font-semibold text-sm transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg hover:shadow-green-500/25 transform hover:scale-105"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  <MessageCircle className="w-4 h-4" />
+                  <span>Get Quote</span>
+                </motion.a>
+                
+                {/* Premium Badge */}
+                <div className="flex items-center justify-center mt-2">
                   <div className="flex items-center space-x-1">
                     <Star className="w-3 h-3 lg:w-4 lg:h-4 text-yellow-400" fill="currentColor" />
-                    <span className="text-white/60 text-xs lg:text-sm">Premium</span>
+                    <span className="text-white/60 text-xs lg:text-sm">Premium Quality</span>
                   </div>
                 </div>
               </div>
@@ -294,12 +299,12 @@ const Gallery = () => {
                   className="w-full h-full object-contain"
                 />
                 
-                {/* Enhanced Image Info Overlay */}
+                {/* Enhanced Image Info Overlay with WhatsApp Button */}
                 <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 via-black/70 to-transparent p-6">
                   <h3 className="text-white text-xl font-bold mb-2">{galleryImages[selectedImage].title}</h3>
-                  <p className="text-white/80 text-sm mb-3">{galleryImages[selectedImage].description}</p>
+                  <p className="text-white/80 text-sm mb-4">{galleryImages[selectedImage].description}</p>
+                  
                   <div className="flex items-center justify-between">
-                    <span className="text-purple-400 font-semibold text-lg">{galleryImages[selectedImage].price}</span>
                     <div className="flex items-center space-x-4">
                       <span className="text-white/70 text-sm">{galleryImages[selectedImage].category}</span>
                       <div className="flex items-center space-x-1">
@@ -307,6 +312,19 @@ const Gallery = () => {
                         <span className="text-white/70 text-sm">Premium Quality</span>
                       </div>
                     </div>
+                    
+                    {/* WhatsApp Button in Lightbox */}
+                    <motion.a
+                      href="http://wa.me/+447949087460"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white px-4 py-2 rounded-lg font-semibold text-sm transition-all duration-300 flex items-center space-x-2 shadow-lg"
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                    >
+                      <MessageCircle className="w-4 h-4" />
+                      <span>Get Quote</span>
+                    </motion.a>
                   </div>
                 </div>
               </motion.div>

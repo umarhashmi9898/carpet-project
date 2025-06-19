@@ -2,85 +2,27 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, Eye, Award, Star } from 'lucide-react';
 
-// ANALYZED AND OPTIMIZED - REMOVED DUPLICATES, ORGANIZED BY ACTUAL CONTENT
+// EXACT MAPPING AS REQUESTED - NO OTHER CHANGES
 const galleryImages = [
-  // STAIRCASE INSTALLATIONS - UPDATED WITH NEW IMAGE
+  // STAIRS
   {
     src: '/Combi stairs.jpg',
-    title: 'Combi Stairs Installation',
+    title: 'Combi Stairs',
     category: 'Stairs',
     price: 'From £55/m²',
     description: 'Professional combination staircase installation with carpet treads and laminate risers'
   },
+
+  // LAMINATE FLOORING
   {
-    src: '/16.jpg',
-    title: 'Luxury Staircase Runner',
-    category: 'Stairs',
-    price: 'From £60/m²',
-    description: 'Premium staircase runner with decorative border'
+    src: '/Laminate colour torros.jpg',
+    title: 'Laminate Colour Torros',
+    category: 'Laminate Flooring',
+    price: 'From £47/m²',
+    description: 'Premium Torros colour laminate flooring with authentic wood grain finish'
   },
 
-  // ROOM CARPETING - UPDATED WITH NEW IMAGES
-  {
-    src: '/Stain free englewood Beige carpet.jpg',
-    title: 'Stain Free Englewood Beige Carpet',
-    category: 'Carpets', 
-    price: 'From £42/m²',
-    description: 'Premium stain-resistant beige carpet with superior comfort and durability'
-  },
-  {
-    src: '/Luxury carpet ivory colour.jpg',
-    title: 'Luxury Carpet Ivory Colour',
-    category: 'Carpets',
-    price: 'From £45/m²',
-    description: 'Elegant ivory luxury carpet offering exceptional comfort and style'
-  },
-  {
-    src: '/Luxury blue carpet.jpg',
-    title: 'Luxury Blue Carpet',
-    category: 'Carpets',
-    price: 'From £48/m²',
-    description: 'Premium blue carpet installation with superior quality and finish'
-  },
-  {
-    src: '/6.jpg',
-    title: 'Luxury Bedroom Carpeting',
-    category: 'Carpets',
-    price: 'From £40/m²',
-    description: 'Premium carpet installation in modern bedroom setting'
-  },
-  {
-    src: '/10.jpg',
-    title: 'Professional Carpet Installation',
-    category: 'Carpets',
-    price: 'From £44/m²',
-    description: 'Expert carpet fitting with precision edge work'
-  },
-  {
-    src: '/17.jpg',
-    title: 'Premium Living Room Carpet',
-    category: 'Carpets',
-    price: 'From £46/m²',
-    description: 'High-quality carpet installation in living space'
-  },
-  {
-    src: '/49.jpg',
-    title: 'Complete Room Transformation',
-    category: 'Carpets',
-    price: 'From £46/m²',
-    description: 'Full room carpet installation with professional finish'
-  },
-
-  // UNDERLAY - NEW CATEGORY WITH NEW IMAGE
-  {
-    src: '/Soundproof plush walk underlay.jpg',
-    title: 'Soundproof Plush Walk Underlay',
-    category: 'Underlay',
-    price: 'From £8/m²',
-    description: 'Premium soundproof underlay installation for enhanced comfort and noise reduction'
-  },
-
-  // VINYL FLOORING - UPDATED WITH NEW IMAGES
+  // VINYL FLOORING
   {
     src: '/Herringbone pattern vinyl.jpg',
     title: 'Herringbone Pattern Vinyl',
@@ -90,89 +32,56 @@ const galleryImages = [
   },
   {
     src: '/Herringbone pattern vinyle.jpg',
-    title: 'Herringbone Pattern Vinyl Installation',
+    title: 'Herringbone Pattern Vinyle',
     category: 'Vinyl Flooring',
     price: 'From £54/m²',
     description: 'Professional herringbone vinyl installation with precision fitting'
   },
   {
     src: '/Vinyl.jpg',
-    title: 'Premium Vinyl Flooring',
+    title: 'Vinyl',
     category: 'Vinyl Flooring',
     price: 'From £45/m²',
     description: 'High-quality vinyl flooring with modern geometric patterns'
   },
   {
     src: '/Luxury vinyl.jpg',
-    title: 'Luxury Vinyl Installation',
+    title: 'Luxury Vinyl',
     category: 'Vinyl Flooring',
     price: 'From £58/m²',
     description: 'Premium luxury vinyl flooring with sophisticated herringbone design'
   },
+
+  // CARPETS
   {
-    src: '/3.jpg',
-    title: 'Geometric Pattern Vinyl Flooring',
-    category: 'Vinyl Flooring',
+    src: '/Luxury blue carpet.jpg',
+    title: 'Luxury Blue Carpet',
+    category: 'Carpets',
     price: 'From £48/m²',
-    description: 'Stunning black and white geometric tile pattern vinyl'
+    description: 'Premium blue carpet installation with superior quality and finish'
   },
   {
-    src: '/7.jpg',
-    title: 'Contemporary Geometric Vinyl',
-    category: 'Vinyl Flooring',
-    price: 'From £52/m²',
-    description: 'Bold geometric pattern vinyl for modern kitchen spaces'
+    src: '/Luxury carpet ivory colour.jpg',
+    title: 'Luxury Carpet Ivory Colour',
+    category: 'Carpets',
+    price: 'From £45/m²',
+    description: 'Elegant ivory luxury carpet offering exceptional comfort and style'
   },
   {
-    src: '/18.jpg',
-    title: 'Decorative Tile Effect Vinyl',
-    category: 'Vinyl Flooring',
-    price: 'From £50/m²',
-    description: 'Intricate decorative tile pattern vinyl flooring'
+    src: '/Stain free englewood Beige carpet.jpg',
+    title: 'Stain Free Englewood Beige Carpet',
+    category: 'Carpets', 
+    price: 'From £42/m²',
+    description: 'Premium stain-resistant beige carpet with superior comfort and durability'
   },
 
-  // LAMINATE FLOORING - ADDED NEW IMAGE
+  // UNDERLAY
   {
-    src: '/Laminate colour torros.jpg',
-    title: 'Laminate Colour Torros',
-    category: 'Laminate Flooring',
-    price: 'From £47/m²',
-    description: 'Premium Torros colour laminate flooring with authentic wood grain finish'
-  },
-  {
-    src: '/4.jpg',
-    title: 'Grey Wood Effect Laminate',
-    category: 'Laminate Flooring',
-    price: 'From £45/m²',
-    description: 'Premium grey wood grain laminate flooring installation'
-  },
-  {
-    src: '/5.jpg',
-    title: 'Dark Wood Laminate Living Room',
-    category: 'Laminate Flooring',
-    price: 'From £50/m²',
-    description: 'Rich dark wood effect laminate with traditional fireplace'
-  },
-  {
-    src: '/8.jpg',
-    title: 'Herringbone Luxury Vinyl',
-    category: 'Laminate Flooring',
-    price: 'From £55/m²',
-    description: 'Classic herringbone pattern luxury vinyl flooring'
-  },
-  {
-    src: '/9.jpg',
-    title: 'Parquet Style Luxury Vinyl',
-    category: 'Laminate Flooring',
-    price: 'From £58/m²',
-    description: 'Elegant parquet pattern vinyl with traditional appeal'
-  },
-  {
-    src: '/20.jpg',
-    title: 'Natural Wood Effect Flooring',
-    category: 'Laminate Flooring',
-    price: 'From £48/m²',
-    description: 'Authentic wood grain effect luxury vinyl'
+    src: '/Soundproof plush walk underlay.jpg',
+    title: 'Soundproof Plush Walk Underlay',
+    category: 'Underlay',
+    price: 'From £8/m²',
+    description: 'Premium soundproof underlay installation for enhanced comfort and noise reduction'
   }
 ];
 
@@ -180,8 +89,8 @@ const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
   const [filter, setFilter] = useState('All');
 
-  // UPDATED CATEGORIES BASED ON YOUR REQUIREMENTS
-  const categories = ['All', 'Stairs', 'Carpets', 'Underlay', 'Vinyl Flooring', 'Laminate Flooring'];
+  // EXACT CATEGORIES AS REQUESTED
+  const categories = ['All', 'Stairs', 'Laminate Flooring', 'Vinyl Flooring', 'Carpets', 'Underlay'];
   
   const filteredImages = filter === 'All' 
     ? galleryImages 
@@ -223,7 +132,7 @@ const Gallery = () => {
                 ))}
               </div>
               
-              {/* ROW 2 - CARPETS & UNDERLAY */}
+              {/* ROW 2 - LAMINATE & VINYL */}
               <div className="flex justify-center gap-3">
                 {categories.slice(2, 4).map((category) => (
                   <motion.button
@@ -242,7 +151,7 @@ const Gallery = () => {
                 ))}
               </div>
               
-              {/* ROW 3 - VINYL & LAMINATE */}
+              {/* ROW 3 - CARPETS & UNDERLAY */}
               <div className="flex justify-center gap-3">
                 {categories.slice(4, 6).map((category) => (
                   <motion.button

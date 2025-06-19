@@ -613,9 +613,26 @@ const Hero = () => {
               {/* Main Headline - MOBILE RESPONSIVE */}
               <div className="space-y-4 sm:space-y-6">
                 <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight">
-                  <span className="block bg-gradient-to-r from-purple-400 via-pink-400 to-indigo-500 bg-clip-text text-transparent">
+                  <motion.span 
+                    className="block bg-gradient-to-r from-purple-400 via-pink-400 to-indigo-500 bg-clip-text text-transparent"
+                    animate={{
+                      backgroundImage: [
+                        'linear-gradient(45deg, #a855f7, #ec4899, #6366f1)',
+                        'linear-gradient(45deg, #10b981, #06b6d4, #8b5cf6)',
+                        'linear-gradient(45deg, #f59e0b, #ef4444, #ec4899)',
+                        'linear-gradient(45deg, #3b82f6, #8b5cf6, #10b981)',
+                        'linear-gradient(45deg, #ef4444, #f59e0b, #3b82f6)',
+                        'linear-gradient(45deg, #a855f7, #ec4899, #6366f1)'
+                      ]
+                    }}
+                    transition={{
+                      duration: 8,
+                      repeat: Infinity,
+                      ease: "easeInOut"
+                    }}
+                  >
                     SYN Carpets
-                  </span>
+                  </motion.span>
                   <span className="block text-white mt-1 sm:mt-2">& Flooring</span>
                 </h1>
                 

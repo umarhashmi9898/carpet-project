@@ -233,7 +233,7 @@ const Reviews = () => {
             </motion.div>
 
             <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-0">
-              {/* LEFT SIDE - PROJECT IMAGE */}
+              {/* LEFT SIDE - PROJECT IMAGE - EXACT SAME SIZE AS CARD */}
               <div className="relative h-64 sm:h-80 lg:h-96 overflow-hidden rounded-t-3xl lg:rounded-l-3xl lg:rounded-tr-none">
                 <AnimatePresence mode="wait">
                   <motion.div
@@ -272,9 +272,9 @@ const Reviews = () => {
                   </motion.div>
                 </AnimatePresence>
                 
-                {/* Image overlays */}
+                {/* Image overlays - MODIFIED TO MATCH CARD EXACTLY */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
-                <div className="absolute inset-0 bg-gradient-to-r from-black/30 via-transparent to-transparent lg:from-transparent lg:to-black/30" />
+                {/* REMOVED THE SIDE GRADIENT TO MAKE IMAGE MATCH CARD SIZE EXACTLY */}
                 
                 {/* Project details overlay */}
                 <div className="absolute bottom-4 left-4 right-4 lg:bottom-6 lg:left-6">

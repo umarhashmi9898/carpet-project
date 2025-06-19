@@ -74,102 +74,104 @@ const Header = () => {
   ];
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled 
-        ? 'bg-black/90 backdrop-blur-md shadow-lg border-b border-white/10' 
-        : 'bg-transparent'
-    }`}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* INCREASED HEIGHT FOR BETTER SPACING */}
-        <div className="flex items-center justify-between h-20 lg:h-24">
-          {/* Logo */}
-          <motion.div 
-            className="flex items-center space-x-2"
-            whileHover={{ scale: 1.02 }}
-            transition={{ duration: 0.2 }}
-          >
-            <div className="w-8 h-8 bg-gradient-to-br from-purple-400 to-indigo-600 rounded-lg flex items-center justify-center shadow-lg">
-              <div className="w-6 h-6 bg-gradient-to-br from-purple-800 to-indigo-900 rounded"></div>
-            </div>
-            <span className="text-white font-bold text-lg">SYN Carpets</span>
-          </motion.div>
+    <>
+      <header className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
+        isScrolled 
+          ? 'bg-black/90 backdrop-blur-md shadow-lg border-b border-white/10' 
+          : 'bg-transparent'
+      }`}>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* INCREASED HEIGHT FOR BETTER SPACING */}
+          <div className="flex items-center justify-between h-20 lg:h-24">
+            {/* Logo */}
+            <motion.div 
+              className="flex items-center space-x-2"
+              whileHover={{ scale: 1.02 }}
+              transition={{ duration: 0.2 }}
+            >
+              <div className="w-8 h-8 bg-gradient-to-br from-purple-400 to-indigo-600 rounded-lg flex items-center justify-center shadow-lg">
+                <div className="w-6 h-6 bg-gradient-to-br from-purple-800 to-indigo-900 rounded"></div>
+              </div>
+              <span className="text-white font-bold text-lg">SYN Carpets</span>
+            </motion.div>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-6">
-            {menuItems.map((item) => (
-              <motion.button 
-                key={item.id}
-                onClick={() => scrollToSection(item.id)} 
-                className="text-white/80 hover:text-white transition-colors relative group"
-                whileHover={{ y: -1 }}
-                transition={{ duration: 0.2 }}
-              >
-                {item.label}
-                <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-500 to-indigo-600 group-hover:w-full transition-all duration-300"></div>
-              </motion.button>
-            ))}
-          </nav>
-
-          {/* Desktop WhatsApp Button */}
-          <motion.a 
-            href="https://wa.me/447949087460"
-            className="hidden md:flex items-center space-x-2 bg-gradient-to-r from-green-500 to-green-600 text-white px-4 py-2 rounded-full hover:from-green-600 hover:to-green-700 transition-all transform hover:scale-105 shadow-lg"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            <Phone size={16} />
-            <span>WhatsApp</span>
-          </motion.a>
-
-          {/* Mobile Menu Button */}
-          <motion.button
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden relative w-10 h-10 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl flex items-center justify-center text-white hover:bg-white/20 transition-all"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            <AnimatePresence mode="wait">
-              {isMenuOpen ? (
-                <motion.div
-                  key="close"
-                  initial={{ rotate: -90, opacity: 0 }}
-                  animate={{ rotate: 0, opacity: 1 }}
-                  exit={{ rotate: 90, opacity: 0 }}
+            {/* Desktop Navigation */}
+            <nav className="hidden md:flex items-center space-x-6">
+              {menuItems.map((item) => (
+                <motion.button 
+                  key={item.id}
+                  onClick={() => scrollToSection(item.id)} 
+                  className="text-white/80 hover:text-white transition-colors relative group"
+                  whileHover={{ y: -1 }}
                   transition={{ duration: 0.2 }}
                 >
-                  <X size={20} />
-                </motion.div>
-              ) : (
-                <motion.div
-                  key="menu"
-                  initial={{ rotate: 90, opacity: 0 }}
-                  animate={{ rotate: 0, opacity: 1 }}
-                  exit={{ rotate: -90, opacity: 0 }}
-                  transition={{ duration: 0.2 }}
-                >
-                  <Menu size={20} />
-                </motion.div>
-              )}
-            </AnimatePresence>
-          </motion.button>
+                  {item.label}
+                  <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-500 to-indigo-600 group-hover:w-full transition-all duration-300"></div>
+                </motion.button>
+              ))}
+            </nav>
+
+            {/* Desktop WhatsApp Button */}
+            <motion.a 
+              href="https://wa.me/447949087460"
+              className="hidden md:flex items-center space-x-2 bg-gradient-to-r from-green-500 to-green-600 text-white px-4 py-2 rounded-full hover:from-green-600 hover:to-green-700 transition-all transform hover:scale-105 shadow-lg"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <Phone size={16} />
+              <span>WhatsApp</span>
+            </motion.a>
+
+            {/* Mobile Menu Button - IMPROVED VISIBILITY */}
+            <motion.button
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="md:hidden relative w-10 h-10 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl flex items-center justify-center text-white hover:bg-white/20 transition-all z-50"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <AnimatePresence mode="wait">
+                {isMenuOpen ? (
+                  <motion.div
+                    key="close"
+                    initial={{ rotate: -90, opacity: 0 }}
+                    animate={{ rotate: 0, opacity: 1 }}
+                    exit={{ rotate: 90, opacity: 0 }}
+                    transition={{ duration: 0.2 }}
+                  >
+                    <X size={20} />
+                  </motion.div>
+                ) : (
+                  <motion.div
+                    key="menu"
+                    initial={{ rotate: 90, opacity: 0 }}
+                    animate={{ rotate: 0, opacity: 1 }}
+                    exit={{ rotate: -90, opacity: 0 }}
+                    transition={{ duration: 0.2 }}
+                  >
+                    <Menu size={20} />
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </motion.button>
+          </div>
         </div>
-      </div>
+      </header>
 
-      {/* ULTRA PROFESSIONAL MOBILE MENU */}
+      {/* MOBILE MENU - FIXED Z-INDEX AND POSITIONING */}
       <AnimatePresence>
         {isMenuOpen && (
           <>
-            {/* Backdrop */}
+            {/* Backdrop - HIGHER Z-INDEX */}
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.3 }}
-              className="fixed inset-0 bg-black/80 backdrop-blur-sm z-40"
+              className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50"
               onClick={() => setIsMenuOpen(false)}
             />
 
-            {/* Menu Panel */}
+            {/* Menu Panel - HIGHEST Z-INDEX */}
             <motion.div
               initial={{ x: '100%', opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
@@ -180,7 +182,7 @@ const Header = () => {
                 damping: 30,
                 opacity: { duration: 0.2 }
               }}
-              className="fixed top-0 right-0 h-full w-80 bg-gradient-to-br from-gray-900/95 via-black/95 to-purple-900/95 backdrop-blur-2xl border-l border-white/10 shadow-2xl z-50 overflow-hidden"
+              className="fixed top-0 right-0 h-full w-80 max-w-[90vw] bg-gradient-to-br from-gray-900/95 via-black/95 to-purple-900/95 backdrop-blur-2xl border-l border-white/10 shadow-2xl z-[60] overflow-hidden"
             >
               {/* Animated Background Elements */}
               <div className="absolute inset-0 overflow-hidden">
@@ -258,7 +260,7 @@ const Header = () => {
               </div>
 
               {/* Navigation Menu */}
-              <div className="relative z-10 flex-1 p-6">
+              <div className="relative z-10 flex-1 p-6 overflow-y-auto">
                 <motion.div 
                   className="space-y-3"
                   initial={{ opacity: 0 }}
@@ -371,7 +373,7 @@ const Header = () => {
           </>
         )}
       </AnimatePresence>
-    </header>
+    </>
   );
 };
 

@@ -247,34 +247,34 @@ const Gallery = () => {
                   {image.title}
                 </h3>
                 
-                {/* PERFECTLY ALIGNED WHATSAPP BUTTON WITH GLASS EFFECT */}
+                {/* PERFECTLY ALIGNED WHATSAPP BUTTON WITH BLACK AND GOLD GRADIENT */}
                 <div className="mt-auto">
                   <motion.a
                     href="http://wa.me/+447949087460"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group/btn relative w-full bg-gradient-to-r from-green-500 to-green-600 text-white px-4 py-3 rounded-xl font-semibold text-sm transition-all duration-500 flex items-center justify-center space-x-2 shadow-lg overflow-hidden border border-green-400/30"
+                    className="group/btn relative w-full bg-gradient-to-r from-black via-gray-900 to-black text-white px-4 py-3 rounded-xl font-semibold text-sm transition-all duration-500 flex items-center justify-center space-x-2 shadow-lg overflow-hidden border border-yellow-500/40"
                     whileHover={{ 
                       scale: 1.02,
-                      boxShadow: "0 10px 30px rgba(34, 197, 94, 0.4)"
+                      boxShadow: "0 10px 30px rgba(255, 215, 0, 0.4)"
                     }}
                     whileTap={{ scale: 0.98 }}
                     onClick={(e) => e.stopPropagation()}
                   >
-                    {/* Glass Background Effect */}
-                    <div className="absolute inset-0 bg-gradient-to-r from-white/10 via-white/5 to-white/10 opacity-0 group-hover/btn:opacity-100 transition-opacity duration-500" />
+                    {/* Black and Gold Gradient Background Effect */}
+                    <div className="absolute inset-0 bg-gradient-to-r from-yellow-600 via-amber-500 to-yellow-600 opacity-0 group-hover/btn:opacity-100 transition-opacity duration-500" />
                     
-                    {/* Animated Shine Effect */}
+                    {/* Animated Gold Shine Effect */}
                     <motion.div
-                      className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -skew-x-12 opacity-0 group-hover/btn:opacity-100"
+                      className="absolute inset-0 bg-gradient-to-r from-transparent via-yellow-400/30 to-transparent -skew-x-12 opacity-0 group-hover/btn:opacity-100"
                       initial={{ x: '-100%' }}
                       whileHover={{ x: '100%' }}
                       transition={{ duration: 0.8, ease: "easeInOut" }}
                     />
                     
-                    {/* Pulsing Background */}
+                    {/* Pulsing Gold Background */}
                     <motion.div
-                      className="absolute inset-0 bg-green-400/20 rounded-xl"
+                      className="absolute inset-0 bg-yellow-500/20 rounded-xl"
                       animate={{ 
                         scale: [1, 1.05, 1],
                         opacity: [0, 0.3, 0]
@@ -292,10 +292,10 @@ const Gallery = () => {
                         whileHover={{ rotate: 360, scale: 1.1 }}
                         transition={{ duration: 0.6 }}
                       >
-                        <WhatsAppIcon className="w-5 h-5" />
+                        <WhatsAppIcon className="w-5 h-5 text-green-400" />
                       </motion.div>
                       <motion.span
-                        className="font-bold"
+                        className="font-bold text-yellow-400 group-hover/btn:text-white"
                         whileHover={{ letterSpacing: "0.05em" }}
                         transition={{ duration: 0.3 }}
                       >
@@ -303,8 +303,8 @@ const Gallery = () => {
                       </motion.span>
                     </div>
                     
-                    {/* Glow Effect */}
-                    <div className="absolute inset-0 rounded-xl bg-green-500/20 blur-md opacity-0 group-hover/btn:opacity-100 transition-opacity duration-500 -z-10" />
+                    {/* Gold Glow Effect */}
+                    <div className="absolute inset-0 rounded-xl bg-yellow-500/20 blur-md opacity-0 group-hover/btn:opacity-100 transition-opacity duration-500 -z-10" />
                   </motion.a>
                   
                   {/* Premium Badge - CONSISTENT SPACING */}
@@ -371,24 +371,24 @@ const Gallery = () => {
                       </div>
                     </div>
                     
-                    {/* Enhanced WhatsApp Button in Lightbox */}
+                    {/* Enhanced WhatsApp Button in Lightbox with Black and Gold */}
                     <motion.a
                       href="http://wa.me/+447949087460"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="group/btn relative bg-gradient-to-r from-green-500 to-green-600 text-white px-6 py-3 rounded-xl font-semibold text-sm transition-all duration-500 flex items-center space-x-2 shadow-lg overflow-hidden border border-green-400/30"
+                      className="group/btn relative bg-gradient-to-r from-black via-gray-900 to-black text-white px-6 py-3 rounded-xl font-semibold text-sm transition-all duration-500 flex items-center space-x-2 shadow-lg overflow-hidden border border-yellow-500/40"
                       whileHover={{ 
                         scale: 1.05,
-                        boxShadow: "0 15px 35px rgba(34, 197, 94, 0.5)"
+                        boxShadow: "0 15px 35px rgba(255, 215, 0, 0.5)"
                       }}
                       whileTap={{ scale: 0.95 }}
                     >
-                      {/* Glass Background Effect */}
-                      <div className="absolute inset-0 bg-gradient-to-r from-white/10 via-white/5 to-white/10 opacity-0 group-hover/btn:opacity-100 transition-opacity duration-500" />
+                      {/* Black and Gold Gradient Background Effect */}
+                      <div className="absolute inset-0 bg-gradient-to-r from-yellow-600 via-amber-500 to-yellow-600 opacity-0 group-hover/btn:opacity-100 transition-opacity duration-500" />
                       
-                      {/* Animated Shine Effect */}
+                      {/* Animated Gold Shine Effect */}
                       <motion.div
-                        className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -skew-x-12 opacity-0 group-hover/btn:opacity-100"
+                        className="absolute inset-0 bg-gradient-to-r from-transparent via-yellow-400/30 to-transparent -skew-x-12 opacity-0 group-hover/btn:opacity-100"
                         initial={{ x: '-100%' }}
                         whileHover={{ x: '100%' }}
                         transition={{ duration: 0.8, ease: "easeInOut" }}
@@ -400,10 +400,10 @@ const Gallery = () => {
                           whileHover={{ rotate: 360, scale: 1.1 }}
                           transition={{ duration: 0.6 }}
                         >
-                          <WhatsAppIcon className="w-5 h-5" />
+                          <WhatsAppIcon className="w-5 h-5 text-green-400" />
                         </motion.div>
                         <motion.span
-                          className="font-bold"
+                          className="font-bold text-yellow-400 group-hover/btn:text-white"
                           whileHover={{ letterSpacing: "0.05em" }}
                           transition={{ duration: 0.3 }}
                         >
@@ -411,8 +411,8 @@ const Gallery = () => {
                         </motion.span>
                       </div>
                       
-                      {/* Glow Effect */}
-                      <div className="absolute inset-0 rounded-xl bg-green-500/20 blur-md opacity-0 group-hover/btn:opacity-100 transition-opacity duration-500 -z-10" />
+                      {/* Gold Glow Effect */}
+                      <div className="absolute inset-0 rounded-xl bg-yellow-500/20 blur-md opacity-0 group-hover/btn:opacity-100 transition-opacity duration-500 -z-10" />
                     </motion.a>
                   </div>
                 </div>

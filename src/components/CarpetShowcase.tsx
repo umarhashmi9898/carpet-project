@@ -355,16 +355,33 @@ const CarpetShowcase = () => {
                       ))}
                     </div>
 
-                    {/* CTA Buttons */}
+                    {/* CTA Buttons - BLACK AND GOLD WHATSAPP BUTTON */}
                     <div className="flex flex-col sm:flex-row gap-3 pt-4">
                       <motion.a
                         href={`http://wa.me/+447949087460?text=I'm interested in the ${currentCollection.name}`}
-                        className={`flex-1 bg-gradient-to-r ${currentCollection.gradient} text-white px-6 py-3 rounded-xl font-semibold text-center hover:scale-105 transition-all shadow-lg flex items-center justify-center space-x-2`}
-                        whileHover={{ scale: 1.05 }}
+                        className="group/btn relative flex-1 bg-gradient-to-r from-black via-gray-900 to-black text-white px-6 py-3 rounded-xl font-semibold text-center transition-all shadow-lg flex items-center justify-center space-x-2 border border-yellow-500/40 overflow-hidden"
+                        whileHover={{ 
+                          scale: 1.05,
+                          boxShadow: "0 10px 30px rgba(255, 215, 0, 0.4)"
+                        }}
                         whileTap={{ scale: 0.98 }}
                       >
-                        <span>Get Quote</span>
-                        <ArrowRight className="w-4 h-4" />
+                        {/* Black and Gold Gradient Background Effect */}
+                        <div className="absolute inset-0 bg-gradient-to-r from-yellow-600 via-amber-500 to-yellow-600 opacity-0 group-hover/btn:opacity-100 transition-opacity duration-500" />
+                        
+                        {/* Animated Gold Shine Effect */}
+                        <motion.div
+                          className="absolute inset-0 bg-gradient-to-r from-transparent via-yellow-400/30 to-transparent -skew-x-12 opacity-0 group-hover/btn:opacity-100"
+                          initial={{ x: '-100%' }}
+                          whileHover={{ x: '100%' }}
+                          transition={{ duration: 0.8, ease: "easeInOut" }}
+                        />
+                        
+                        <span className="relative z-10 text-yellow-400 group-hover/btn:text-white font-bold">Get Quote</span>
+                        <ArrowRight className="w-4 h-4 relative z-10 text-yellow-400 group-hover/btn:text-white" />
+                        
+                        {/* Gold Glow Effect */}
+                        <div className="absolute inset-0 rounded-xl bg-yellow-500/20 blur-md opacity-0 group-hover/btn:opacity-100 transition-opacity duration-500 -z-10" />
                       </motion.a>
                       
                       <motion.button
@@ -431,7 +448,7 @@ const CarpetShowcase = () => {
           </div>
         </motion.div>
 
-        {/* Bottom CTA */}
+        {/* Bottom CTA - BLACK AND GOLD WHATSAPP BUTTON */}
         <motion.div 
           className="text-center mt-12 sm:mt-16"
           initial={{ opacity: 0, y: 30 }}
@@ -441,19 +458,28 @@ const CarpetShowcase = () => {
         >
           <motion.a
             href="http://wa.me/+447949087460?text=I'd like to explore your complete flooring collection of 8 premium options"
-            className="group inline-flex items-center space-x-3 bg-gradient-to-r from-yellow-500 to-amber-600 text-white px-8 sm:px-10 py-4 sm:py-5 rounded-2xl font-bold text-lg sm:text-xl shadow-2xl hover:shadow-yellow-500/25 transition-all relative overflow-hidden"
-            whileHover={{ scale: 1.05 }}
+            className="group/btn relative inline-flex items-center space-x-3 bg-gradient-to-r from-black via-gray-900 to-black text-white px-8 sm:px-10 py-4 sm:py-5 rounded-2xl font-bold text-lg sm:text-xl shadow-2xl transition-all overflow-hidden border border-yellow-500/40"
+            whileHover={{ 
+              scale: 1.05,
+              boxShadow: "0 25px 50px rgba(255, 215, 0, 0.4)"
+            }}
             whileTap={{ scale: 0.98 }}
           >
-            <div className="absolute inset-0 bg-gradient-to-r from-yellow-400 to-amber-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-            <Home className="w-5 h-5 sm:w-6 sm:h-6 relative z-10" />
-            <span className="relative z-10">Explore All 8 Collections</span>
+            {/* Black and Gold Gradient Background Effect */}
+            <div className="absolute inset-0 bg-gradient-to-r from-yellow-600 via-amber-500 to-yellow-600 opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300" />
+            
+            <Home className="w-5 h-5 sm:w-6 sm:h-6 relative z-10 text-yellow-400 group-hover/btn:text-white" />
+            <span className="relative z-10 text-yellow-400 group-hover/btn:text-white">Explore All 8 Collections</span>
+            
             <motion.div
-              className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -skew-x-12"
+              className="absolute inset-0 bg-gradient-to-r from-transparent via-yellow-400/20 to-transparent -skew-x-12"
               initial={{ x: '-100%' }}
               whileHover={{ x: '100%' }}
               transition={{ duration: 0.8 }}
             />
+            
+            {/* Gold Glow Effect */}
+            <div className="absolute inset-0 rounded-2xl bg-yellow-500/20 blur-md opacity-0 group-hover/btn:opacity-100 transition-opacity duration-500 -z-10" />
           </motion.a>
         </motion.div>
       </div>

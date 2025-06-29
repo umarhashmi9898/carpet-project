@@ -10,10 +10,10 @@ const services = [
     description: 'Professional staircase carpeting and flooring solutions with premium materials and expert installation.',
     features: ['Professional Installation', 'Premium Materials', 'Safety Focused', 'Custom Fitting'],
     image: '/Combi stairs.jpg',
-    gradient: 'from-purple-500 to-indigo-600',
+    gradient: 'from-yellow-500 to-amber-600',
     subtitle: 'Professional Installation',
-    iconBg: 'from-purple-500/20 to-indigo-500/20',
-    borderColor: 'border-purple-500/30'
+    iconBg: 'from-yellow-500/20 to-amber-500/20',
+    borderColor: 'border-yellow-500/30'
   },
   {
     icon: Layers,
@@ -21,10 +21,10 @@ const services = [
     description: 'Premium laminate flooring including Torros color collection with authentic wood effects and superior durability.',
     features: ['Wood Effect Finish', 'Durable Surface', 'Easy Maintenance', 'Professional Install'],
     image: '/Laminate colour torros.jpg',
-    gradient: 'from-emerald-500 to-teal-600',
+    gradient: 'from-amber-500 to-yellow-600',
     subtitle: 'Premium Wood Effect',
-    iconBg: 'from-emerald-500/20 to-teal-500/20',
-    borderColor: 'border-emerald-500/30'
+    iconBg: 'from-amber-500/20 to-yellow-500/20',
+    borderColor: 'border-amber-500/30'
   },
   {
     icon: Palette,
@@ -32,10 +32,10 @@ const services = [
     description: 'Luxury vinyl flooring including herringbone patterns and premium vinyl collections for modern spaces.',
     features: ['Pattern Designs', 'Water Resistant', 'Luxury Finish', 'Contemporary Style'],
     image: '/Herringbone pattern vinyl.jpg',
-    gradient: 'from-amber-500 to-orange-600',
+    gradient: 'from-orange-500 to-yellow-600',
     subtitle: 'Luxury Patterns',
-    iconBg: 'from-amber-500/20 to-orange-500/20',
-    borderColor: 'border-amber-500/30'
+    iconBg: 'from-orange-500/20 to-yellow-500/20',
+    borderColor: 'border-orange-500/30'
   }
 ];
 
@@ -53,7 +53,7 @@ const Services = () => {
             rotate: [0, 180, 360]
           }}
           transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-          className="absolute -top-32 -left-32 w-64 h-64 bg-gradient-to-r from-purple-500/10 to-indigo-500/10 rounded-full blur-3xl"
+          className="absolute -top-32 -left-32 w-64 h-64 bg-gradient-to-r from-yellow-500/10 to-amber-500/10 rounded-full blur-3xl"
         />
         <motion.div
           animate={{
@@ -62,7 +62,7 @@ const Services = () => {
             rotate: [360, 180, 0]
           }}
           transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
-          className="absolute -bottom-32 -right-32 w-80 h-80 bg-gradient-to-r from-indigo-500/10 to-purple-500/10 rounded-full blur-3xl"
+          className="absolute -bottom-32 -right-32 w-80 h-80 bg-gradient-to-r from-amber-500/10 to-yellow-500/10 rounded-full blur-3xl"
         />
       </div>
 
@@ -76,16 +76,16 @@ const Services = () => {
           viewport={{ once: true }}
         >
           <motion.div
-            className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-500/20 to-indigo-500/20 backdrop-blur-xl border border-purple-500/30 rounded-full px-4 sm:px-6 py-2 sm:py-3 mb-6 sm:mb-8"
+            className="inline-flex items-center space-x-2 bg-gradient-to-r from-yellow-500/20 to-amber-500/20 backdrop-blur-xl border border-yellow-500/30 rounded-full px-4 sm:px-6 py-2 sm:py-3 mb-6 sm:mb-8"
             whileHover={{ scale: 1.02 }}
           >
             <Star className="w-4 h-4 sm:w-5 sm:h-5 text-yellow-400" fill="currentColor" />
             <span className="text-white/90 font-semibold text-sm sm:text-base">Our Services</span>
-            <Award className="w-4 h-4 sm:w-5 sm:h-5 text-purple-400" />
+            <Award className="w-4 h-4 sm:w-5 sm:h-5 text-yellow-400" />
           </motion.div>
 
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6">
-            Our <span className="bg-gradient-to-r from-purple-400 to-indigo-600 bg-clip-text text-transparent">Expertise</span>
+            Our <span className="bg-gradient-to-r from-yellow-400 to-amber-600 bg-clip-text text-transparent">Expertise</span>
           </h2>
           <p className="text-lg sm:text-xl text-white/70 max-w-3xl mx-auto leading-relaxed">
             Discover our comprehensive range of premium flooring solutions: Stairs, Laminate, and Vinyl
@@ -97,7 +97,7 @@ const Services = () => {
           {/* Enhanced Active Service Content - NOW ON LEFT */}
           <div className="lg:w-2/3 order-2 lg:order-1">
             <motion.div 
-              className="relative bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl overflow-hidden shadow-2xl"
+              className="relative bg-white/5 backdrop-blur-xl border border-yellow-500/20 rounded-3xl overflow-hidden shadow-2xl"
               key={activeService}
               initial={{ opacity: 0, y: 20, scale: 0.98 }}
               animate={{ opacity: 1, y: 0, scale: 1 }}
@@ -108,7 +108,7 @@ const Services = () => {
               <motion.div 
                 className={`absolute inset-0 rounded-3xl opacity-30 transition-all duration-1000 p-[1px]`}
                 animate={{
-                  background: `linear-gradient(135deg, ${services[activeService].gradient.includes('purple') ? '#8B5CF6' : services[activeService].gradient.includes('emerald') ? '#10B981' : '#F59E0B'}40, transparent, ${services[activeService].gradient.includes('purple') ? '#8B5CF6' : services[activeService].gradient.includes('emerald') ? '#10B981' : '#F59E0B'}30)`,
+                  background: `linear-gradient(135deg, ${services[activeService].gradient.includes('yellow') ? '#DAA520' : services[activeService].gradient.includes('amber') ? '#B8860B' : '#FF8C00'}40, transparent, ${services[activeService].gradient.includes('yellow') ? '#DAA520' : services[activeService].gradient.includes('amber') ? '#B8860B' : '#FF8C00'}30)`,
                 }}
               >
                 <div className="w-full h-full bg-gradient-to-br from-black/90 via-gray-900/90 to-black/90 rounded-3xl" />
@@ -137,7 +137,7 @@ const Services = () => {
                     animate={{ scale: 1, rotate: 0 }}
                     transition={{ delay: 0.4, duration: 0.5 }}
                   >
-                    <div className="flex items-center space-x-1 bg-black/60 backdrop-blur-md rounded-lg px-3 py-1 border border-white/20">
+                    <div className="flex items-center space-x-1 bg-black/60 backdrop-blur-md rounded-lg px-3 py-1 border border-yellow-500/30">
                       <Star className="w-3 h-3 text-yellow-400" fill="currentColor" />
                       <span className="text-white text-xs font-semibold">Premium Quality</span>
                     </div>
@@ -213,7 +213,7 @@ const Services = () => {
                 className={`group relative w-full text-left p-6 sm:p-8 rounded-3xl border transition-all duration-500 overflow-hidden ${
                   activeService === index
                     ? `bg-gradient-to-r ${service.gradient}/20 ${service.borderColor} text-white shadow-2xl`
-                    : 'bg-white/5 border-white/10 text-white/70 hover:bg-white/10 hover:text-white hover:border-white/20'
+                    : 'bg-white/5 border-yellow-500/20 text-white/70 hover:bg-white/10 hover:text-white hover:border-yellow-500/30'
                 }`}
                 initial={{ opacity: 0, x: 30 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -223,7 +223,7 @@ const Services = () => {
                   scale: 1.02, 
                   x: -4,
                   boxShadow: activeService === index 
-                    ? "0 25px 50px rgba(139, 92, 246, 0.3)" 
+                    ? "0 25px 50px rgba(218, 165, 32, 0.3)" 
                     : "0 15px 30px rgba(255, 255, 255, 0.1)"
                 }}
               >
@@ -251,17 +251,17 @@ const Services = () => {
                         className={`w-14 h-14 rounded-2xl flex items-center justify-center transition-all duration-300 shadow-lg ${
                           activeService === index
                             ? `bg-gradient-to-r ${service.gradient} shadow-xl`
-                            : `bg-gradient-to-r ${service.iconBg} backdrop-blur-sm border border-white/20`
+                            : `bg-gradient-to-r ${service.iconBg} backdrop-blur-sm border border-yellow-500/30`
                         }`}
                         whileHover={{ 
                           scale: 1.1, 
                           rotate: 5,
-                          boxShadow: "0 15px 30px rgba(139, 92, 246, 0.4)"
+                          boxShadow: "0 15px 30px rgba(218, 165, 32, 0.4)"
                         }}
                         transition={{ duration: 0.3 }}
                       >
                         <service.icon className={`w-7 h-7 transition-colors duration-300 ${
-                          activeService === index ? 'text-white' : 'text-purple-300 group-hover:text-white'
+                          activeService === index ? 'text-white' : 'text-yellow-300 group-hover:text-white'
                         }`} />
                       </motion.div>
 
@@ -314,7 +314,7 @@ const Services = () => {
                       animate={{ opacity: 1, height: 'auto' }}
                       exit={{ opacity: 0, height: 0 }}
                       transition={{ duration: 0.3 }}
-                      className="mt-4 pt-4 border-t border-white/20"
+                      className="mt-4 pt-4 border-t border-yellow-500/30"
                     >
                       <div className="grid grid-cols-2 gap-2">
                         {service.features.slice(0, 4).map((feature, idx) => (
@@ -335,8 +335,8 @@ const Services = () => {
                 </div>
 
                 {/* Decorative Elements */}
-                <div className="absolute top-4 left-4 w-2 h-2 bg-purple-400/30 rounded-full group-hover:bg-purple-400 transition-colors duration-300" />
-                <div className="absolute bottom-4 right-4 w-1.5 h-1.5 bg-indigo-400/30 rounded-full group-hover:bg-indigo-400 transition-colors duration-300" />
+                <div className="absolute top-4 left-4 w-2 h-2 bg-yellow-400/30 rounded-full group-hover:bg-yellow-400 transition-colors duration-300" />
+                <div className="absolute bottom-4 right-4 w-1.5 h-1.5 bg-amber-400/30 rounded-full group-hover:bg-amber-400 transition-colors duration-300" />
               </motion.button>
             ))}
           </div>
@@ -355,9 +355,9 @@ const Services = () => {
           repeat: Infinity, 
           ease: "easeInOut" 
         }}
-        className="absolute top-20 right-8 w-16 h-16 bg-gradient-to-br from-purple-500/20 to-indigo-500/20 rounded-2xl backdrop-blur-xl border border-purple-500/30 flex items-center justify-center shadow-2xl hidden lg:flex"
+        className="absolute top-20 right-8 w-16 h-16 bg-gradient-to-br from-yellow-500/20 to-amber-500/20 rounded-2xl backdrop-blur-xl border border-yellow-500/30 flex items-center justify-center shadow-2xl hidden lg:flex"
       >
-        <div className="w-8 h-8 bg-gradient-to-br from-purple-400 to-indigo-600 rounded-lg" />
+        <div className="w-8 h-8 bg-gradient-to-br from-yellow-400 to-amber-600 rounded-lg" />
       </motion.div>
       
       <motion.div
@@ -372,9 +372,9 @@ const Services = () => {
           ease: "easeInOut",
           delay: 3
         }}
-        className="absolute bottom-32 left-8 w-12 h-12 bg-gradient-to-br from-indigo-500/20 to-purple-500/20 rounded-xl backdrop-blur-xl border border-indigo-500/30 flex items-center justify-center shadow-2xl hidden lg:flex"
+        className="absolute bottom-32 left-8 w-12 h-12 bg-gradient-to-br from-amber-500/20 to-yellow-500/20 rounded-xl backdrop-blur-xl border border-amber-500/30 flex items-center justify-center shadow-2xl hidden lg:flex"
       >
-        <div className="w-6 h-6 bg-gradient-to-br from-indigo-400 to-purple-600 rounded-md" />
+        <div className="w-6 h-6 bg-gradient-to-br from-amber-400 to-yellow-600 rounded-md" />
       </motion.div>
     </section>
   );

@@ -44,10 +44,10 @@ const LoadingScreen: React.FC<LoadingScreenProps> = ({ onComplete }) => {
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
         transition={{ duration: 0.3 }}
-        className="fixed inset-0 z-[9999] bg-gradient-to-br from-gray-900 via-black to-purple-900 flex items-center justify-center"
+        className="fixed inset-0 z-[9999] bg-gradient-to-br from-gray-900 via-black to-yellow-900 flex items-center justify-center"
       >
         {/* Simplified background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 via-transparent to-indigo-500/10" />
+        <div className="absolute inset-0 bg-gradient-to-br from-yellow-500/10 via-transparent to-amber-500/10" />
 
         {/* Main Loading Content */}
         <div className="relative z-10 text-center max-w-md mx-auto px-6">
@@ -58,8 +58,8 @@ const LoadingScreen: React.FC<LoadingScreenProps> = ({ onComplete }) => {
             transition={{ duration: 0.5 }}
             className="mb-8"
           >
-            <div className="w-16 h-16 mx-auto bg-gradient-to-br from-purple-400 to-indigo-600 rounded-xl flex items-center justify-center shadow-xl">
-              <div className="w-10 h-10 bg-gradient-to-br from-purple-800 to-indigo-900 rounded-lg" />
+            <div className="w-16 h-16 mx-auto bg-gradient-to-br from-yellow-400 to-amber-600 rounded-xl flex items-center justify-center shadow-xl">
+              <div className="w-10 h-10 bg-gradient-to-br from-yellow-800 to-amber-900 rounded-lg" />
             </div>
           </motion.div>
 
@@ -77,7 +77,7 @@ const LoadingScreen: React.FC<LoadingScreenProps> = ({ onComplete }) => {
             initial={{ y: 15, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.3, duration: 0.5 }}
-            className="text-purple-300 mb-8 font-medium"
+            className="text-yellow-300 mb-8 font-medium"
           >
             Luxury Flooring Redefined
           </motion.p>
@@ -89,7 +89,7 @@ const LoadingScreen: React.FC<LoadingScreenProps> = ({ onComplete }) => {
                 initial={{ width: 0 }}
                 animate={{ width: `${progress}%` }}
                 transition={{ duration: 0.2 }}
-                className="h-full bg-gradient-to-r from-purple-500 to-indigo-600 rounded-full"
+                className="h-full bg-gradient-to-r from-yellow-500 to-amber-600 rounded-full"
               />
             </div>
             

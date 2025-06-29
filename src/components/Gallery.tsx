@@ -104,7 +104,7 @@ const Gallery = () => {
         {/* Clean Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Project <span className="bg-gradient-to-r from-purple-400 to-indigo-600 bg-clip-text text-transparent">Gallery</span>
+            Project <span className="bg-gradient-to-r from-yellow-400 to-amber-600 bg-clip-text text-transparent">Gallery</span>
           </h2>
           <p className="text-xl text-white/70 max-w-3xl mx-auto mb-12">
             Explore our premium flooring collection: Stairs, Laminate, Vinyl, Carpets, and Underlay solutions
@@ -122,8 +122,8 @@ const Gallery = () => {
                     onClick={() => setFilter(category)}
                     className={`flex-1 max-w-[140px] px-4 py-3 rounded-xl font-semibold text-sm transition-all duration-300 border-2 ${
                       filter === category
-                        ? 'bg-gradient-to-r from-purple-500 to-indigo-600 text-white border-[#B57EFA] shadow-lg shadow-purple-500/25'
-                        : 'bg-white/10 text-white/80 border-[#B57EFA]/30 hover:border-[#B57EFA] hover:bg-white/20 hover:text-white'
+                        ? 'bg-gradient-to-r from-yellow-500 to-amber-600 text-white border-yellow-400 shadow-lg shadow-yellow-500/25'
+                        : 'bg-white/10 text-white/80 border-yellow-500/30 hover:border-yellow-400 hover:bg-white/20 hover:text-white'
                     }`}
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
@@ -141,8 +141,8 @@ const Gallery = () => {
                     onClick={() => setFilter(category)}
                     className={`flex-1 max-w-[140px] px-4 py-3 rounded-xl font-semibold text-sm transition-all duration-300 border-2 ${
                       filter === category
-                        ? 'bg-gradient-to-r from-purple-500 to-indigo-600 text-white border-[#B57EFA] shadow-lg shadow-purple-500/25'
-                        : 'bg-white/10 text-white/80 border-[#B57EFA]/30 hover:border-[#B57EFA] hover:bg-white/20 hover:text-white'
+                        ? 'bg-gradient-to-r from-yellow-500 to-amber-600 text-white border-yellow-400 shadow-lg shadow-yellow-500/25'
+                        : 'bg-white/10 text-white/80 border-yellow-500/30 hover:border-yellow-400 hover:bg-white/20 hover:text-white'
                     }`}
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
@@ -160,8 +160,8 @@ const Gallery = () => {
                     onClick={() => setFilter(category)}
                     className={`flex-1 max-w-[140px] px-4 py-3 rounded-xl font-semibold text-sm transition-all duration-300 border-2 ${
                       filter === category
-                        ? 'bg-gradient-to-r from-purple-500 to-indigo-600 text-white border-[#B57EFA] shadow-lg shadow-purple-500/25'
-                        : 'bg-white/10 text-white/80 border-[#B57EFA]/30 hover:border-[#B57EFA] hover:bg-white/20 hover:text-white'
+                        ? 'bg-gradient-to-r from-yellow-500 to-amber-600 text-white border-yellow-400 shadow-lg shadow-yellow-500/25'
+                        : 'bg-white/10 text-white/80 border-yellow-500/30 hover:border-yellow-400 hover:bg-white/20 hover:text-white'
                     }`}
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
@@ -180,8 +180,8 @@ const Gallery = () => {
                   onClick={() => setFilter(category)}
                   className={`px-6 py-3 rounded-xl font-semibold transition-all duration-300 border-2 ${
                     filter === category
-                      ? 'bg-gradient-to-r from-purple-500 to-indigo-600 text-white border-[#B57EFA] shadow-lg shadow-purple-500/25'
-                      : 'bg-white/10 text-white/80 border-[#B57EFA]/30 hover:border-[#B57EFA] hover:bg-white/20 hover:text-white'
+                      ? 'bg-gradient-to-r from-yellow-500 to-amber-600 text-white border-yellow-400 shadow-lg shadow-yellow-500/25'
+                      : 'bg-white/10 text-white/80 border-yellow-500/30 hover:border-yellow-400 hover:bg-white/20 hover:text-white'
                   }`}
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
@@ -195,7 +195,7 @@ const Gallery = () => {
           {/* Results Counter */}
           <div className="mt-6">
             <p className="text-white/60 text-sm">
-              Showing <span className="text-purple-400 font-semibold">{filteredImages.length}</span> of <span className="text-purple-400 font-semibold">{galleryImages.length}</span> premium products
+              Showing <span className="text-yellow-400 font-semibold">{filteredImages.length}</span> of <span className="text-yellow-400 font-semibold">{galleryImages.length}</span> premium products
             </p>
           </div>
         </div>
@@ -205,13 +205,13 @@ const Gallery = () => {
           {filteredImages.map((image, index) => (
             <motion.div 
               key={`${image.src}-${index}`}
-              className="group relative bg-white/5 rounded-2xl overflow-hidden cursor-pointer border-2 border-[#B57EFA]/30 hover:border-[#B57EFA] transition-all duration-300 flex flex-col h-full"
+              className="group relative bg-white/5 rounded-2xl overflow-hidden cursor-pointer border-2 border-yellow-500/30 hover:border-yellow-400 transition-all duration-300 flex flex-col h-full"
               onClick={() => setSelectedImage(galleryImages.findIndex(img => img.src === image.src))}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.05 }}
               viewport={{ once: true }}
-              whileHover={{ y: -8, boxShadow: "0 20px 40px rgba(181, 126, 250, 0.3)" }}
+              whileHover={{ y: -8, boxShadow: "0 20px 40px rgba(218, 165, 32, 0.3)" }}
             >
               {/* Image */}
               <div className="relative h-48 sm:h-56 lg:h-64 overflow-hidden flex-shrink-0">
@@ -228,22 +228,22 @@ const Gallery = () => {
                 
                 {/* Simple Overlay */}
                 <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                  <div className="w-12 h-12 bg-[#B57EFA]/20 rounded-full flex items-center justify-center backdrop-blur-sm border-2 border-[#B57EFA]">
+                  <div className="w-12 h-12 bg-yellow-500/20 rounded-full flex items-center justify-center backdrop-blur-sm border-2 border-yellow-400">
                     <Eye className="w-6 h-6 text-white" />
                   </div>
                 </div>
 
                 {/* Category Badge */}
                 <div className="absolute top-4 left-4">
-                  <span className="bg-black/60 backdrop-blur-sm text-white px-3 py-1 rounded-full text-xs font-medium border border-[#B57EFA]/50">
+                  <span className="bg-black/60 backdrop-blur-sm text-white px-3 py-1 rounded-full text-xs font-medium border border-yellow-500/50">
                     {image.category}
                   </span>
                 </div>
               </div>
               
               {/* Content - PERFECT FLEX LAYOUT FOR BUTTON ALIGNMENT */}
-              <div className="p-4 lg:p-6 border-t border-[#B57EFA]/20 flex flex-col flex-grow">
-                <h3 className="text-base lg:text-lg font-semibold text-white mb-3 group-hover:text-purple-400 transition-colors line-clamp-2 flex-grow">
+              <div className="p-4 lg:p-6 border-t border-yellow-500/20 flex flex-col flex-grow">
+                <h3 className="text-base lg:text-lg font-semibold text-white mb-3 group-hover:text-yellow-400 transition-colors line-clamp-2 flex-grow">
                   {image.title}
                 </h3>
                 
@@ -339,13 +339,13 @@ const Gallery = () => {
             >
               <button
                 onClick={() => setSelectedImage(null)}
-                className="absolute top-6 right-6 w-12 h-12 bg-white/10 rounded-full flex items-center justify-center text-white hover:bg-white/20 transition-colors border-2 border-[#B57EFA]"
+                className="absolute top-6 right-6 w-12 h-12 bg-white/10 rounded-full flex items-center justify-center text-white hover:bg-white/20 transition-colors border-2 border-yellow-400"
               >
                 <X className="w-6 h-6" />
               </button>
               
               <motion.div 
-                className="max-w-4xl max-h-[90vh] overflow-hidden rounded-2xl border-2 border-[#B57EFA] relative"
+                className="max-w-4xl max-h-[90vh] overflow-hidden rounded-2xl border-2 border-yellow-400 relative"
                 initial={{ scale: 0.8 }}
                 animate={{ scale: 1 }}
                 exit={{ scale: 0.8 }}

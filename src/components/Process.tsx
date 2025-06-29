@@ -8,36 +8,36 @@ const steps = [
     title: 'Consultation',
     description: 'Free consultation to understand your needs and preferences for the perfect flooring solution',
     step: '01',
-    color: 'from-purple-500 to-indigo-600',
-    iconBg: 'from-purple-500/20 to-indigo-500/20',
-    borderColor: 'border-purple-500/30'
+    color: 'from-yellow-500 to-amber-600',
+    iconBg: 'from-yellow-500/20 to-amber-500/20',
+    borderColor: 'border-yellow-500/30'
   },
   {
     icon: Eye,
     title: 'Selection',
     description: 'Choose from our premium range of carpets, laminate, and lino with expert guidance',
     step: '02',
-    color: 'from-indigo-500 to-purple-600',
-    iconBg: 'from-indigo-500/20 to-purple-500/20',
-    borderColor: 'border-indigo-500/30'
+    color: 'from-amber-500 to-yellow-600',
+    iconBg: 'from-amber-500/20 to-yellow-500/20',
+    borderColor: 'border-amber-500/30'
   },
   {
     icon: Truck,
     title: 'Doorstep Delivery',
     description: 'We bring samples and materials directly to your door for ultimate convenience',
     step: '03',
-    color: 'from-purple-600 to-pink-600',
-    iconBg: 'from-purple-600/20 to-pink-600/20',
-    borderColor: 'border-purple-600/30'
+    color: 'from-orange-500 to-yellow-600',
+    iconBg: 'from-orange-500/20 to-yellow-500/20',
+    borderColor: 'border-orange-500/30'
   },
   {
     icon: Wrench,
     title: 'Professional Installation',
     description: 'Expert fitting by our skilled professionals ensuring perfect results every time',
     step: '04',
-    color: 'from-pink-500 to-purple-600',
-    iconBg: 'from-pink-500/20 to-purple-600/20',
-    borderColor: 'border-pink-500/30'
+    color: 'from-yellow-600 to-amber-500',
+    iconBg: 'from-yellow-600/20 to-amber-500/20',
+    borderColor: 'border-yellow-600/30'
   }
 ];
 
@@ -53,7 +53,7 @@ const Process = () => {
             rotate: [0, 180, 360]
           }}
           transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-          className="absolute -top-32 -left-32 w-64 h-64 bg-gradient-to-r from-purple-500/10 to-indigo-500/10 rounded-full blur-3xl"
+          className="absolute -top-32 -left-32 w-64 h-64 bg-gradient-to-r from-yellow-500/10 to-amber-500/10 rounded-full blur-3xl"
         />
         <motion.div
           animate={{
@@ -62,7 +62,7 @@ const Process = () => {
             rotate: [360, 180, 0]
           }}
           transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
-          className="absolute -bottom-32 -right-32 w-80 h-80 bg-gradient-to-r from-indigo-500/10 to-purple-500/10 rounded-full blur-3xl"
+          className="absolute -bottom-32 -right-32 w-80 h-80 bg-gradient-to-r from-amber-500/10 to-yellow-500/10 rounded-full blur-3xl"
         />
       </div>
 
@@ -76,16 +76,16 @@ const Process = () => {
           viewport={{ once: true }}
         >
           <motion.div
-            className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-500/20 to-indigo-500/20 backdrop-blur-xl border border-purple-500/30 rounded-full px-4 sm:px-6 py-2 sm:py-3 mb-6 sm:mb-8"
+            className="inline-flex items-center space-x-2 bg-gradient-to-r from-yellow-500/20 to-amber-500/20 backdrop-blur-xl border border-yellow-500/30 rounded-full px-4 sm:px-6 py-2 sm:py-3 mb-6 sm:mb-8"
             whileHover={{ scale: 1.02 }}
           >
-            <div className="w-2 h-2 bg-purple-400 rounded-full animate-pulse" />
+            <div className="w-2 h-2 bg-yellow-400 rounded-full animate-pulse" />
             <span className="text-white/90 font-semibold text-sm sm:text-base">Our Process</span>
-            <div className="w-2 h-2 bg-indigo-400 rounded-full animate-pulse" />
+            <div className="w-2 h-2 bg-amber-400 rounded-full animate-pulse" />
           </motion.div>
 
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6">
-            Our Simple <span className="bg-gradient-to-r from-purple-400 to-indigo-600 bg-clip-text text-transparent">Process</span>
+            Our Simple <span className="bg-gradient-to-r from-yellow-400 to-amber-600 bg-clip-text text-transparent">Process</span>
           </h2>
           <p className="text-lg sm:text-xl text-white/70 max-w-3xl mx-auto leading-relaxed">
             From consultation to installation, we make luxury flooring simple and stress-free
@@ -110,18 +110,18 @@ const Process = () => {
               {/* Connecting Line - Desktop Only */}
               {index < steps.length - 1 && (
                 <div className="hidden lg:block absolute top-20 left-full w-full h-0.5 z-0">
-                  <div className="w-full h-full bg-gradient-to-r from-purple-500/40 via-purple-500/20 to-transparent" />
+                  <div className="w-full h-full bg-gradient-to-r from-yellow-500/40 via-yellow-500/20 to-transparent" />
                 </div>
               )}
               
               {/* Card */}
               <motion.div 
-                className={`relative bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-6 sm:p-8 text-center transition-all duration-500 z-10 h-full group-hover:${step.borderColor} group-hover:bg-white/10`}
+                className={`relative bg-white/5 backdrop-blur-xl border border-yellow-500/20 rounded-3xl p-6 sm:p-8 text-center transition-all duration-500 z-10 h-full group-hover:${step.borderColor} group-hover:bg-white/10`}
                 whileHover={{ 
                   y: -12,
                   scale: 1.03,
                   rotateY: 5,
-                  boxShadow: "0 30px 60px rgba(139, 92, 246, 0.2)"
+                  boxShadow: "0 30px 60px rgba(218, 165, 32, 0.2)"
                 }}
                 transition={{ 
                   duration: 0.4,
@@ -131,7 +131,7 @@ const Process = () => {
               >
                 {/* Step Number Badge */}
                 <motion.div 
-                  className={`absolute -top-4 left-1/2 transform -translate-x-1/2 w-10 h-10 bg-gradient-to-r ${step.color} rounded-full flex items-center justify-center text-white font-bold text-sm shadow-xl border-2 border-white/20`}
+                  className={`absolute -top-4 left-1/2 transform -translate-x-1/2 w-10 h-10 bg-gradient-to-r ${step.color} rounded-full flex items-center justify-center text-white font-bold text-sm shadow-xl border-2 border-yellow-500/30`}
                   whileHover={{ scale: 1.1, rotate: 360 }}
                   transition={{ duration: 0.6 }}
                 >
@@ -140,20 +140,20 @@ const Process = () => {
                 
                 {/* Icon Container */}
                 <motion.div 
-                  className={`w-20 h-20 bg-gradient-to-r ${step.iconBg} backdrop-blur-sm border border-white/20 rounded-3xl flex items-center justify-center mx-auto mb-6 shadow-lg`}
+                  className={`w-20 h-20 bg-gradient-to-r ${step.iconBg} backdrop-blur-sm border border-yellow-500/30 rounded-3xl flex items-center justify-center mx-auto mb-6 shadow-lg`}
                   whileHover={{ 
                     scale: 1.15, 
                     rotate: 10,
-                    boxShadow: "0 20px 40px rgba(139, 92, 246, 0.3)"
+                    boxShadow: "0 20px 40px rgba(218, 165, 32, 0.3)"
                   }}
                   transition={{ duration: 0.4 }}
                 >
-                  <step.icon className="w-9 h-9 text-purple-300 group-hover:text-white transition-colors duration-300" />
+                  <step.icon className="w-9 h-9 text-yellow-300 group-hover:text-white transition-colors duration-300" />
                 </motion.div>
                 
                 {/* Content */}
                 <div className="space-y-4">
-                  <h3 className="text-xl sm:text-2xl font-bold text-white group-hover:text-purple-300 transition-colors duration-300">
+                  <h3 className="text-xl sm:text-2xl font-bold text-white group-hover:text-yellow-300 transition-colors duration-300">
                     {step.title}
                   </h3>
                   
@@ -169,8 +169,8 @@ const Process = () => {
                 />
 
                 {/* Decorative Elements */}
-                <div className="absolute top-4 right-4 w-2 h-2 bg-purple-400/30 rounded-full group-hover:bg-purple-400 transition-colors duration-300" />
-                <div className="absolute bottom-4 left-4 w-1.5 h-1.5 bg-indigo-400/30 rounded-full group-hover:bg-indigo-400 transition-colors duration-300" />
+                <div className="absolute top-4 right-4 w-2 h-2 bg-yellow-400/30 rounded-full group-hover:bg-yellow-400 transition-colors duration-300" />
+                <div className="absolute bottom-4 left-4 w-1.5 h-1.5 bg-amber-400/30 rounded-full group-hover:bg-amber-400 transition-colors duration-300" />
               </motion.div>
             </motion.div>
           ))}
@@ -186,15 +186,15 @@ const Process = () => {
         >
           <motion.a 
             href="http://wa.me/+447949087460?text=I'd like to start the consultation process"
-            className="group inline-flex items-center space-x-3 bg-gradient-to-r from-purple-500 to-indigo-600 text-white px-8 sm:px-10 py-4 sm:py-5 rounded-2xl font-bold text-lg sm:text-xl shadow-2xl hover:shadow-purple-500/25 transition-all relative overflow-hidden"
+            className="group inline-flex items-center space-x-3 bg-gradient-to-r from-yellow-500 to-amber-600 text-white px-8 sm:px-10 py-4 sm:py-5 rounded-2xl font-bold text-lg sm:text-xl shadow-2xl hover:shadow-yellow-500/25 transition-all relative overflow-hidden"
             whileHover={{ 
               scale: 1.05,
-              boxShadow: "0 25px 50px rgba(139, 92, 246, 0.3)"
+              boxShadow: "0 25px 50px rgba(218, 165, 32, 0.3)"
             }}
             whileTap={{ scale: 0.98 }}
           >
             {/* Animated background */}
-            <div className="absolute inset-0 bg-gradient-to-r from-purple-400 to-indigo-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            <div className="absolute inset-0 bg-gradient-to-r from-yellow-400 to-amber-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             
             <span className="relative z-10">Start Your Journey Today</span>
             <motion.div
@@ -238,9 +238,9 @@ const Process = () => {
           repeat: Infinity, 
           ease: "easeInOut" 
         }}
-        className="absolute top-20 right-8 w-16 h-16 bg-gradient-to-br from-purple-500/20 to-indigo-500/20 rounded-2xl backdrop-blur-xl border border-purple-500/30 flex items-center justify-center shadow-2xl hidden lg:flex"
+        className="absolute top-20 right-8 w-16 h-16 bg-gradient-to-br from-yellow-500/20 to-amber-500/20 rounded-2xl backdrop-blur-xl border border-yellow-500/30 flex items-center justify-center shadow-2xl hidden lg:flex"
       >
-        <div className="w-8 h-8 bg-gradient-to-br from-purple-400 to-indigo-600 rounded-lg" />
+        <div className="w-8 h-8 bg-gradient-to-br from-yellow-400 to-amber-600 rounded-lg" />
       </motion.div>
       
       <motion.div
@@ -255,9 +255,9 @@ const Process = () => {
           ease: "easeInOut",
           delay: 3
         }}
-        className="absolute bottom-32 left-8 w-12 h-12 bg-gradient-to-br from-indigo-500/20 to-purple-500/20 rounded-xl backdrop-blur-xl border border-indigo-500/30 flex items-center justify-center shadow-2xl hidden lg:flex"
+        className="absolute bottom-32 left-8 w-12 h-12 bg-gradient-to-br from-amber-500/20 to-yellow-500/20 rounded-xl backdrop-blur-xl border border-amber-500/30 flex items-center justify-center shadow-2xl hidden lg:flex"
       >
-        <div className="w-6 h-6 bg-gradient-to-br from-indigo-400 to-purple-600 rounded-md" />
+        <div className="w-6 h-6 bg-gradient-to-br from-amber-400 to-yellow-600 rounded-md" />
       </motion.div>
     </section>
   );

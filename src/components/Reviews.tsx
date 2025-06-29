@@ -29,8 +29,8 @@ const reviews: Review[] = [
     service: 'Stairs',
     image: '/Combi stairs.jpg',
     projectImage: '/Combi stairs.jpg',
-    color: '#8B5CF6',
-    gradient: 'from-purple-500 to-indigo-600',
+    color: '#DAA520',
+    gradient: 'from-yellow-500 to-amber-600',
     verified: true,
     completionDate: 'November 2024',
     projectValue: '£2,400'
@@ -44,8 +44,8 @@ const reviews: Review[] = [
     service: 'Laminate Flooring',
     image: '/Laminate colour torros.jpg',
     projectImage: '/Laminate colour torros.jpg',
-    color: '#10B981',
-    gradient: 'from-emerald-500 to-teal-600',
+    color: '#B8860B',
+    gradient: 'from-amber-500 to-yellow-600',
     verified: true,
     completionDate: 'October 2024',
     projectValue: '£1,800'
@@ -59,8 +59,8 @@ const reviews: Review[] = [
     service: 'Vinyl Flooring',
     image: '/Herringbone pattern vinyl.jpg',
     projectImage: '/Herringbone pattern vinyl.jpg',
-    color: '#F59E0B',
-    gradient: 'from-amber-500 to-orange-600',
+    color: '#FFD700',
+    gradient: 'from-yellow-400 to-orange-500',
     verified: true,
     completionDate: 'September 2024',
     projectValue: '£2,200'
@@ -74,8 +74,8 @@ const reviews: Review[] = [
     service: 'Carpets',
     image: '/Luxury blue carpet.jpg',
     projectImage: '/Luxury blue carpet.jpg',
-    color: '#3B82F6',
-    gradient: 'from-blue-500 to-indigo-600',
+    color: '#CD853F',
+    gradient: 'from-orange-400 to-yellow-500',
     verified: true,
     completionDate: 'August 2024',
     projectValue: '£2,600'
@@ -89,8 +89,8 @@ const reviews: Review[] = [
     service: 'Underlay',
     image: '/Soundproof plush walk underlay.jpg',
     projectImage: '/Soundproof plush walk underlay.jpg',
-    color: '#7C3AED',
-    gradient: 'from-violet-500 to-purple-600',
+    color: '#B8860B',
+    gradient: 'from-amber-500 to-yellow-600',
     verified: true,
     completionDate: 'July 2024',
     projectValue: '£3,100'
@@ -146,7 +146,7 @@ const Reviews = () => {
             rotate: [0, 180, 360]
           }}
           transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-          className="absolute -top-32 -left-32 w-64 h-64 bg-gradient-to-r from-purple-500/20 to-indigo-500/20 rounded-full blur-3xl"
+          className="absolute -top-32 -left-32 w-64 h-64 bg-gradient-to-r from-yellow-500/20 to-amber-500/20 rounded-full blur-3xl"
         />
         <motion.div
           animate={{
@@ -155,7 +155,7 @@ const Reviews = () => {
             rotate: [360, 180, 0]
           }}
           transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
-          className="absolute -bottom-32 -right-32 w-80 h-80 bg-gradient-to-r from-indigo-500/20 to-purple-500/20 rounded-full blur-3xl"
+          className="absolute -bottom-32 -right-32 w-80 h-80 bg-gradient-to-r from-amber-500/20 to-yellow-500/20 rounded-full blur-3xl"
         />
         
         {/* Dynamic color-changing background based on current review */}
@@ -182,7 +182,7 @@ const Reviews = () => {
           viewport={{ once: true }}
         >
           <motion.div
-            className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-500/20 to-indigo-500/20 backdrop-blur-xl border border-purple-500/30 rounded-full px-4 sm:px-6 py-2 sm:py-3 mb-6 sm:mb-8"
+            className="inline-flex items-center space-x-2 bg-gradient-to-r from-yellow-500/20 to-amber-500/20 backdrop-blur-xl border border-yellow-500/30 rounded-full px-4 sm:px-6 py-2 sm:py-3 mb-6 sm:mb-8"
             whileHover={{ scale: 1.02 }}
           >
             <Star className="w-4 h-4 sm:w-5 sm:h-5 text-yellow-400" fill="currentColor" />
@@ -190,7 +190,7 @@ const Reviews = () => {
           </motion.div>
 
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6">
-            Customer <span className="bg-gradient-to-r from-purple-400 to-indigo-600 bg-clip-text text-transparent">Reviews</span>
+            Customer <span className="bg-gradient-to-r from-yellow-400 to-amber-600 bg-clip-text text-transparent">Reviews</span>
           </h2>
           <p className="text-lg sm:text-xl text-white/70 max-w-3xl mx-auto leading-relaxed">
             See what our 5 satisfied customers have to say about our premium flooring services across Birmingham
@@ -201,7 +201,7 @@ const Reviews = () => {
         <div className="relative max-w-6xl mx-auto">
           {/* PREMIUM TESTIMONIAL CARD - NAVIGATION ARROWS REMOVED */}
           <motion.div
-            className="relative bg-gradient-to-br from-white/10 via-white/5 to-white/10 backdrop-blur-2xl border border-white/20 rounded-3xl sm:rounded-[2rem] overflow-hidden shadow-2xl"
+            className="relative bg-gradient-to-br from-white/10 via-white/5 to-white/10 backdrop-blur-2xl border border-yellow-500/30 rounded-3xl sm:rounded-[2rem] overflow-hidden shadow-2xl"
             whileHover={{ scale: 1.01 }}
             transition={{ duration: 0.3 }}
           >
@@ -268,7 +268,7 @@ const Reviews = () => {
                     transition={{ delay: 0.4, duration: 0.6 }}
                     className="space-y-2"
                   >
-                    <div className={`inline-block px-3 py-1 rounded-full text-xs font-bold text-white backdrop-blur-md border border-white/30 bg-gradient-to-r ${currentReviewData.gradient}`}>
+                    <div className={`inline-block px-3 py-1 rounded-full text-xs font-bold text-white backdrop-blur-md border border-yellow-500/40 bg-gradient-to-r ${currentReviewData.gradient}`}>
                       {currentReviewData.service}
                     </div>
                     <div className="flex items-center space-x-4 text-white/90">
@@ -313,7 +313,7 @@ const Reviews = () => {
                       transition={{ delay: 0.3, duration: 0.5 }}
                     >
                       {/* STAR RATING CONTAINER - PERFECT SIZE */}
-                      <div className="bg-gradient-to-r from-slate-900/95 via-gray-900/95 to-slate-900/95 backdrop-blur-xl rounded-xl px-4 py-2.5 border border-slate-600/50 shadow-xl">
+                      <div className="bg-gradient-to-r from-slate-900/95 via-gray-900/95 to-slate-900/95 backdrop-blur-xl rounded-xl px-4 py-2.5 border border-yellow-500/40 shadow-xl">
                         <div className="flex items-center space-x-3">
                           {/* CLEAN IRON STARS - PERFECT SIZE */}
                           <div className="flex items-center space-x-1">
@@ -377,7 +377,7 @@ const Reviews = () => {
 
                     {/* PERFECT MOBILE CUSTOMER INFO WITH PROPER SPACING */}
                     <motion.div 
-                      className="pt-4 sm:pt-6 border-t border-white/10 px-4 sm:px-0"
+                      className="pt-4 sm:pt-6 border-t border-yellow-500/20 px-4 sm:px-0"
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: 0.7, duration: 0.5 }}
@@ -408,7 +408,7 @@ const Reviews = () => {
           {/* DESKTOP DOTS NAVIGATION ONLY */}
           <div className="hidden lg:block mt-8">
             <div className="flex items-center justify-center">
-              <div className="bg-black/80 backdrop-blur-2xl rounded-2xl px-6 py-4 border border-white/20 shadow-2xl">
+              <div className="bg-black/80 backdrop-blur-2xl rounded-2xl px-6 py-4 border border-yellow-500/30 shadow-2xl">
                 <div className="flex items-center space-x-4">
                   {/* Counter */}
                   <div className="flex items-center space-x-2">

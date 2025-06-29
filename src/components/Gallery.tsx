@@ -47,19 +47,19 @@ const galleryImages = [
   {
     src: '/Herringbone pattern vinyle copy.jpg',
     title: 'Herringbone pattern vinyle copy',
-    category: 'Vinyl Flooring',
+    category: 'vinyle Flooring',
     description: 'Stunning herringbone vinyl patterns offering classic style and unmatched durability'
   },
   {
     src: '/Luxury vinyle.jpg',
     title: 'Luxury vinyle',
-    category: 'Vinyl Flooring',
+    category: 'vinyle Flooring',
     description: 'Luxury vinyl flooring combining elegant design with superior durability and modern appeal'
   },
   {
     src: '/vinyle.jpg',
     title: 'vinyle',
-    category: 'Vinyl Flooring',
+    category: 'vinyle Flooring',
     description: 'Premium vinyl flooring designed for ultimate comfort and contemporary style'
   },
 
@@ -91,7 +91,7 @@ const Gallery = () => {
   const [filter, setFilter] = useState('All');
 
   // EXACT CATEGORIES FROM PROVIDED MENU NAMES
-  const categories = ['All', 'Stairs', 'Laminate Flooring', 'Vinyl Flooring', 'Carpets', 'Underlay'];
+  const categories = ['All', 'Stairs', 'Laminate Flooring', 'vinyle Flooring', 'Carpets', 'Underlay'];
   
   const filteredImages = filter === 'All' 
     ? galleryImages 
@@ -107,7 +107,7 @@ const Gallery = () => {
             Project <span className="bg-gradient-to-r from-yellow-400 to-amber-600 bg-clip-text text-transparent">Gallery</span>
           </h2>
           <p className="text-xl text-white/70 max-w-3xl mx-auto mb-12">
-            Explore our premium flooring collection: Stairs, Laminate, Vinyl, Carpets, and Underlay solutions
+            Explore our premium flooring collection: Stairs, Laminate, vinyle, Carpets, and Underlay solutions
           </p>
 
           {/* OPTIMIZED MOBILE FILTER BUTTONS */}

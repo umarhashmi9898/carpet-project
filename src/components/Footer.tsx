@@ -10,37 +10,48 @@ const Footer = () => {
           <div className="flex flex-col h-full">
             <div className="bg-white/5 backdrop-blur-sm border border-yellow-500/20 rounded-2xl p-8 flex-1 flex flex-col">
               <div className="flex items-center space-x-3 mb-6">
-                {/* Professional Carpet Business Logo - Footer Version */}
+                {/* Clear Professional Carpet Business Logo - Footer Version */}
                 <div className="relative">
                   <div className="w-12 h-12 bg-gradient-to-br from-yellow-400 via-amber-500 to-yellow-600 rounded-2xl flex items-center justify-center shadow-2xl border border-yellow-300/40 relative overflow-hidden">
-                    {/* Clean Carpet Layers Background */}
+                    {/* Background */}
                     <div className="absolute inset-0">
-                      <div className="w-full h-full bg-gradient-to-br from-amber-900/30 to-yellow-900/30 rounded-2xl"></div>
+                      <div className="w-full h-full bg-gradient-to-br from-amber-900/20 to-yellow-900/20 rounded-2xl"></div>
                     </div>
                     
-                    {/* Professional Carpet Symbol */}
+                    {/* Clear Carpet/Rug Icon */}
                     <div className="relative z-10 flex items-center justify-center">
-                      {/* Clean Carpet/Flooring Representation */}
-                      <div className="w-8 h-8 relative">
-                        {/* Main carpet base */}
-                        <div className="absolute inset-0 bg-white rounded-lg shadow-inner"></div>
+                      {/* Carpet/Rug Shape */}
+                      <div className="w-8 h-6 relative">
+                        {/* Main carpet body */}
+                        <div className="absolute inset-0 bg-white rounded-lg shadow-lg border border-gray-200"></div>
                         
-                        {/* Carpet texture lines - horizontal */}
-                        <div className="absolute inset-x-1 top-1.5 h-0.5 bg-gradient-to-r from-amber-700 to-yellow-800 rounded-full"></div>
-                        <div className="absolute inset-x-1 top-3 h-0.5 bg-gradient-to-r from-yellow-800 to-amber-700 rounded-full"></div>
-                        <div className="absolute inset-x-1 top-4.5 h-0.5 bg-gradient-to-r from-amber-700 to-yellow-800 rounded-full"></div>
-                        <div className="absolute inset-x-1 bottom-1.5 h-0.5 bg-gradient-to-r from-yellow-800 to-amber-700 rounded-full"></div>
+                        {/* Carpet pattern - diamond/geometric */}
+                        <div className="absolute inset-1 grid grid-cols-3 gap-0.5">
+                          <div className="bg-amber-600 rounded-sm"></div>
+                          <div className="bg-yellow-700 rounded-sm"></div>
+                          <div className="bg-amber-600 rounded-sm"></div>
+                          <div className="bg-yellow-700 rounded-sm"></div>
+                          <div className="bg-amber-600 rounded-sm"></div>
+                          <div className="bg-yellow-700 rounded-sm"></div>
+                          <div className="bg-amber-600 rounded-sm"></div>
+                          <div className="bg-yellow-700 rounded-sm"></div>
+                          <div className="bg-amber-600 rounded-sm"></div>
+                        </div>
                         
-                        {/* Professional center accent */}
-                        <div className="absolute inset-0 flex items-center justify-center">
-                          <div className="w-3 h-3 bg-gradient-to-br from-amber-600 to-yellow-700 rounded-full shadow-lg border border-white/50">
-                            <div className="w-full h-full bg-gradient-to-br from-yellow-300/50 to-transparent rounded-full"></div>
-                          </div>
+                        {/* Carpet fringe/tassels */}
+                        <div className="absolute -bottom-1 left-1 right-1 flex justify-between">
+                          <div className="w-0.5 h-1.5 bg-amber-700 rounded-full"></div>
+                          <div className="w-0.5 h-1.5 bg-yellow-800 rounded-full"></div>
+                          <div className="w-0.5 h-1.5 bg-amber-700 rounded-full"></div>
+                          <div className="w-0.5 h-1.5 bg-yellow-800 rounded-full"></div>
+                          <div className="w-0.5 h-1.5 bg-amber-700 rounded-full"></div>
+                          <div className="w-0.5 h-1.5 bg-yellow-800 rounded-full"></div>
+                          <div className="w-0.5 h-1.5 bg-amber-700 rounded-full"></div>
                         </div>
                       </div>
                     </div>
                     
-                    {/* Subtle professional glow */}
+                    {/* Professional glow */}
                     <div className="absolute inset-0 bg-gradient-to-br from-yellow-200/20 to-amber-300/20 rounded-2xl"></div>
                   </div>
                   
@@ -269,14 +280,14 @@ const Footer = () => {
                 <div className="relative">
                   <div className="w-8 h-8 bg-gradient-to-br from-yellow-400 via-amber-500 to-yellow-600 rounded-lg flex items-center justify-center shadow-lg border border-yellow-300/30 relative overflow-hidden">
                     <div className="absolute inset-0">
-                      <div className="w-full h-full bg-gradient-to-br from-amber-900/30 to-yellow-900/30 rounded-lg"></div>
+                      <div className="w-full h-full bg-gradient-to-br from-amber-900/20 to-yellow-900/20 rounded-lg"></div>
                     </div>
                     <div className="relative z-10 flex items-center justify-center">
-                      <div className="w-5 h-5 relative">
+                      <div className="w-5 h-4 relative">
                         <div className="absolute inset-0 bg-white rounded-sm shadow-inner"></div>
-                        <div className="absolute inset-x-0.5 top-1 h-0.5 bg-gradient-to-r from-amber-700 to-yellow-800 rounded-full"></div>
-                        <div className="absolute inset-x-0.5 top-2 h-0.5 bg-gradient-to-r from-yellow-800 to-amber-700 rounded-full"></div>
-                        <div className="absolute inset-x-0.5 bottom-1 h-0.5 bg-gradient-to-r from-amber-700 to-yellow-800 rounded-full"></div>
+                        <div className="absolute inset-x-0.5 top-0.5 h-0.5 bg-gradient-to-r from-amber-700 to-yellow-800 rounded-full"></div>
+                        <div className="absolute inset-x-0.5 top-1.5 h-0.5 bg-gradient-to-r from-yellow-800 to-amber-700 rounded-full"></div>
+                        <div className="absolute inset-x-0.5 bottom-0.5 h-0.5 bg-gradient-to-r from-amber-700 to-yellow-800 rounded-full"></div>
                         <div className="absolute inset-0 flex items-center justify-center">
                           <div className="w-2 h-2 bg-gradient-to-br from-amber-600 to-yellow-700 rounded-full shadow-lg border border-white/50">
                             <div className="w-full h-full bg-gradient-to-br from-yellow-300/50 to-transparent rounded-full"></div>

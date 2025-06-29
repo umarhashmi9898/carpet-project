@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, Eye, Award, Star } from 'lucide-react';
+import { Star, Quote, MapPin } from 'lucide-react';
 
 // WhatsApp Glass Icon Component
 const WhatsAppIcon = ({ className = "w-5 h-5" }: { className?: string }) => (
@@ -13,7 +13,7 @@ const WhatsAppIcon = ({ className = "w-5 h-5" }: { className?: string }) => (
   </svg>
 );
 
-// UPDATED GALLERY IMAGES - ONLY VINYL FLOORING CATEGORY CHANGED
+// UPDATED GALLERY IMAGES - ONLY CARPETS CATEGORY CHANGED
 const galleryImages = [
   // STAIRS - UNCHANGED
   {
@@ -43,7 +43,7 @@ const galleryImages = [
     description: 'Premium Torros color laminate flooring with professional installation and authentic wood effect'
   },
 
-  // VINYL FLOORING - NEW IMAGES WITH EXACT NAMES
+  // VINYL FLOORING - UNCHANGED
   {
     src: '/Herringbone pattern vinyle copy.jpg',
     title: 'Herringbone pattern vinyle copy',
@@ -63,16 +63,16 @@ const galleryImages = [
     description: 'Premium vinyl flooring designed for ultimate comfort and contemporary style'
   },
 
-  // CARPETS - UNCHANGED
+  // CARPETS - NEW IMAGES WITH EXACT NAMES
   {
-    src: '/Luxury blue carpet.jpg',
-    title: 'Luxury Blue Carpet',
+    src: '/Luxury blue carpet copy.jpg',
+    title: 'Luxury blue carpet copy',
     category: 'Carpets',
     description: 'Transform your space with luxury blue carpet offering ultimate comfort and elegant style'
   },
   {
-    src: '/Luxury carpet ivory colour.jpg',
-    title: 'Luxury Ivory Carpet',
+    src: '/Luxury carpet ivory colour copy.jpg',
+    title: 'Luxury carpet ivory colour copy',
     category: 'Carpets',
     description: 'Premium ivory carpet creating sophisticated statements in any space'
   },
@@ -229,7 +229,7 @@ const Gallery = () => {
                 {/* Simple Overlay */}
                 <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                   <div className="w-12 h-12 bg-yellow-500/20 rounded-full flex items-center justify-center backdrop-blur-sm border-2 border-yellow-400">
-                    <Eye className="w-6 h-6 text-white" />
+                    <Star className="w-6 h-6 text-white" />
                   </div>
                 </div>
 
@@ -341,7 +341,7 @@ const Gallery = () => {
                 onClick={() => setSelectedImage(null)}
                 className="absolute top-6 right-6 w-12 h-12 bg-white/10 rounded-full flex items-center justify-center text-white hover:bg-white/20 transition-colors border-2 border-yellow-400"
               >
-                <X className="w-6 h-6" />
+                <Star className="w-6 h-6" />
               </button>
               
               <motion.div 

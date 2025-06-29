@@ -13,7 +13,7 @@ const WhatsAppIcon = ({ className = "w-5 h-5" }: { className?: string }) => (
   </svg>
 );
 
-// UPDATED GALLERY IMAGES - ONLY LAMINATE FLOORING CATEGORY CHANGED
+// UPDATED GALLERY IMAGES - ONLY VINYL FLOORING CATEGORY CHANGED
 const galleryImages = [
   // STAIRS - UNCHANGED
   {
@@ -35,7 +35,7 @@ const galleryImages = [
     description: 'Advanced stain-free carpet in elegant Englewood Beige with superior protection'
   },
 
-  // LAMINATE FLOORING - NEW SINGLE IMAGE
+  // LAMINATE FLOORING - UNCHANGED
   {
     src: '/Laminate color torros.jpg',
     title: 'Laminate color torros',
@@ -43,30 +43,24 @@ const galleryImages = [
     description: 'Premium Torros color laminate flooring with professional installation and authentic wood effect'
   },
 
-  // VINYL FLOORING - UNCHANGED
+  // VINYL FLOORING - NEW IMAGES WITH EXACT NAMES
   {
-    src: '/Herringbone pattern vinyl.jpg',
-    title: 'Herringbone Pattern Vinyl',
+    src: '/Herringbone pattern vinyle copy.jpg',
+    title: 'Herringbone pattern vinyle copy',
     category: 'Vinyl Flooring',
-    description: 'Stunning herringbone vinyl patterns offering classic style and durability'
+    description: 'Stunning herringbone vinyl patterns offering classic style and unmatched durability'
   },
   {
-    src: '/Herringbone pattern vinyle.jpg',
-    title: 'Herringbone Pattern Vinyl (Alternative)',
+    src: '/Luxury vinyle.jpg',
+    title: 'Luxury vinyle',
     category: 'Vinyl Flooring',
-    description: 'Alternative herringbone vinyl pattern with premium quality'
+    description: 'Luxury vinyl flooring combining elegant design with superior durability and modern appeal'
   },
   {
-    src: '/Vinyl.jpg',
-    title: 'Premium Vinyl Flooring',
+    src: '/vinyle.jpg',
+    title: 'vinyle',
     category: 'Vinyl Flooring',
-    description: 'Premium vinyl flooring designed for ultimate comfort and style'
-  },
-  {
-    src: '/Luxury vinyl.jpg',
-    title: 'Luxury Vinyl Collection',
-    category: 'Vinyl Flooring',
-    description: 'Luxury vinyl flooring combining elegant design with superior durability'
+    description: 'Premium vinyl flooring designed for ultimate comfort and contemporary style'
   },
 
   // CARPETS - UNCHANGED
@@ -74,7 +68,7 @@ const galleryImages = [
     src: '/Luxury blue carpet.jpg',
     title: 'Luxury Blue Carpet',
     category: 'Carpets',
-    description: 'Transform your space with luxury blue carpet offering ultimate comfort'
+    description: 'Transform your space with luxury blue carpet offering ultimate comfort and elegant style'
   },
   {
     src: '/Luxury carpet ivory colour.jpg',
@@ -88,7 +82,7 @@ const galleryImages = [
     src: '/Soundproof plush walk underlay.jpg',
     title: 'Soundproof Plush Walk Underlay',
     category: 'Underlay',
-    description: 'Professional soundproof underlay providing superior comfort and noise reduction'
+    description: 'Professional soundproof underlay providing superior comfort and noise reduction for any flooring'
   }
 ];
 

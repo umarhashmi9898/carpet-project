@@ -13,9 +13,9 @@ const WhatsAppIcon = ({ className = "w-5 h-5" }: { className?: string }) => (
   </svg>
 );
 
-// UPDATED GALLERY IMAGES - ONLY STAIRS CATEGORY CHANGED
+// UPDATED GALLERY IMAGES - ONLY LAMINATE FLOORING CATEGORY CHANGED
 const galleryImages = [
-  // STAIRS - NEW IMAGES
+  // STAIRS - UNCHANGED
   {
     src: '/Combi stairs.jpg',
     title: 'Combi stairs',
@@ -35,12 +35,12 @@ const galleryImages = [
     description: 'Advanced stain-free carpet in elegant Englewood Beige with superior protection'
   },
 
-  // LAMINATE FLOORING - UNCHANGED
+  // LAMINATE FLOORING - NEW SINGLE IMAGE
   {
-    src: '/Laminate colour torros.jpg',
-    title: 'Torros Laminate Flooring',
+    src: '/Laminate color torros.jpg',
+    title: 'Laminate color torros',
     category: 'Laminate Flooring',
-    description: 'Premium Torros color laminate flooring with professional installation'
+    description: 'Premium Torros color laminate flooring with professional installation and authentic wood effect'
   },
 
   // VINYL FLOORING - UNCHANGED

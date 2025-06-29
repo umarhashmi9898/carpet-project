@@ -83,16 +83,54 @@ const Header = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* INCREASED HEIGHT FOR BETTER SPACING */}
           <div className="flex items-center justify-between h-20 lg:h-24">
-            {/* Logo */}
+            {/* Professional Carpet Business Logo */}
             <motion.div 
-              className="flex items-center space-x-2"
+              className="flex items-center space-x-3"
               whileHover={{ scale: 1.02 }}
               transition={{ duration: 0.2 }}
             >
-              <div className="w-8 h-8 bg-gradient-to-br from-yellow-400 to-amber-600 rounded-lg flex items-center justify-center shadow-lg">
-                <div className="w-6 h-6 bg-gradient-to-br from-yellow-800 to-amber-900 rounded"></div>
+              {/* Professional Carpet Logo Design */}
+              <div className="relative">
+                {/* Main Logo Container */}
+                <div className="w-12 h-12 bg-gradient-to-br from-yellow-400 via-amber-500 to-yellow-600 rounded-xl flex items-center justify-center shadow-xl border-2 border-yellow-300/30 relative overflow-hidden">
+                  {/* Carpet Pattern Background */}
+                  <div className="absolute inset-0 opacity-20">
+                    <div className="w-full h-full bg-gradient-to-br from-amber-800 to-yellow-900 rounded-xl"></div>
+                    {/* Subtle carpet texture lines */}
+                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent transform -skew-x-12"></div>
+                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent transform skew-x-12"></div>
+                  </div>
+                  
+                  {/* Central Carpet Icon */}
+                  <div className="relative z-10 flex items-center justify-center">
+                    {/* Custom Carpet/Flooring Symbol */}
+                    <div className="w-7 h-7 relative">
+                      {/* Layered carpet representation */}
+                      <div className="absolute inset-0 bg-white rounded-sm transform rotate-3 opacity-90"></div>
+                      <div className="absolute inset-0 bg-white/80 rounded-sm transform -rotate-2 scale-95"></div>
+                      <div className="absolute inset-0 bg-white/60 rounded-sm transform rotate-1 scale-90"></div>
+                      {/* Central pattern */}
+                      <div className="absolute inset-2 bg-gradient-to-br from-amber-800 to-yellow-900 rounded-sm flex items-center justify-center">
+                        <div className="w-2 h-2 bg-white/80 rounded-full"></div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  {/* Subtle glow effect */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-yellow-300/30 to-amber-400/30 rounded-xl blur-sm"></div>
+                </div>
+                
+                {/* Professional accent dot */}
+                <div className="absolute -top-1 -right-1 w-4 h-4 bg-gradient-to-br from-green-400 to-emerald-500 rounded-full border-2 border-white shadow-lg flex items-center justify-center">
+                  <div className="w-1.5 h-1.5 bg-white rounded-full"></div>
+                </div>
               </div>
-              <span className="text-white font-bold text-lg">SYN Carpets</span>
+              
+              {/* Company Name */}
+              <div>
+                <span className="text-white font-bold text-xl tracking-tight">SYN Carpets</span>
+                <div className="text-yellow-300 text-xs font-medium tracking-wide">Premium Flooring</div>
+              </div>
             </motion.div>
 
             {/* Desktop Navigation */}
@@ -215,12 +253,33 @@ const Header = () => {
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: 0.1 }}
                   >
-                    <div className="w-10 h-10 bg-gradient-to-br from-yellow-400 to-amber-600 rounded-xl flex items-center justify-center shadow-lg">
-                      <div className="w-6 h-6 bg-gradient-to-br from-yellow-800 to-amber-900 rounded-lg"></div>
+                    {/* Mobile Menu Logo - Same Professional Design */}
+                    <div className="relative">
+                      <div className="w-10 h-10 bg-gradient-to-br from-yellow-400 via-amber-500 to-yellow-600 rounded-xl flex items-center justify-center shadow-xl border-2 border-yellow-300/30 relative overflow-hidden">
+                        <div className="absolute inset-0 opacity-20">
+                          <div className="w-full h-full bg-gradient-to-br from-amber-800 to-yellow-900 rounded-xl"></div>
+                          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent transform -skew-x-12"></div>
+                          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent transform skew-x-12"></div>
+                        </div>
+                        <div className="relative z-10 flex items-center justify-center">
+                          <div className="w-6 h-6 relative">
+                            <div className="absolute inset-0 bg-white rounded-sm transform rotate-3 opacity-90"></div>
+                            <div className="absolute inset-0 bg-white/80 rounded-sm transform -rotate-2 scale-95"></div>
+                            <div className="absolute inset-0 bg-white/60 rounded-sm transform rotate-1 scale-90"></div>
+                            <div className="absolute inset-2 bg-gradient-to-br from-amber-800 to-yellow-900 rounded-sm flex items-center justify-center">
+                              <div className="w-1.5 h-1.5 bg-white/80 rounded-full"></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div className="absolute inset-0 bg-gradient-to-br from-yellow-300/30 to-amber-400/30 rounded-xl blur-sm"></div>
+                      </div>
+                      <div className="absolute -top-1 -right-1 w-3 h-3 bg-gradient-to-br from-green-400 to-emerald-500 rounded-full border border-white shadow-lg flex items-center justify-center">
+                        <div className="w-1 h-1 bg-white rounded-full"></div>
+                      </div>
                     </div>
                     <div>
                       <h3 className="text-white font-bold text-lg">SYN Carpets</h3>
-                      <p className="text-yellow-300 text-sm">Luxury Redefined</p>
+                      <p className="text-yellow-300 text-sm">Premium Flooring</p>
                     </div>
                   </motion.div>
                   

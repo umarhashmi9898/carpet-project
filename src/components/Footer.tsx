@@ -10,12 +10,39 @@ const Footer = () => {
           <div className="flex flex-col h-full">
             <div className="bg-white/5 backdrop-blur-sm border border-yellow-500/20 rounded-2xl p-8 flex-1 flex flex-col">
               <div className="flex items-center space-x-3 mb-6">
-                <div className="w-12 h-12 bg-gradient-to-br from-yellow-400 to-amber-600 rounded-xl flex items-center justify-center shadow-lg">
-                  <div className="w-8 h-8 bg-gradient-to-br from-yellow-800 to-amber-900 rounded-lg"></div>
+                {/* Professional Carpet Business Logo - Footer Version */}
+                <div className="relative">
+                  <div className="w-12 h-12 bg-gradient-to-br from-yellow-400 via-amber-500 to-yellow-600 rounded-xl flex items-center justify-center shadow-xl border-2 border-yellow-300/30 relative overflow-hidden">
+                    {/* Carpet Pattern Background */}
+                    <div className="absolute inset-0 opacity-20">
+                      <div className="w-full h-full bg-gradient-to-br from-amber-800 to-yellow-900 rounded-xl"></div>
+                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent transform -skew-x-12"></div>
+                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent transform skew-x-12"></div>
+                    </div>
+                    
+                    {/* Central Carpet Icon */}
+                    <div className="relative z-10 flex items-center justify-center">
+                      <div className="w-7 h-7 relative">
+                        <div className="absolute inset-0 bg-white rounded-sm transform rotate-3 opacity-90"></div>
+                        <div className="absolute inset-0 bg-white/80 rounded-sm transform -rotate-2 scale-95"></div>
+                        <div className="absolute inset-0 bg-white/60 rounded-sm transform rotate-1 scale-90"></div>
+                        <div className="absolute inset-2 bg-gradient-to-br from-amber-800 to-yellow-900 rounded-sm flex items-center justify-center">
+                          <div className="w-2 h-2 bg-white/80 rounded-full"></div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div className="absolute inset-0 bg-gradient-to-br from-yellow-300/30 to-amber-400/30 rounded-xl blur-sm"></div>
+                  </div>
+                  
+                  <div className="absolute -top-1 -right-1 w-4 h-4 bg-gradient-to-br from-green-400 to-emerald-500 rounded-full border-2 border-white shadow-lg flex items-center justify-center">
+                    <div className="w-1.5 h-1.5 bg-white rounded-full"></div>
+                  </div>
                 </div>
+                
                 <div>
                   <span className="text-white font-bold text-xl">SYN Carpets</span>
-                  <p className="text-yellow-300 text-sm">Luxury Redefined</p>
+                  <p className="text-yellow-300 text-sm">Premium Flooring</p>
                 </div>
               </div>
               
@@ -229,15 +256,29 @@ const Footer = () => {
           <div className="bg-white/5 backdrop-blur-sm border border-yellow-500/20 rounded-2xl p-6">
             <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
               <div className="flex items-center space-x-4">
-                <div className="w-8 h-8 bg-gradient-to-br from-yellow-400 to-amber-600 rounded-lg flex items-center justify-center">
-                  <div className="w-5 h-5 bg-gradient-to-br from-yellow-800 to-amber-900 rounded"></div>
+                {/* Professional Logo - Bottom Bar Version */}
+                <div className="relative">
+                  <div className="w-8 h-8 bg-gradient-to-br from-yellow-400 via-amber-500 to-yellow-600 rounded-lg flex items-center justify-center shadow-lg border border-yellow-300/30 relative overflow-hidden">
+                    <div className="absolute inset-0 opacity-20">
+                      <div className="w-full h-full bg-gradient-to-br from-amber-800 to-yellow-900 rounded-lg"></div>
+                    </div>
+                    <div className="relative z-10 flex items-center justify-center">
+                      <div className="w-5 h-5 relative">
+                        <div className="absolute inset-0 bg-white rounded-sm transform rotate-2 opacity-90"></div>
+                        <div className="absolute inset-1 bg-gradient-to-br from-amber-800 to-yellow-900 rounded-sm flex items-center justify-center">
+                          <div className="w-1 h-1 bg-white/80 rounded-full"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
+                
                 <div>
                   <p className="text-white/80 font-medium">
                     © 2024 SYN Carpets. All rights reserved.
                   </p>
                   <p className="text-white/60 text-sm">
-                    Luxury Flooring Redefined
+                    Premium Flooring Redefined
                   </p>
                 </div>
               </div>

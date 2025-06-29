@@ -13,17 +13,29 @@ const WhatsAppIcon = ({ className = "w-5 h-5" }: { className?: string }) => (
   </svg>
 );
 
-// EXACT IMAGES FROM PROVIDED MENU NAMES
+// UPDATED GALLERY IMAGES - ONLY STAIRS CATEGORY CHANGED
 const galleryImages = [
-  // STAIRS
+  // STAIRS - NEW IMAGES
   {
     src: '/Combi stairs.jpg',
-    title: 'Premium Staircase Installation',
+    title: 'Combi stairs',
     category: 'Stairs',
     description: 'Professional staircase carpeting with elegant design and superior comfort'
   },
+  {
+    src: '/Combi stairs 2.jpg',
+    title: 'Combi stairs 2',
+    category: 'Stairs',
+    description: 'Premium staircase installation with professional finish and quality materials'
+  },
+  {
+    src: '/Stain free englewood Beige carpet.jpg',
+    title: 'Stain free englewood Beige carpet',
+    category: 'Stairs',
+    description: 'Advanced stain-free carpet in elegant Englewood Beige with superior protection'
+  },
 
-  // LAMINATE FLOORING
+  // LAMINATE FLOORING - UNCHANGED
   {
     src: '/Laminate colour torros.jpg',
     title: 'Torros Laminate Flooring',
@@ -31,7 +43,7 @@ const galleryImages = [
     description: 'Premium Torros color laminate flooring with professional installation'
   },
 
-  // VINYL FLOORING
+  // VINYL FLOORING - UNCHANGED
   {
     src: '/Herringbone pattern vinyl.jpg',
     title: 'Herringbone Pattern Vinyl',
@@ -57,7 +69,7 @@ const galleryImages = [
     description: 'Luxury vinyl flooring combining elegant design with superior durability'
   },
 
-  // CARPETS
+  // CARPETS - UNCHANGED
   {
     src: '/Luxury blue carpet.jpg',
     title: 'Luxury Blue Carpet',
@@ -70,14 +82,8 @@ const galleryImages = [
     category: 'Carpets',
     description: 'Premium ivory carpet creating sophisticated statements in any space'
   },
-  {
-    src: '/Stain free Englewood Beige carpet.jpg',
-    title: 'Stain Free Englewood Beige',
-    category: 'Carpets',
-    description: 'Advanced stain-free carpet in elegant Englewood Beige with protection'
-  },
 
-  // UNDERLAY
+  // UNDERLAY - UNCHANGED
   {
     src: '/Soundproof plush walk underlay.jpg',
     title: 'Soundproof Plush Walk Underlay',

@@ -597,11 +597,26 @@ const Hero = () => {
                 <Sparkles className="w-3 h-3 sm:w-4 sm:h-4 text-yellow-400" />
               </motion.div>
 
-              {/* Main Headline - MOBILE RESPONSIVE */}
+              {/* Main Headline - MOBILE RESPONSIVE WITH FIXED TEXT AND AUTO COLOR CHANGING */}
               <div className="space-y-4 sm:space-y-6">
                 <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight">
                   <motion.span 
-                    className="block bg-gradient-to-r from-yellow-400 via-orange-400 to-amber-500 bg-clip-text text-transparent"
+                    className="block text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-orange-400 to-amber-500"
+                    style={{
+                      // Ensure text is always visible with proper contrast
+                      WebkitTextFillColor: 'transparent',
+                      WebkitBackgroundClip: 'text',
+                      backgroundClip: 'text',
+                      // Add text shadow for better visibility
+                      textShadow: '0 0 30px rgba(255, 215, 0, 0.3), 0 0 60px rgba(255, 215, 0, 0.2)',
+                      // Ensure minimum height to prevent cropping
+                      minHeight: '1.2em',
+                      lineHeight: '1.1',
+                      // Prevent text from being cut off
+                      overflow: 'visible',
+                      display: 'block',
+                      width: '100%'
+                    }}
                     animate={{
                       backgroundImage: [
                         'linear-gradient(45deg, #fbbf24, #f59e0b, #d97706)',
@@ -609,27 +624,51 @@ const Hero = () => {
                         'linear-gradient(45deg, #f59e0b, #d97706, #b45309)',
                         'linear-gradient(45deg, #facc15, #eab308, #ca8a04)',
                         'linear-gradient(45deg, #d97706, #b45309, #92400e)',
-                        'linear-gradient(45deg, #fbbf24, #f59e0b, #d97706)'
+                        'linear-gradient(45deg, #fbbf24, #f59e0b, #d97706)',
+                        'linear-gradient(45deg, #fcd34d, #fbbf24, #f59e0b)',
+                        'linear-gradient(45deg, #a16207, #92400e, #78350f)',
+                        'linear-gradient(45deg, #f59e0b, #fbbf24, #fcd34d)',
+                        'linear-gradient(45deg, #ca8a04, #eab308, #facc15)'
                       ]
                     }}
                     transition={{
-                      duration: 8,
+                      duration: 12,
                       repeat: Infinity,
-                      ease: "easeInOut"
+                      ease: "easeInOut",
+                      repeatType: "reverse"
                     }}
                   >
                     SYN Carpets
                   </motion.span>
-                  <span className="block text-white mt-1 sm:mt-2">& Flooring</span>
+                  <span className="block text-white mt-1 sm:mt-2" style={{ lineHeight: '1.1' }}>& Flooring</span>
                 </h1>
                 
                 <div className="w-16 sm:w-20 h-1 bg-gradient-to-r from-yellow-500 to-amber-600 rounded-full mx-auto xl:mx-0" />
                 
                 <div className="space-y-3 sm:space-y-4">
                   <p className="text-lg sm:text-xl md:text-2xl text-white/90 leading-relaxed max-w-2xl mx-auto xl:mx-0">
-                    <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 to-amber-300">
+                    <motion.span 
+                      className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 to-amber-300"
+                      animate={{
+                        backgroundImage: [
+                          'linear-gradient(45deg, #fde047, #facc15)',
+                          'linear-gradient(45deg, #facc15, #eab308)',
+                          'linear-gradient(45deg, #eab308, #ca8a04)',
+                          'linear-gradient(45deg, #ca8a04, #a16207)',
+                          'linear-gradient(45deg, #a16207, #ca8a04)',
+                          'linear-gradient(45deg, #ca8a04, #eab308)',
+                          'linear-gradient(45deg, #eab308, #facc15)',
+                          'linear-gradient(45deg, #facc15, #fde047)'
+                        ]
+                      }}
+                      transition={{
+                        duration: 8,
+                        repeat: Infinity,
+                        ease: "easeInOut"
+                      }}
+                    >
                       Luxury Flooring Redefined.
-                    </span>
+                    </motion.span>
                   </p>
                   <p className="text-base sm:text-lg text-white/80 leading-relaxed max-w-2xl mx-auto xl:mx-0 px-4 sm:px-0">
                     Transform your home with premium stairs, laminate, vinyl, carpets, and underlay solutions.

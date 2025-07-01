@@ -85,7 +85,7 @@ const Header = () => {
           <div className="flex items-center justify-between h-20 lg:h-24">
             {/* Professional SYN Carpet Logo */}
             <motion.div 
-              className="flex items-center space-x-3"
+              className="flex items-center space-x-2"
               whileHover={{ scale: 1.02 }}
               transition={{ duration: 0.2 }}
             >
@@ -225,7 +225,7 @@ const Header = () => {
               <div className="relative z-10 p-6 border-b border-yellow-500/20">
                 <div className="flex items-center justify-between mb-4">
                   <motion.div 
-                    className="flex items-center space-x-3"
+                    className="flex items-center space-x-2"
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: 0.1 }}

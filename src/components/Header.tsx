@@ -101,11 +101,6 @@ const Header = () => {
                     e.currentTarget.style.display = 'none';
                   }}
                 />
-                
-                {/* Quality indicator */}
-                <div className="absolute -top-1 -right-1 w-4 h-4 bg-gradient-to-br from-emerald-400 to-green-500 rounded-full border-2 border-white shadow-xl flex items-center justify-center">
-                  <div className="w-1.5 h-1.5 bg-white rounded-full"></div>
-                </div>
               </div>
               
               {/* Company Name - Fallback */}
@@ -246,9 +241,6 @@ const Header = () => {
                           e.currentTarget.style.display = 'none';
                         }}
                       />
-                      <div className="absolute -top-1 -right-1 w-3 h-3 bg-gradient-to-br from-emerald-400 to-green-500 rounded-full border border-white shadow-lg flex items-center justify-center">
-                        <div className="w-1 h-1 bg-white rounded-full"></div>
-                      </div>
                     </div>
                     <div>
                       <h3 className="text-white font-bold text-lg">SYN Carpets</h3>

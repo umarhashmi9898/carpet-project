@@ -21,10 +21,6 @@ const Footer = () => {
                       e.currentTarget.style.display = 'none';
                     }}
                   />
-                  
-                  <div className="absolute -top-1 -right-1 w-4 h-4 bg-gradient-to-br from-emerald-400 to-green-500 rounded-full border-2 border-white shadow-xl flex items-center justify-center">
-                    <div className="w-1.5 h-1.5 bg-white rounded-full"></div>
-                  </div>
                 </div>
                 
                 <div>

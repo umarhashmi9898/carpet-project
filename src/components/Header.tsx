@@ -83,57 +83,24 @@ const Header = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* INCREASED HEIGHT FOR BETTER SPACING */}
           <div className="flex items-center justify-between h-20 lg:h-24">
-            {/* Clear Professional Carpet Business Logo */}
+            {/* Professional SYN Carpet Logo */}
             <motion.div 
               className="flex items-center space-x-3"
               whileHover={{ scale: 1.02 }}
               transition={{ duration: 0.2 }}
             >
-              {/* Clear Carpet/Rug Business Logo */}
+              {/* SYN Carpet Logo Image */}
               <div className="relative">
-                {/* Main Logo Container */}
-                <div className="w-12 h-12 bg-gradient-to-br from-yellow-400 via-amber-500 to-yellow-600 rounded-2xl flex items-center justify-center shadow-2xl border border-yellow-300/40 relative overflow-hidden">
-                  {/* Background */}
-                  <div className="absolute inset-0">
-                    <div className="w-full h-full bg-gradient-to-br from-amber-900/20 to-yellow-900/20 rounded-2xl"></div>
-                  </div>
-                  
-                  {/* Clear Carpet/Rug Icon */}
-                  <div className="relative z-10 flex items-center justify-center">
-                    {/* Carpet/Rug Shape */}
-                    <div className="w-9 h-7 relative">
-                      {/* Main carpet body */}
-                      <div className="absolute inset-0 bg-white rounded-lg shadow-lg border border-gray-200"></div>
-                      
-                      {/* Carpet pattern - diamond/geometric */}
-                      <div className="absolute inset-1 grid grid-cols-3 gap-0.5">
-                        <div className="bg-amber-600 rounded-sm"></div>
-                        <div className="bg-yellow-700 rounded-sm"></div>
-                        <div className="bg-amber-600 rounded-sm"></div>
-                        <div className="bg-yellow-700 rounded-sm"></div>
-                        <div className="bg-amber-600 rounded-sm"></div>
-                        <div className="bg-yellow-700 rounded-sm"></div>
-                        <div className="bg-amber-600 rounded-sm"></div>
-                        <div className="bg-yellow-700 rounded-sm"></div>
-                        <div className="bg-amber-600 rounded-sm"></div>
-                      </div>
-                      
-                      {/* Carpet fringe/tassels */}
-                      <div className="absolute -bottom-1 left-1 right-1 flex justify-between">
-                        <div className="w-0.5 h-2 bg-amber-700 rounded-full"></div>
-                        <div className="w-0.5 h-2 bg-yellow-800 rounded-full"></div>
-                        <div className="w-0.5 h-2 bg-amber-700 rounded-full"></div>
-                        <div className="w-0.5 h-2 bg-yellow-800 rounded-full"></div>
-                        <div className="w-0.5 h-2 bg-amber-700 rounded-full"></div>
-                        <div className="w-0.5 h-2 bg-yellow-800 rounded-full"></div>
-                        <div className="w-0.5 h-2 bg-amber-700 rounded-full"></div>
-                      </div>
-                    </div>
-                  </div>
-                  
-                  {/* Professional glow */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-yellow-200/20 to-amber-300/20 rounded-2xl"></div>
-                </div>
+                <img 
+                  src="/SYN Carpet (1).png" 
+                  alt="SYN Carpets Logo" 
+                  className="h-12 w-auto object-contain"
+                  onError={(e) => {
+                    console.log('Logo failed to load, using fallback');
+                    // Fallback to text if image fails
+                    e.currentTarget.style.display = 'none';
+                  }}
+                />
                 
                 {/* Quality indicator */}
                 <div className="absolute -top-1 -right-1 w-4 h-4 bg-gradient-to-br from-emerald-400 to-green-500 rounded-full border-2 border-white shadow-xl flex items-center justify-center">
@@ -141,7 +108,7 @@ const Header = () => {
                 </div>
               </div>
               
-              {/* Company Name */}
+              {/* Company Name - Fallback */}
               <div>
                 <span className="text-white font-bold text-xl tracking-tight">SYN Carpets</span>
                 <div className="text-yellow-300 text-xs font-medium tracking-wide">Premium Flooring</div>
@@ -268,39 +235,17 @@ const Header = () => {
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: 0.1 }}
                   >
-                    {/* Mobile Menu Logo - Same Clear Design */}
+                    {/* Mobile Menu Logo - SYN Carpet Logo */}
                     <div className="relative">
-                      <div className="w-10 h-10 bg-gradient-to-br from-yellow-400 via-amber-500 to-yellow-600 rounded-2xl flex items-center justify-center shadow-2xl border border-yellow-300/40 relative overflow-hidden">
-                        <div className="absolute inset-0">
-                          <div className="w-full h-full bg-gradient-to-br from-amber-900/20 to-yellow-900/20 rounded-2xl"></div>
-                        </div>
-                        <div className="relative z-10 flex items-center justify-center">
-                          <div className="w-8 h-6 relative">
-                            <div className="absolute inset-0 bg-white rounded-lg shadow-lg border border-gray-200"></div>
-                            <div className="absolute inset-1 grid grid-cols-3 gap-0.5">
-                              <div className="bg-amber-600 rounded-sm"></div>
-                              <div className="bg-yellow-700 rounded-sm"></div>
-                              <div className="bg-amber-600 rounded-sm"></div>
-                              <div className="bg-yellow-700 rounded-sm"></div>
-                              <div className="bg-amber-600 rounded-sm"></div>
-                              <div className="bg-yellow-700 rounded-sm"></div>
-                              <div className="bg-amber-600 rounded-sm"></div>
-                              <div className="bg-yellow-700 rounded-sm"></div>
-                              <div className="bg-amber-600 rounded-sm"></div>
-                            </div>
-                            <div className="absolute -bottom-1 left-1 right-1 flex justify-between">
-                              <div className="w-0.5 h-1.5 bg-amber-700 rounded-full"></div>
-                              <div className="w-0.5 h-1.5 bg-yellow-800 rounded-full"></div>
-                              <div className="w-0.5 h-1.5 bg-amber-700 rounded-full"></div>
-                              <div className="w-0.5 h-1.5 bg-yellow-800 rounded-full"></div>
-                              <div className="w-0.5 h-1.5 bg-amber-700 rounded-full"></div>
-                              <div className="w-0.5 h-1.5 bg-yellow-800 rounded-full"></div>
-                              <div className="w-0.5 h-1.5 bg-amber-700 rounded-full"></div>
-                            </div>
-                          </div>
-                        </div>
-                        <div className="absolute inset-0 bg-gradient-to-br from-yellow-200/20 to-amber-300/20 rounded-2xl"></div>
-                      </div>
+                      <img 
+                        src="/SYN Carpet (1).png" 
+                        alt="SYN Carpets Logo" 
+                        className="h-10 w-auto object-contain"
+                        onError={(e) => {
+                          console.log('Mobile logo failed to load');
+                          e.currentTarget.style.display = 'none';
+                        }}
+                      />
                       <div className="absolute -top-1 -right-1 w-3 h-3 bg-gradient-to-br from-emerald-400 to-green-500 rounded-full border border-white shadow-lg flex items-center justify-center">
                         <div className="w-1 h-1 bg-white rounded-full"></div>
                       </div>

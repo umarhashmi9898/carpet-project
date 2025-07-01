@@ -51,15 +51,42 @@ const LoadingScreen: React.FC<LoadingScreenProps> = ({ onComplete }) => {
 
         {/* Main Loading Content */}
         <div className="relative z-10 text-center max-w-md mx-auto px-6">
-          {/* Logo */}
+          {/* SYN Carpet Logo */}
           <motion.div
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 0.5 }}
-            className="mb-8"
+            className="mb-8 flex justify-center"
           >
-            <div className="w-16 h-16 mx-auto bg-gradient-to-br from-yellow-400 to-amber-600 rounded-xl flex items-center justify-center shadow-xl">
-              <div className="w-10 h-10 bg-gradient-to-br from-yellow-800 to-amber-900 rounded-lg" />
+            <div className="relative">
+              <img 
+                src="/SYN Carpet (1).png" 
+                alt="SYN Carpets Logo" 
+                className="h-16 w-auto object-contain"
+                onError={(e) => {
+                  console.log('Loading screen logo failed to load, using fallback');
+                  // Fallback to gradient design if image fails
+                  e.currentTarget.style.display = 'none';
+                  const fallback = document.createElement('div');
+                  fallback.className = 'w-16 h-16 bg-gradient-to-br from-yellow-400 to-amber-600 rounded-xl flex items-center justify-center shadow-xl';
+                  fallback.innerHTML = '<div class="w-10 h-10 bg-gradient-to-br from-yellow-800 to-amber-900 rounded-lg"></div>';
+                  e.currentTarget.parentNode?.appendChild(fallback);
+                }}
+              />
+              
+              {/* Animated glow effect around logo */}
+              <motion.div
+                className="absolute inset-0 bg-gradient-to-br from-yellow-400/20 to-amber-600/20 rounded-xl blur-xl"
+                animate={{
+                  scale: [1, 1.2, 1],
+                  opacity: [0.3, 0.6, 0.3]
+                }}
+                transition={{
+                  duration: 2,
+                  repeat: Infinity,
+                  ease: "easeInOut"
+                }}
+              />
             </div>
           </motion.div>
 

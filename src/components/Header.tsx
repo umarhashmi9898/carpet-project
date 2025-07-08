@@ -77,8 +77,8 @@ const Header = () => {
     <>
       <header className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
         isScrolled 
-          ? 'bg-black/90 backdrop-blur-md shadow-lg border-b border-yellow-500/20' 
-          : 'bg-transparent'
+          ? 'bg-gradient-to-r from-amber-900/95 via-yellow-900/90 to-amber-900/95 backdrop-blur-md shadow-2xl border-b border-yellow-400/30' 
+          : 'bg-gradient-to-r from-amber-800/20 via-yellow-800/15 to-amber-800/20 backdrop-blur-sm'
       }`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* INCREASED HEIGHT FOR BETTER SPACING */}
@@ -116,12 +116,12 @@ const Header = () => {
                 <motion.button 
                   key={item.id}
                   onClick={() => scrollToSection(item.id)} 
-                  className="text-white/80 hover:text-white transition-colors relative group"
+                  className="text-white/90 hover:text-yellow-200 transition-colors relative group font-medium"
                   whileHover={{ y: -1 }}
                   transition={{ duration: 0.2 }}
                 >
                   {item.label}
-                  <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-yellow-500 to-amber-600 group-hover:w-full transition-all duration-300"></div>
+                  <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-yellow-400 to-amber-500 group-hover:w-full transition-all duration-300 shadow-sm"></div>
                 </motion.button>
               ))}
             </nav>
@@ -129,7 +129,7 @@ const Header = () => {
             {/* Desktop WhatsApp Button */}
             <motion.a 
               href="https://wa.me/447949087460"
-              className="hidden md:flex items-center space-x-2 bg-gradient-to-r from-green-500 to-green-600 text-white px-4 py-2 rounded-full hover:from-green-600 hover:to-green-700 transition-all transform hover:scale-105 shadow-lg"
+              className="hidden md:flex items-center space-x-2 bg-gradient-to-r from-green-500 to-green-600 text-white px-4 py-2 rounded-full hover:from-green-600 hover:to-green-700 transition-all transform hover:scale-105 shadow-lg border border-green-400/30"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
@@ -140,7 +140,7 @@ const Header = () => {
             {/* Mobile Menu Button - IMPROVED VISIBILITY */}
             <motion.button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="md:hidden relative w-10 h-10 bg-white/10 backdrop-blur-sm border border-yellow-500/30 rounded-xl flex items-center justify-center text-white hover:bg-white/20 transition-all z-50"
+              className="md:hidden relative w-10 h-10 bg-gradient-to-br from-yellow-600/20 to-amber-600/20 backdrop-blur-sm border border-yellow-400/40 rounded-xl flex items-center justify-center text-white hover:bg-gradient-to-br hover:from-yellow-600/30 hover:to-amber-600/30 transition-all z-50 shadow-lg"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >

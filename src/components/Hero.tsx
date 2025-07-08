@@ -561,19 +561,23 @@ const Hero = () => {
     <section 
       ref={heroRef}
       id="hero-section" 
-      className="relative min-h-screen overflow-hidden bg-black"
+      className="relative min-h-screen overflow-hidden bg-gradient-to-br from-amber-950/90 via-black to-yellow-950/90"
     >
       {/* Optimized Background */}
       <motion.div 
         style={{ y: backgroundY }}
         className="absolute inset-0 z-0"
       >
-        <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-black to-yellow-900" />
-        <div className="absolute inset-0 bg-gradient-to-tr from-amber-900/20 via-transparent to-yellow-900/20" />
+        <div className="absolute inset-0 bg-gradient-to-br from-amber-900/40 via-black to-yellow-900/40" />
+        <div className="absolute inset-0 bg-gradient-to-tr from-amber-800/30 via-transparent to-yellow-800/30" />
         
         {/* Simplified animated elements */}
-        <div className="absolute top-1/4 left-1/4 w-64 sm:w-96 h-64 sm:h-96 bg-gradient-to-r from-yellow-500/5 to-amber-500/5 rounded-full blur-2xl sm:blur-3xl animate-pulse" />
-        <div className="absolute bottom-1/4 right-1/4 w-56 sm:w-80 h-56 sm:h-80 bg-gradient-to-r from-amber-500/5 to-yellow-500/5 rounded-full blur-2xl sm:blur-3xl animate-pulse" style={{ animationDelay: '2s' }} />
+        <div className="absolute top-1/4 left-1/4 w-64 sm:w-96 h-64 sm:h-96 bg-gradient-to-r from-yellow-500/10 to-amber-500/10 rounded-full blur-2xl sm:blur-3xl animate-pulse" />
+        <div className="absolute bottom-1/4 right-1/4 w-56 sm:w-80 h-56 sm:h-80 bg-gradient-to-r from-amber-500/10 to-yellow-500/10 rounded-full blur-2xl sm:blur-3xl animate-pulse" style={{ animationDelay: '2s' }} />
+        
+        {/* Additional golden ambient lighting */}
+        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-amber-900/5 via-transparent to-yellow-900/5" />
+        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-yellow-800/5 to-transparent" />
       </motion.div>
 
       {/* Main Content */}
